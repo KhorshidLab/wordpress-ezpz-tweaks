@@ -1,0 +1,68 @@
+/* vazir Font v27.1.0 */
+@font-face {
+	font-family: Vazir;
+	src: url('../fonts/vazir-v27.1.0/Vazir-Regular.eot');
+	src: url('../fonts/vazir-v27.1.0/Vazir-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/vazir-v27.1.0/Vazir-Regular.woff2') format('woff2'),
+	url('../fonts/vazir-v27.1.0/Vazir-Regular.woff') format('woff'),
+	url('../fonts/vazir-v27.1.0/Vazir-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Vazir;
+	src: url('../fonts/vazir-v27.1.0/Vazir-Bold.eot');
+	src: url('../fonts/vazir-v27.1.0/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/vazir-v27.1.0/Vazir-Bold.woff2') format('woff2'),
+	url('../fonts/vazir-v27.1.0/Vazir-Bold.woff') format('woff'),
+	url('../fonts/vazir-v27.1.0/Vazir-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* Estedad Font */
+@font-face {
+	font-family: Estedad;
+	url('../fonts/estedad/Estedad[wght,kshd].woff2') format('woff2'),
+	url('../fonts/estedad/Estedad[wght,kshd].ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* IranianSans Font */
+@font-face {
+	font-family: IranianSans;
+	src: url('../fonts/iraniansans/iranian-sans.eot');
+	src: url('../fonts/iraniansans/iranian-sans.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/iraniansans/iranian-sans.woff2') format('woff2'),
+	url('../fonts/iraniansans/iranian-sans.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* NotoSans Font */
+@font-face {
+	font-family: NotoSans;
+	url('../fonts/notosans/NotoSansArabic-Regular.woff2') format('woff2'),
+	url('../fonts/notosans/NotoSansArabic-Regular.woff') format('woff'),
+	url('../fonts/notosans/NotoSansArabic-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: NotoSans;
+	url('../fonts/notosans/NotoSansArabic-Bold.woff2') format('woff2'),
+	url('../fonts/notosans/NotoSansArabic-Bold.woff') format('woff'),
+	url('../fonts/notosans/NotoSansArabic-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+#dashboard_right_now a.demo-count:before {
+	content: "\f115"
+}
+
+.setting-title {
+	font-weight: bold !important;
+	color: #0052cc;
+}

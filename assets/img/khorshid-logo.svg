@@ -1,0 +1,10 @@
+<svg id="KL_Logo" data-name="KL Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 259.2 255.84">
+	<defs>
+		<style>.cls-1{fill:#0052cc}.cls-2{fill:#ffab00}</style>
+	</defs>
+	<path class="cls-1" d="M129.39 126.96L74.6 180.25l75.74 75.49 108.35.1-129.3-128.88z" id="_bot" data-name="\ bot"/>
+	<path class="cls-2" d="M259.2 0H151.97L2.07 150.18l26.8 78.32L259.2.37V0z" id="_" data-name="/"/>
+	<path class="cls-1" d="M0 .01h76.47v255.83H0z" id="_2" data-name="|"/>
+	<path class="cls-2" d="M0-.19l.1 107.2 75.62 74.95 53.38-54.21L0-.19z" id="_3" data-name="\"/>
+	<path fill="#172b4d" d="M130.73 128.33l-26.3 25.19-24 24.28 70.56-28.8-20.26-20.67z" id="shadow" opacity=".2"/>
+</svg>

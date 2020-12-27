@@ -1,0 +1,214 @@
+<?php
+
+/**
+ * WP2X
+ *
+ * @package   WP2X
+ * @author    Khorshid <info@khorshidlab.com>
+ * @copyright 2020 Khorshid
+ * @license   GPL 2.0+
+ * @link      https://khorshidlab.com
+ */
+
+namespace WP2X\Engine;
+
+use Composer\Autoload\ClassLoader;
+use Exception;
+use Throwable;
+use WP2X\Engine;
+use function apply_filters;
+use function array_diff;
+use function array_keys;
+use function do_action;
+use function esc_html__;
+use function is_array;
+use function is_dir;
+use function is_file;
+use function scandir;
+use function strlen;
+use function strncmp;
+use function strtolower;
+use function substr;
+use function substr_count;
+use function wp_die;
+
+/**
+ * Plugin Name Initializer
+ */
+class Initialize
+{
+
+	/**
+	 * List of class to initialize.
+	 *
+	 * @var array
+	 */
+	public $classes = array();
+
+	/**
+	 * Instance of this W_Is_Methods.
+	 *
+	 * @var object
+	 */
+	protected $is = null;
+
+	/**
+	 * Composer autoload file list.
+	 *
+	 * @var ClassLoader
+	 */
+	private $composer;
+
+	/**
+	 * The Constructor that load the entry classes
+	 *
+	 * @param ClassLoader $composer Composer autoload output.
+	 * @since 1.0.0
+	 */
+	public function __construct(ClassLoader $composer)
+	{
+		$this->is = new Engine\Is_Methods;
+		$this->composer = $composer;
+
+		$this->get_classes('Internals');
+		$this->get_classes('Integrations');
+
+		if ($this->is->request('cli')) {
+			$this->get_classes('Cli');
+		}
+
+		if ($this->is->request('backend')) {
+			$this->get_classes('Backend');
+		}
+
+		if ($this->is->request('frontend')) {
+			$this->get_classes('Frontend');
+		}
+
+		$this->load_classes();
+	}
+
+	/**
+	 * Based on the folder loads the classes automatically using the Composer autoload to detect the classes of a Namespace.
+	 *
+	 * @param string $namespace Class name to find.
+	 * @return array Return the classes.
+	 * @since 1.0.0
+	 */
+	private function get_classes(string $namespace)
+	{
+		$prefix = $this->composer->getPrefixesPsr4();
+		$classmap = $this->composer->getClassMap();
+		$namespace = 'WP2X\\' . $namespace;
+
+		// In case composer has autoload optimized
+		if (isset($classmap['WP2X\\Engine\\Initialize'])) {
+			$classes = array_keys($classmap);
+
+			foreach ($classes as $class) {
+				if (0 !== strncmp((string)$class, $namespace, strlen($namespace))) {
+					continue;
+				}
+
+				$this->classes[] = $class;
+			}
+
+			return $this->classes;
+		}
+
+		$namespace .= '\\';
+
+		// In case composer is not optimized
+		if (isset($prefix[$namespace])) {
+			$folder = $prefix[$namespace][0];
+			$php_files = $this->scandir($folder);
+			$this->find_classes($php_files, $folder, $namespace);
+
+			if (!WP_DEBUG) {
+				wp_die(esc_html__('Plugin Name is on production environment with missing `composer dumpautoload -o` that will improve the performance on autoloading itself.', W_TEXTDOMAIN));
+			}
+
+			return $this->classes;
+		}
+
+		return $this->classes;
+	}
+
+	/**
+	 * Get php files inside the folder/subfolder that will be loaded.
+	 * This class is used only when Composer is not optimized.
+	 *
+	 * @param string $folder Path.
+	 * @return array List of files.
+	 * @since 1.0.0
+	 */
+	private function scandir(string $folder)
+	{
+		$temp_files = scandir($folder);
+		$files = array();
+
+		if (is_array($temp_files)) {
+			$files = $temp_files;
+		}
+
+		return array_diff($files, array('..', '.', 'index.php'));
+	}
+
+	/**
+	 * Load namespace classes by files.
+	 *
+	 * @param array $php_files List of files with the Class.
+	 * @param string $folder Path of the folder.
+	 * @param string $base Namespace base.
+	 * @since 1.0.0
+	 */
+	private function find_classes(array $php_files, string $folder, string $base)
+	{
+		foreach ($php_files as $php_file) {
+			$class_name = substr($php_file, 0, -4);
+			$path = $folder . '/' . $php_file;
+
+			if (is_file($path)) {
+				$this->classes[] = $base . $class_name;
+
+				continue;
+			}
+
+			// Verify the Namespace level
+			if (substr_count($base . $class_name, '\\') < 2) {
+				continue;
+			}
+
+			if (!is_dir($path) || strtolower($php_file) === $php_file) {
+				continue;
+			}
+
+			$sub_php_files = $this->scandir($folder . '/' . $php_file);
+			$this->find_classes($sub_php_files, $folder . '/' . $php_file, $base . $php_file . '\\');
+		}
+	}
+
+	/**
+	 * Initialize all the classes.
+	 *
+	 * @since 1.0.0
+	 */
+	private function load_classes()
+	{
+		$this->classes = apply_filters('wp2x_classes_to_execute', $this->classes);
+
+		foreach ($this->classes as $class) {
+			try {
+				$temp = new $class;
+				$temp->initialize();
+			} catch (Throwable $err) {
+				do_action('wp2x_initialize_failed', $err);
+
+				if (WP_DEBUG) {
+					throw new Exception($err->getMessage());
+				}
+			}
+		}
+	}
+
+}

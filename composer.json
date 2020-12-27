@@ -1,0 +1,54 @@
+{
+    "name": "khorshid-lab/wp2x",
+    "type": "wordpress-plugin",
+    "description": "Wordpress Plugin Boilerplate with steroids!",
+    "homepage": "https:\/\/github.com\/WPBP\/WordPress-Plugin-Boilerplate-Powered",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Khorshid",
+            "email": "info@khorshidlab.com",
+            "homepage": "https://khorshidlab.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "cmb2\/cmb2": "2.7.*",
+        "composer\/installers": "1.x",
+        "origgami\/cmb2-grid": "dev-master",
+        "wpbp\/cpt_columns": "1.0.*",
+        "wpbp\/cronplus": "1.0.*",
+        "wpbp\/debug": "1.1.*",
+        "wpbp\/fakepage": "1.0.*",
+        "wpbp\/language": "1.0.*",
+        "wpbp\/pointerplus": "1.0.*",
+        "wpbp\/template": "1.0.*",
+        "wpbp\/widgets-helper": "1.0.*",
+        "wpdesk\/wp-notice": "^3.1",
+        "yoast\/i18n-module": "3.1.*"
+    },
+    "require-dev": {
+        "ergebnis\/composer-normalize": "^2.6"
+    },
+    "extra": {
+        "installer-paths": {
+            "vendor\/{$name}\/": [
+                "cmb2\/cmb2",
+                "origgami\/cmb2-grid"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "WP2X\\Backend\\": "backend\/",
+            "WP2X\\Frontend\\": "frontend\/",
+            "WP2X\\Rest\\": "rest\/",
+            "WP2X\\Internals\\": "internals\/",
+            "WP2X\\Cli\\": "cli\/",
+            "WP2X\\Integrations\\": "integrations\/",
+            "WP2X\\Engine\\": "engine\/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
