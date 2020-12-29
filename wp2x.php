@@ -8,8 +8,8 @@
  * @link      https://khorshidlab.com
  *
  * Plugin Name:     WP2X
- * Plugin URI:      @TODO
- * Description:     @TODO
+ * Plugin URI:      https://khorshidlab.com
+ * Description:     Plugin for wordpress tweaks
  * Version:         1.0.0
  * Author:          Khorshid
  * Author URI:      https://khorshidlab.com
@@ -22,9 +22,8 @@
  */
 
 // If this file is called directly, abort.
-if ( !defined( 'ABSPATH' ) ) {
+if ( !defined( 'ABSPATH' ) )
 	die( 'We\'re sorry, but you can not directly access this file.' );
-}
 
 define( 'W_VERSION', '1.0.0' );
 define( 'W_TEXTDOMAIN', 'wp2x' );
@@ -35,12 +34,14 @@ define( 'W_PLUGIN_ABSOLUTE', __FILE__ );
 
 add_action(
 	'init',
-	static function () {
+	static function ()
+	{
 		load_plugin_textdomain( W_TEXTDOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
 	);
 
-if ( version_compare( PHP_VERSION, '7.0.0', '<=' ) ) {
+if ( version_compare( PHP_VERSION, '7.0.0', '<=' ) )
+{
 	add_action(
 		'admin_init',
 		static function() {
@@ -49,7 +50,8 @@ if ( version_compare( PHP_VERSION, '7.0.0', '<=' ) ) {
 	);
 	add_action(
 		'admin_notices',
-		static function() {
+		static function()
+		{
 			echo wp_kses_post(
 			sprintf(
 				'<div class="notice notice-error"><p>%s</p></div>',
@@ -66,15 +68,25 @@ if ( version_compare( PHP_VERSION, '7.0.0', '<=' ) ) {
 $wp2x_libraries = require_once W_PLUGIN_ROOT . 'vendor/autoload.php';
 
 require_once W_PLUGIN_ROOT . 'functions/functions.php';
-require_once W_PLUGIN_ROOT . 'functions/debug.php';
 
 // Add your new plugin on the wiki: https://github.com/WPBP/WordPress-Plugin-Boilerplate-Powered/wiki/Plugin-made-with-this-Boilerplate
 
-if ( ! wp_installing() ) {
+if ( ! wp_installing() )
+{
 	add_action(
 		'plugins_loaded',
-		static function () use ( $wp2x_libraries ) {
+		static function () use ( $wp2x_libraries )
+		{
 			new \WP2X\Engine\Initialize( $wp2x_libraries );
 		}
 	);
 }
+
+function change_login_logo()
+{
+	$settings_option = get_option('wp2x-settings');
+
+	if( isset( $settings_option['custom_logo'] ) )
+		echo '<style type="text/css">h1 a {background-image: url( "'. $settings_option['custom_logo'] .'" ) !important; }</style>';
+}
+add_action( 'login_head', 'change_login_logo' );

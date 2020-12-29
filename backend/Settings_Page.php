@@ -37,12 +37,16 @@ class Settings_Page extends Base
 
 		add_action( 'admin_menu', array( $this, 'add_plugin_admin_menu' ) );
 		add_action( 'admin_footer_text', array( $this, 'custom_footer' ) );
-		add_action( 'login_head', array( $this, 'change_login_logo' ) );
+		add_action( 'wp_before_admin_bar_render', array( $this, 'adminbar_logo' ) );
+		add_action( 'admin_head', array( $this, 'hide_core_update_notifications_from_users' ), 1 );
+		add_action( 'admin_init', array( $this, 'remove_welcome_panel' ) );
+		add_action( 'wp_dashboard_setup', array( $this, 'remove_dashboard_widgets' ) );
 
-		$realpath = realpath(dirname(__FILE__));
-		assert(is_string($realpath));
-		$plugin_basename = plugin_basename(plugin_dir_path($realpath) . W_TEXTDOMAIN . '.php');
-		add_filter('plugin_action_links_' . $plugin_basename, array($this, 'add_action_links'));
+		$realpath = realpath( dirname( __FILE__ ) );
+		assert( is_string( $realpath ) );
+		$plugin_basename = plugin_basename( plugin_dir_path($realpath) . W_TEXTDOMAIN . '.php' );
+
+		add_filter( 'plugin_action_links_' . $plugin_basename, array( $this, 'add_action_links' ) );
 	}
 
 	/**
@@ -61,9 +65,20 @@ class Settings_Page extends Base
 		// Menu icon
 		$icon_svg = 'data:image/svg+xml;base64,PHN2ZyBpZD0iS0xfTG9nbyIgZGF0YS1uYW1lPSJLTCBMb2dvIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTkuMiAyNTUuODQiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMDA1MmNjfS5jbHMtMntmaWxsOiNmZmFiMDB9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTI5LjM5IDEyNi45Nkw3NC42IDE4MC4yNWw3NS43NCA3NS40OSAxMDguMzUuMS0xMjkuMy0xMjguODh6IiBpZD0iX2JvdCIgZGF0YS1uYW1lPSJcIGJvdCIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTI1OS4yIDBIMTUxLjk3TDIuMDcgMTUwLjE4bDI2LjggNzguMzJMMjU5LjIuMzdWMHoiIGlkPSJfIiBkYXRhLW5hbWU9Ii8iLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0wIC4wMWg3Ni40N3YyNTUuODNIMHoiIGlkPSJfMiIgZGF0YS1uYW1lPSJ8Ii8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMC0uMTlsLjEgMTA3LjIgNzUuNjIgNzQuOTUgNTMuMzgtNTQuMjFMMC0uMTl6IiBpZD0iXzMiIGRhdGEtbmFtZT0iXCIvPjxwYXRoIGZpbGw9IiMxNzJiNGQiIGQ9Ik0xMzAuNzMgMTI4LjMzbC0yNi4zIDI1LjE5LTI0IDI0LjI4IDcwLjU2LTI4LjgtMjAuMjYtMjAuNjd6IiBpZD0ic2hhZG93IiBvcGFjaXR5PSIuMiIvPjwvc3ZnPg==';
 
-		add_menu_page(__('Khorshid', W_TEXTDOMAIN), W_NAME, 'manage_options', W_TEXTDOMAIN, array($this, 'display_plugin_admin_page'), $icon_svg, 3);
+		add_menu_page(__('Khorshid', W_TEXTDOMAIN), W_NAME, 'manage_options', W_TEXTDOMAIN, array($this, 'display_plugin_about_page'), $icon_svg, 3);
 
-		add_submenu_page(W_TEXTDOMAIN, __('Settings', W_TEXTDOMAIN), __('Settings', W_TEXTDOMAIN), 'manage_options', W_TEXTDOMAIN . '-settings', [$this, 'settings_page']);
+		add_submenu_page(W_TEXTDOMAIN, __('Settings', W_TEXTDOMAIN), __('Settings', W_TEXTDOMAIN), 'manage_options', W_TEXTDOMAIN . '-settings', [$this, 'display_plugin_settings_page']);
+	}
+
+	/**
+	 * Render the about page for this plugin.
+	 *
+	 * @return void
+	 * @since 1.0.0
+	 */
+	public function display_plugin_about_page()
+	{
+		include_once W_PLUGIN_ROOT . 'backend/views/about.php';
 	}
 
 	/**
@@ -72,9 +87,9 @@ class Settings_Page extends Base
 	 * @return void
 	 * @since 1.0.0
 	 */
-	public function display_plugin_admin_page()
+	public function display_plugin_settings_page()
 	{
-		include_once W_PLUGIN_ROOT . 'backend/views/admin.php';
+		include W_PLUGIN_ROOT . "backend/views/settings.php";
 	}
 
 	/**
@@ -92,11 +107,6 @@ class Settings_Page extends Base
 	public function custom_footer()
 	{
 		return '<img src="' . W_PLUGIN_ROOT_URL . 'assets/img/khorshid-logo.svg" width="30" style="vertical-align: middle;" /><a href="https://khorshidlab.com" style="	text-decoration: none;color: #0052cc;margin-right: 5px;font-weight: bold;" target="_blank">' . __('WordPress Support', W_TEXTDOMAIN) . ': ' . __('Khorshid', W_TEXTDOMAIN) . '</a>';
-	}
-
-	public function settings_page()
-	{
-		include W_PLUGIN_ROOT . "backend/views/settings.php";
 	}
 
 	public function change_admin_font()
@@ -139,9 +149,85 @@ class Settings_Page extends Base
 
 	}
 
-	public function change_login_logo()
+	public function adminbar_logo()
 	{
 		if( isset( $this->settings_option['custom_logo'] ) )
-			echo '<style type=”text/css”>h1 a {background-image: url( ' . $this->settings_option['custom_logo'] . ') !important; }</style>';
+		{
+			echo '<style type="text/css">
+			#wpadminbar #wp-admin-bar-wp-logo>.ab-item {
+			    padding: 0 7px;
+			    background-image: url('. $this->settings_option['custom_logo'] .') !important;
+			    background-size: 50%;
+			    background-position: center;
+			    background-repeat: no-repeat;
+			    opacity: 1;
+			}
+			#wpadminbar #wp-admin-bar-wp-logo>.ab-item .ab-icon:before {
+			    content: " ";
+			    top: 2px;
+			}
+        </style>';
+		}
 	}
+
+	public function hide_core_update_notifications_from_users()
+	{
+		if( isset( $this->settings_option['hide_update_notifications'] ) )
+		{
+			$user_roles = wp_roles_array();
+
+			foreach( $user_roles as $role => $name )
+			{
+				if ( current_user_can( $role ) )
+				{
+					remove_action( 'admin_notices', 'update_nag', 3 );
+					break;
+				}
+			}
+		}
+	}
+
+	public function remove_welcome_panel()
+	{
+		if( isset( $this->settings_option['remove_welcome_panel'] ) )
+			remove_action('welcome_panel', 'wp_welcome_panel');
+	}
+
+	public function remove_dashboard_widgets()
+	{
+		if( isset( $this->settings_option['remove_dashboard_widgets'] ) )
+		{
+			global $wp_meta_boxes;
+
+			$selected_widgets = $this->settings_option['remove_dashboard_widgets'];
+
+			if( in_array( 'dashboard_primary', $selected_widgets ) )
+				unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_primary'] );
+
+			if( in_array( 'dashboard_quick_press', $selected_widgets ) )
+				unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press'] );
+
+			if( in_array( 'dashboard_incoming_links', $selected_widgets ) )
+				unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links'] );
+
+			if( in_array( 'dashboard_right_now', $selected_widgets ) )
+				unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_right_now'] );
+
+			if( in_array( 'dashboard_plugins', $selected_widgets ) )
+				unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins'] );
+
+			if( in_array( 'dashboard_recent_drafts', $selected_widgets ) )
+				unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_drafts'] );
+
+			if( in_array( 'dashboard_recent_comments', $selected_widgets ) )
+				unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments'] );
+
+			if( in_array( 'dashboard_site_health', $selected_widgets ) )
+				unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_site_health'] );
+
+			if( in_array( 'dashboard_activity', $selected_widgets ) )
+				unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_activity'] );
+		}
+	}
+
 }

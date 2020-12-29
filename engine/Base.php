@@ -20,15 +20,10 @@ use function w_get_settings;
 class Base
 {
 
-	/**
-	 * @var array The settings of the plugin.
-	 */
-	public $settings = array();
-
 	/** Initialize the class and get the plugin settings */
 	public function initialize()
 	{
-		$this->settings = w_get_settings();
+
 	}
 
 }

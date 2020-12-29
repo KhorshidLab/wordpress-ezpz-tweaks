@@ -73,10 +73,6 @@ class Initialize
 		$this->get_classes('Internals');
 		$this->get_classes('Integrations');
 
-		if ($this->is->request('cli')) {
-			$this->get_classes('Cli');
-		}
-
 		if ($this->is->request('backend')) {
 			$this->get_classes('Backend');
 		}

@@ -66,7 +66,7 @@ class Enqueue extends Base {
 			W_TEXTDOMAIN . '-plugin-script',
 			'w_js_vars',
 			array(
-				'alert' => \__( 'Hey! You have clicked the button!', W_TEXTDOMAIN ),
+				'alert' => __( 'Hey! You have clicked the button!', W_TEXTDOMAIN ),
 			)
 		);
 	}
