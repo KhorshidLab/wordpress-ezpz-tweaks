@@ -18,10 +18,10 @@
 			'show_option_none' => false,
 			'options'          => array(
 				'wp-default'   => __( 'WordPress Default', W_TEXTDOMAIN ),
-				'vazir'        => __( 'Vazir', W_TEXTDOMAIN ),
-				'estedad'      => __( 'Estedad', W_TEXTDOMAIN ),
-				'iranian'      => __( 'Iranian', W_TEXTDOMAIN ),
-				'noto'         => __( 'Noto', W_TEXTDOMAIN ),
+				'Vazir'        => __( 'Vazir', W_TEXTDOMAIN ),
+				'Estedad'      => __( 'Estedad', W_TEXTDOMAIN ),
+				'IranianSans'  => __( 'Iranian', W_TEXTDOMAIN ),
+				'NotoSans'     => __( 'Noto', W_TEXTDOMAIN ),
 			),
 		)
 	);
