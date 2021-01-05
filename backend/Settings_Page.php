@@ -35,6 +35,7 @@ class Settings_Page extends Base
 		$this->settings_option = get_option('wp2x-settings');
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'change_admin_font' ), 30 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'change_editor_font' ), 30 );
 		add_action( 'admin_menu', array( $this, 'add_plugin_admin_menu' ) );
 		add_action( 'admin_footer_text', array( $this, 'custom_footer' ) );
 		add_action( 'wp_before_admin_bar_render', array( $this, 'adminbar_logo' ) );
@@ -118,7 +119,21 @@ class Settings_Page extends Base
 			add_action( 'wp_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
 			add_action( 'admin_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
 
-			$font_styles = 'body, .rtl h1, .rtl h2, .rtl h3, .rtl h4, .rtl h5, .rtl h6, #wpadminbar *:not([class="ab-icon"]), .wp-core-ui, .media-menu, .media-frame *, .media-modal *{font-family:"'. $admin_font .'" !important;}';
+			$font_styles = 'body, .rtl h1, .rtl h2, .rtl h3, .rtl h4, .rtl h5, .rtl h6, label, input, textarea, .components-notice, #wpadminbar *:not([class="ab-icon"]), .wp-core-ui, .media-menu, .media-frame *, .media-modal *{font-family:"'. $admin_font .'" !important;}';
+			wp_add_inline_style( W_TEXTDOMAIN . '-admin-styles', $font_styles );
+		}
+	}
+
+	public function change_editor_font()
+	{
+		$editor_font = $this->settings_option['editor-font'];
+
+		if( isset( $editor_font ) && $editor_font != 'wp-default' )
+		{
+			add_action( 'wp_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
+
+			$font_styles = '#editorcontainer #content, #wp_mce_fullscreen, .block-editor-writing-flow input, .block-editor-writing-flow textarea, .block-editor-writing-flow p {font-family:"'. $editor_font .'" !important;}';
 			wp_add_inline_style( W_TEXTDOMAIN . '-admin-styles', $font_styles );
 		}
 	}
@@ -210,6 +225,19 @@ class Settings_Page extends Base
 			if( in_array( 'dashboard_activity', $selected_widgets ) )
 				unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_activity'] );
 		}
+	}
+
+	public function custom_fonts()
+	{
+		$fonts = array(
+			'wp-default'   => __( 'WordPress Default', W_TEXTDOMAIN ),
+			'Vazir'        => __( 'Vazir', W_TEXTDOMAIN ),
+			'Estedad'      => __( 'Estedad', W_TEXTDOMAIN ),
+			'IranianSans'  => __( 'Iranian', W_TEXTDOMAIN ),
+			'NotoSans'     => __( 'Noto', W_TEXTDOMAIN ),
+		);
+
+		return $fonts;
 	}
 
 }

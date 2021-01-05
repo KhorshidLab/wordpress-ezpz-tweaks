@@ -1,6 +1,7 @@
 <div id="tabs-1" class="wrap">
 	<?php
-	$cmb = new_cmb2_box(
+	$settings_page = new WP2X\Backend\Settings_Page();
+	$cmb           = new_cmb2_box(
 		array(
 			'id'         => W_TEXTDOMAIN . '_options',
 			'hookup'     => false,
@@ -16,14 +17,19 @@
 			'id'               => 'admin-font',
 			'type'             => 'select',
 			'show_option_none' => false,
-			'options'          => array(
-				'wp-default'   => __( 'WordPress Default', W_TEXTDOMAIN ),
-				'Vazir'        => __( 'Vazir', W_TEXTDOMAIN ),
-				'Estedad'      => __( 'Estedad', W_TEXTDOMAIN ),
-				'IranianSans'  => __( 'Iranian', W_TEXTDOMAIN ),
-				'NotoSans'     => __( 'Noto', W_TEXTDOMAIN ),
-			),
+			'options'          => $settings_page->custom_fonts(),
 		)
+	);
+
+	$cmb->add_field(
+			array(
+					'name'             => __( 'Editor Font', W_TEXTDOMAIN ),
+					'desc'             => __( 'Change WordPress editor font', W_TEXTDOMAIN ),
+					'id'               => 'editor-font',
+					'type'             => 'select',
+					'show_option_none' => false,
+					'options'          => $settings_page->custom_fonts(),
+			)
 	);
 
 	$cmb->add_field(
