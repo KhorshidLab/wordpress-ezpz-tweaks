@@ -1,0 +1,595 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2020-12-29 11:39+0330\n"
+"PO-Revision-Date: 2021-01-05 13:16+0330\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e;\\__\n"
+"Last-Translator: \n"
+"Language: fr\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: backend/ImpExp.php:120
+msgid "Failed to import the settings."
+msgstr "N’a pas importé les paramètres."
+
+#: backend/Notices.php:32
+msgid "Updated Messages"
+msgstr "Messages mis à jour"
+
+#: backend/Notices.php:33
+msgid "This is my dismissible notice"
+msgstr ""
+
+#: backend/Pointers.php:50
+msgid "Boilerplate Help"
+msgstr ""
+
+#: backend/Pointers.php:51
+msgid ""
+"A pointer for help tab.<br>Go to Posts, Pages or Users for other pointers."
+msgstr ""
+
+#: backend/Settings_Page.php:68 backend/Settings_Page.php:98 wp2x.php:31
+msgid "Khorshid"
+msgstr "Khorshid"
+
+#: backend/Settings_Page.php:70 backend/Settings_Page.php:93
+#: vendor/wpdesk/wp-builder/src/Plugin/AbstractPlugin.php:214
+msgid "Settings"
+msgstr "Paramètres"
+
+#: backend/Settings_Page.php:93
+msgid "Donate"
+msgstr "Faire un don"
+
+#: backend/Settings_Page.php:98
+msgid "WordPress Support"
+msgstr "Assistance WordPress"
+
+#: backend/views/settings-2.php:14 integrations/CMB.php:58
+msgid "Text"
+msgstr ""
+
+#: backend/views/settings-2.php:15 backend/views/settings-2.php:24
+#: integrations/CMB.php:59 integrations/CMB.php:67 integrations/CMB.php:76
+#: integrations/CMB.php:84 vendor/cmb2-grid/Test/Test.php:32
+#: vendor/cmb2-grid/Test/Test.php:38 vendor/cmb2-grid/Test/Test.php:102
+#: vendor/cmb2-grid/Test/Test.php:108 vendor/cmb2-grid/Test/Test.php:114
+#: vendor/cmb2-grid/Test/Test.php:120 vendor/cmb2-grid/Test/Test.php:126
+msgid "field description (optional)"
+msgstr ""
+
+#: backend/views/settings-2.php:23
+msgid "Color Picker"
+msgstr ""
+
+#: backend/views/settings.php:14
+msgid "Admin Font"
+msgstr "Panneau d'administration la fonte"
+
+#: backend/views/settings.php:15
+msgid "Change WordPress admin font"
+msgstr "Changer la police d'administration de WordPress"
+
+#: backend/views/settings.php:20
+msgid "WordPress Default"
+msgstr "WordPress par défaut"
+
+#: backend/views/settings.php:21
+msgid "Vazir"
+msgstr ""
+
+#: backend/views/settings.php:22
+msgid "Estedad"
+msgstr ""
+
+#: backend/views/settings.php:23
+msgid "Iranian"
+msgstr ""
+
+#: backend/views/settings.php:24
+msgid "Noto"
+msgstr ""
+
+#: backend/views/settings.php:31
+msgid "Change WordPress Logo"
+msgstr "Changer le logo WordPress"
+
+#: backend/views/settings.php:32
+msgid "Upload an image or enter an URL."
+msgstr "Téléchargez une image ou entrez une URL."
+
+#: backend/views/settings.php:39
+msgid "Add File"
+msgstr "Ajouter le fichier"
+
+#: backend/views/settings.php:53
+msgid "Disable WP REST API"
+msgstr "Désactiver l'API WP REST"
+
+#: backend/views/settings.php:54
+msgid ""
+" API consumers be authenticated, which effectively prevents anonymous "
+"external access."
+msgstr ""
+"Les consommateurs d'API soient authentifiés, ce qui empêche efficacement "
+"l'accès externe anonyme."
+
+#: backend/views/settings.php:62
+msgid "Disable Comment Website Field"
+msgstr "Désactiver le champ du site Web de commentaires"
+
+#: backend/views/settings.php:70
+msgid "Remove Welcome Panel"
+msgstr "Supprimer le panneau de bienvenue"
+
+#: backend/views/settings.php:78
+msgid "Disable Emojis"
+msgstr "Désactiver les émojis"
+
+#: backend/views/settings.php:86
+msgid "Disable Embeds"
+msgstr "Désactiver les incorporations"
+
+#: backend/views/settings.php:94
+msgid "Disable XML-RPC"
+msgstr "Désactiver XML-RPC"
+
+#: backend/views/settings.php:102
+msgid "Remove Shortlink"
+msgstr "Supprimer le lien court"
+
+#: backend/views/settings.php:110
+msgid "Remove WP Version"
+msgstr "Supprimer la version WP"
+
+#: backend/views/settings.php:120
+msgid "Hide Admin Bar"
+msgstr "Masquer la barre d'administration"
+
+#: backend/views/settings.php:121
+msgid "Hide admin bar for user roles"
+msgstr "Masquer la barre d'administration pour les rôles utilisateur"
+
+#: backend/views/settings.php:130
+msgid "Hide Update Notifications"
+msgstr "Masquer les notifications de mise à jour"
+
+#: backend/views/settings.php:131
+msgid "Hide update notifications for user roles"
+msgstr "Masquer les notifications de mise à jour pour les rôles utilisateur"
+
+#: backend/views/settings.php:140
+msgid "Remove Dashboard Widgets"
+msgstr "Supprimer les widgets du tableau de bord"
+
+#: backend/views/settings.php:141
+msgid "Check widgets to remove from dashboard"
+msgstr "Cochez les widgets à supprimer du tableau de bord"
+
+#: backend/views/settings.php:145
+msgid "Dashboard Activity"
+msgstr "Activité du tableau de bord"
+
+#: backend/views/settings.php:146
+msgid "Dashboard Site Health"
+msgstr "État du site du tableau de bord"
+
+#: backend/views/settings.php:147
+msgid "Dashboard Quick Press"
+msgstr "Tableau de bord Quick Press"
+
+#: backend/views/settings.php:148
+msgid "Dashboard Incoming Links"
+msgstr "Liens entrants du tableau de bord"
+
+#: backend/views/settings.php:149
+msgid "Dashboard Right Now"
+msgstr "Tableau de bord en ce moment"
+
+#: backend/views/settings.php:150
+msgid "Dashboard Plugins"
+msgstr "Plugins de tableau de bord"
+
+#: backend/views/settings.php:151
+msgid "Dashboard Recent Drafts"
+msgstr "Brouillons récents du tableau de bord"
+
+#: backend/views/settings.php:152
+msgid "Dashboard Recent Comments"
+msgstr "Commentaires récents du tableau de bord"
+
+#: backend/views/settings.php:153
+msgid "Dashboard Primary"
+msgstr "Tableau de bord principal"
+
+#: frontend/Enqueue.php:69
+msgid "Hey! You have clicked the button!"
+msgstr ""
+
+#: functions/debug.php:12
+msgid "Plugin Name"
+msgstr ""
+
+#: integrations/CMB.php:47
+msgid "Demo Metabox"
+msgstr ""
+
+#: integrations/CMB.php:66
+msgid "Text 2"
+msgstr ""
+
+#: integrations/CMB.php:75
+msgid "Text Small"
+msgstr ""
+
+#: integrations/CMB.php:83
+msgid "Text Small 2"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:26
+msgid "My Recent Posts Example"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:27
+msgid "My Recent Posts Widget Description"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:36
+msgid "Title"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:38
+msgid "Enter the widget title."
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:46
+msgid "Recent Posts"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:77
+msgid "Taxonomy"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:78
+msgid "Set the taxonomy."
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:85
+msgid "Taxonomy terms"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:86
+msgid "Set the taxonomy terms."
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:94
+msgid "Pages"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:95
+msgid "Set the page."
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:102
+msgid "Post type"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:103
+msgid "Set the post type."
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:111
+msgid "Amount"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:112
+msgid "Select how many posts to show."
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:118
+msgid "1 Post"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:122
+msgid "2 Posts"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:126
+msgid "3 Posts"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:137
+msgid "Output as list"
+msgstr ""
+
+#: integrations/Widgets/My_Recent_Posts_Widget.php:138
+msgid "Wraps posts with the <li> tag."
+msgstr ""
+
+#: internals/PostTypes.php:37
+msgid "CMB2 Field"
+msgstr ""
+
+#: rest/Example.php:63
+msgid "Text field demo of Post type"
+msgstr ""
+
+#: rest/Example.php:106
+msgid "Failed to update post views."
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:27
+msgid "Repeating Field Group using a Grid"
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:31 vendor/cmb2-grid/Test/Test.php:101
+msgid "Test Text"
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:37 vendor/cmb2-grid/Test/Test.php:107
+msgid "Test Text Small"
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:48
+msgid "Entry {#}"
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:49
+msgid "Add Another Entry"
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:50
+msgid "Remove Entry"
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:55
+msgid "Entry Title"
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:60
+msgid "Description"
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:61
+msgid "Write a short description for this entry"
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:97
+msgid "Test Metabox using a Grid"
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:113
+msgid "Test Text Medium"
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:119
+msgid "Website URL"
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:125
+msgid "Test Text Email"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Base.php:485
+#, php-format
+msgid ""
+"The \"%1$s\" field parameter has been deprecated in favor of the \"%2$s\" "
+"parameter."
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Base.php:489
+#, php-format
+msgid ""
+"Using the \"%1$s\" field parameter as a callback has been deprecated in "
+"favor of the \"%2$s\" parameter."
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Base.php:519
+#, php-format
+msgid ""
+"%1$s was called with a parameter that is <strong>deprecated</strong> since "
+"version %2$s! %3$s"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Base.php:522
+#, php-format
+msgid ""
+"%1$s was called with a parameter that is <strong>deprecated</strong> since "
+"version %2$s with no alternative available."
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Field_Display.php:453
+msgid "File:"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Hookup.php:550
+#, php-format
+msgid "Toggle panel: %s"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Options_Hookup.php:139
+msgid "Nothing to update."
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Options_Hookup.php:143
+msgid "Settings updated."
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Types.php:222
+msgid "Custom CMB2 field type classes must extend CMB2_Type_Base."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:278
+msgid "A human-readable description of the object."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:278
+msgid "The id for the object."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:278
+msgid "The title for the object."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:325
+msgid "This box does not have read permissions."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:347
+msgid ""
+"No box found by that id. A box needs to be registered with the \"show_in_rest"
+"\" parameter configured."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:404
+msgid "This box does not have write permissions."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:53
+msgid "Includes the registered fields for the box in the response."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:63
+msgid ""
+"Includes the fully rendered attributes, 'form_open', 'form_close', as well "
+"as the enqueued 'js_dependencies' script handles, and 'css_dependencies' "
+"stylesheet handles."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:106
+msgid "No boxes found."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:28
+msgid ""
+"Includes the box object which the fields are registered to in the response."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:28
+msgid ""
+"When the '_rendered' argument is passed, the renderable field attributes "
+"will be returned fully rendered. By default, the names of the callback "
+"handers for the renderable attributes will be returned."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:28
+msgid ""
+"To view or modify the field's value, the 'object_id' and 'object_type' "
+"arguments are required."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:187
+#, php-format
+msgid "Value Error for %s"
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:299
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:375
+msgid "No field found by that id."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:347
+msgid ""
+"CMB2 Field value cannot be updated without the value parameter specified."
+msgstr ""
+
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:365
+msgid ""
+"CMB2 Field value cannot be modified without the object_id and object_type "
+"parameters specified."
+msgstr ""
+
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:26
+#, php-format
+msgid "Method '%s' must be overridden."
+msgstr ""
+
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:37
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:48
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:59
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:70
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:81
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:92
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:103
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:114
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:125
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:136
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:148
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:456
+#, php-format
+msgid "Method '%s' not implemented. Must be overridden in subclass."
+msgstr ""
+
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:327
+msgid "Current page of the collection."
+msgstr ""
+
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:327
+msgid "Maximum number of items to be returned in result set."
+msgstr ""
+
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:327
+msgid "Limit results to those matching a string."
+msgstr ""
+
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:340
+msgid ""
+"Scope under which the request is made; determines fields present in response."
+msgstr ""
+
+#: vendor/wpbp/pointerplus/pointerplus.php:78
+msgid "PointerPlus Error: post_type is not an array!"
+msgstr ""
+
+#: vendor/wpbp/pointerplus/pointerplus.php:102
+msgid "PointerPlus Error: pages is not an array!"
+msgstr ""
+
+#: vendor/wpbp/pointerplus/pointerplus.php:137
+msgid "Next"
+msgstr ""
+
+#: vendor/wpdesk/wp-builder/src/Plugin/AbstractPlugin.php:201
+msgid "Support"
+msgstr ""
+
+#: vendor/wpdesk/wp-builder/src/Plugin/AbstractPlugin.php:207
+msgid "Docs"
+msgstr ""
+
+#: vendor/yoast/i18n-module/src/i18n-v3.php:233
+#, php-format
+msgid ""
+"As you can see, there is a translation of this plugin in %1$s. This "
+"translation is currently %3$d%% complete. We need your help to make it "
+"complete and to fix any errors. Please register at %4$s to help complete the "
+"translation to %1$s!"
+msgstr ""
+
+#: vendor/yoast/i18n-module/src/i18n-v3.php:237
+#, php-format
+msgid ""
+"You're using WordPress in %1$s. While %2$s has been translated to %1$s for "
+"%3$d%%, it's not been shipped with the plugin yet. You can help! Register at "
+"%4$s to help complete the translation to %1$s!"
+msgstr ""
+
+#: vendor/yoast/i18n-module/src/i18n-v3.php:241
+#, php-format
+msgid ""
+"You're using WordPress in a language we don't support yet. We'd love for "
+"%2$s to be translated in that language too, but unfortunately, it isn't "
+"right now. You can change that! Register at %4$s to help translate it!"
+msgstr ""
+
+#: wp2x.php:57
+msgid "\"WP2X\" requires PHP 5.6 or newer."
+msgstr ""
