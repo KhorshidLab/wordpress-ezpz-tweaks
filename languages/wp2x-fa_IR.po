@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-12-29 11:39+0330\n"
-"PO-Revision-Date: 2020-12-29 12:47+0330\n"
+"POT-Creation-Date: 2021-01-06 13:30+0330\n"
+"PO-Revision-Date: 2021-01-06 13:32+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -15,196 +15,171 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;\\__\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: backend/ImpExp.php:120
-msgid "Failed to import the settings."
-msgstr "خطا در درون ریزی تنظیمات."
-
-#: backend/Notices.php:32
-msgid "Updated Messages"
-msgstr "پیام های به روز شده"
-
-#: backend/Notices.php:33
-msgid "This is my dismissible notice"
-msgstr ""
-
-#: backend/Pointers.php:50
-msgid "Boilerplate Help"
-msgstr ""
-
-#: backend/Pointers.php:51
-msgid ""
-"A pointer for help tab.<br>Go to Posts, Pages or Users for other pointers."
-msgstr ""
-
-#: backend/Settings_Page.php:68 backend/Settings_Page.php:98 wp2x.php:31
+#: backend/Settings_Page.php:71 backend/Settings_Page.php:112 wp2x.php:30
 msgid "Khorshid"
 msgstr "خورشيد"
 
-#: backend/Settings_Page.php:70 backend/Settings_Page.php:93
-#: vendor/wpdesk/wp-builder/src/Plugin/AbstractPlugin.php:214
+#: backend/Settings_Page.php:73 backend/Settings_Page.php:107
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: backend/Settings_Page.php:93
+#: backend/Settings_Page.php:107
 msgid "Donate"
 msgstr "حمایت مالی"
 
-#: backend/Settings_Page.php:98
+#: backend/Settings_Page.php:112
 msgid "WordPress Support"
 msgstr "پشتیبانی وردپرس"
 
-#: backend/views/settings-2.php:14 integrations/CMB.php:58
-msgid "Text"
-msgstr ""
-
-#: backend/views/settings-2.php:15 backend/views/settings-2.php:24
-#: integrations/CMB.php:59 integrations/CMB.php:67 integrations/CMB.php:76
-#: integrations/CMB.php:84 vendor/cmb2-grid/Test/Test.php:32
-#: vendor/cmb2-grid/Test/Test.php:38 vendor/cmb2-grid/Test/Test.php:102
-#: vendor/cmb2-grid/Test/Test.php:108 vendor/cmb2-grid/Test/Test.php:114
-#: vendor/cmb2-grid/Test/Test.php:120 vendor/cmb2-grid/Test/Test.php:126
-msgid "field description (optional)"
-msgstr ""
-
-#: backend/views/settings-2.php:23
-msgid "Color Picker"
-msgstr ""
-
-#: backend/views/settings.php:14
-msgid "Admin Font"
-msgstr "فونت پنل مدیریت"
-
-#: backend/views/settings.php:15
-msgid "Change WordPress admin font"
-msgstr "فونت پنل مدیریت را تغییر دهید"
-
-#: backend/views/settings.php:20
+#: backend/Settings_Page.php:247
 msgid "WordPress Default"
 msgstr "پیشفرض وردپرس"
 
-#: backend/views/settings.php:21
+#: backend/Settings_Page.php:248
 msgid "Vazir"
 msgstr "وزیر"
 
-#: backend/views/settings.php:22
+#: backend/Settings_Page.php:249
 msgid "Estedad"
 msgstr "استعداد"
 
-#: backend/views/settings.php:23
+#: backend/Settings_Page.php:250
 msgid "Iranian"
 msgstr "ایرانیان"
 
-#: backend/views/settings.php:24
+#: backend/Settings_Page.php:251
 msgid "Noto"
 msgstr "نوتو"
 
-#: backend/views/settings.php:31
+#: backend/views/settings.php:17 backend/views/settings.php:41
+msgid "Admin Font"
+msgstr "فونت پنل مدیریت"
+
+#: backend/views/settings.php:18 backend/views/settings.php:42
+msgid "Change WordPress admin font"
+msgstr "فونت پنل مدیریت را تغییر دهید"
+
+#: backend/views/settings.php:28 backend/views/settings.php:51
+msgid "Editor Font"
+msgstr "فونت ویرایشگر"
+
+#: backend/views/settings.php:29 backend/views/settings.php:52
+msgid "Change WordPress editor font"
+msgstr "فونت ویرایشگر وردپرس را تغییر دهید"
+
+#: backend/views/settings.php:45 backend/views/settings.php:55
+msgid "Choose a font"
+msgstr "یک فونت را انتخاب کنید"
+
+#: backend/views/settings.php:62
 msgid "Change WordPress Logo"
 msgstr "تغییر لوگو وردپرس"
 
-#: backend/views/settings.php:32
+#: backend/views/settings.php:63
 msgid "Upload an image or enter an URL."
 msgstr "تصویر را آپلود کنید یا URL تصویر را وارد کنید."
 
-#: backend/views/settings.php:39
+#: backend/views/settings.php:70
 msgid "Add File"
 msgstr "انتخاب فایل"
 
-#: backend/views/settings.php:53
+#: backend/views/settings.php:84
 msgid "Disable WP REST API"
 msgstr "غیرفعال کردن WP REST API"
 
-#: backend/views/settings.php:54
+#: backend/views/settings.php:85
 msgid ""
 " API consumers be authenticated, which effectively prevents anonymous "
 "external access."
 msgstr ""
+" مصرف کنندگان API تصدیق می شوند که به طور مؤثری از دسترسی خارجی ناشناس "
+"جلوگیری می کند."
 
-#: backend/views/settings.php:62
+#: backend/views/settings.php:93
 msgid "Disable Comment Website Field"
 msgstr "غیرفعال کردن فیلد وبسایت در کامنت ها"
 
-#: backend/views/settings.php:70
+#: backend/views/settings.php:101
 msgid "Remove Welcome Panel"
 msgstr "حذف پنل خوش آمد گویی داشبورد"
 
-#: backend/views/settings.php:78
+#: backend/views/settings.php:109
 msgid "Disable Emojis"
 msgstr "غیرفعال کردن ایموجی ها"
 
-#: backend/views/settings.php:86
+#: backend/views/settings.php:117
 msgid "Disable Embeds"
 msgstr "غیرفعال کردن Embeds"
 
-#: backend/views/settings.php:94
+#: backend/views/settings.php:125
 msgid "Disable XML-RPC"
 msgstr "غیرفعال کردن XML-RPC"
 
-#: backend/views/settings.php:102
+#: backend/views/settings.php:133
 msgid "Remove Shortlink"
 msgstr "حذف لینک های کوتاه"
 
-#: backend/views/settings.php:110
+#: backend/views/settings.php:141
 msgid "Remove WP Version"
 msgstr "مخفی کردن ورژن وردپرس"
 
-#: backend/views/settings.php:120
+#: backend/views/settings.php:151
 msgid "Hide Admin Bar"
 msgstr "مخفی کردن نوار ادمین"
 
-#: backend/views/settings.php:121
+#: backend/views/settings.php:152
 msgid "Hide admin bar for user roles"
 msgstr "نوار ادمین را برای نقش های کاربری مختلف مخفی کنید"
 
-#: backend/views/settings.php:130
+#: backend/views/settings.php:161
 msgid "Hide Update Notifications"
 msgstr "مخفی کردن پیغام های به روز رسانی"
 
-#: backend/views/settings.php:131
+#: backend/views/settings.php:162
 msgid "Hide update notifications for user roles"
 msgstr "پیغام های به روزرسانی را برای نقش های کاربری مختلف مخفی کنید"
 
-#: backend/views/settings.php:140
+#: backend/views/settings.php:171
 msgid "Remove Dashboard Widgets"
 msgstr "حذف ویجت های داشبورد"
 
-#: backend/views/settings.php:141
+#: backend/views/settings.php:172
 msgid "Check widgets to remove from dashboard"
 msgstr "برای حذف شدن ویجت ها از داشبورد آن ها را انتخاب کنید"
 
-#: backend/views/settings.php:145
+#: backend/views/settings.php:176
 msgid "Dashboard Activity"
 msgstr "فعالیت"
 
-#: backend/views/settings.php:146
+#: backend/views/settings.php:177
 msgid "Dashboard Site Health"
 msgstr "وضعیت سلامت سایت"
 
-#: backend/views/settings.php:147
+#: backend/views/settings.php:178
 msgid "Dashboard Quick Press"
 msgstr "پیش‌نویس سریع"
 
-#: backend/views/settings.php:148
+#: backend/views/settings.php:179
 msgid "Dashboard Incoming Links"
 msgstr "اخبار و رویداد های وردپرس"
 
-#: backend/views/settings.php:149
+#: backend/views/settings.php:180
 msgid "Dashboard Right Now"
 msgstr "در یک نگاه"
 
-#: backend/views/settings.php:150
+#: backend/views/settings.php:181
 msgid "Dashboard Plugins"
 msgstr "پلاگین ها"
 
-#: backend/views/settings.php:151
+#: backend/views/settings.php:182
 msgid "Dashboard Recent Drafts"
 msgstr "آخرین نوشته ها"
 
-#: backend/views/settings.php:152
+#: backend/views/settings.php:183
 msgid "Dashboard Recent Comments"
 msgstr "کامنت های اخیر"
 
-#: backend/views/settings.php:153
+#: backend/views/settings.php:184
 msgid "Dashboard Primary"
 msgstr "اصلی"
 
@@ -212,12 +187,20 @@ msgstr "اصلی"
 msgid "Hey! You have clicked the button!"
 msgstr ""
 
-#: functions/debug.php:12
-msgid "Plugin Name"
-msgstr ""
-
 #: integrations/CMB.php:47
 msgid "Demo Metabox"
+msgstr ""
+
+#: integrations/CMB.php:58
+msgid "Text"
+msgstr ""
+
+#: integrations/CMB.php:59 integrations/CMB.php:67 integrations/CMB.php:76
+#: integrations/CMB.php:84 vendor/cmb2-grid/Test/Test.php:32
+#: vendor/cmb2-grid/Test/Test.php:38 vendor/cmb2-grid/Test/Test.php:102
+#: vendor/cmb2-grid/Test/Test.php:108 vendor/cmb2-grid/Test/Test.php:114
+#: vendor/cmb2-grid/Test/Test.php:120 vendor/cmb2-grid/Test/Test.php:126
+msgid "field description (optional)"
 msgstr ""
 
 #: integrations/CMB.php:66
@@ -230,98 +213,6 @@ msgstr ""
 
 #: integrations/CMB.php:83
 msgid "Text Small 2"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:26
-msgid "My Recent Posts Example"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:27
-msgid "My Recent Posts Widget Description"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:36
-msgid "Title"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:38
-msgid "Enter the widget title."
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:46
-msgid "Recent Posts"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:77
-msgid "Taxonomy"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:78
-msgid "Set the taxonomy."
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:85
-msgid "Taxonomy terms"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:86
-msgid "Set the taxonomy terms."
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:94
-msgid "Pages"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:95
-msgid "Set the page."
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:102
-msgid "Post type"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:103
-msgid "Set the post type."
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:111
-msgid "Amount"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:112
-msgid "Select how many posts to show."
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:118
-msgid "1 Post"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:122
-msgid "2 Posts"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:126
-msgid "3 Posts"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:137
-msgid "Output as list"
-msgstr ""
-
-#: integrations/Widgets/My_Recent_Posts_Widget.php:138
-msgid "Wraps posts with the <li> tag."
-msgstr ""
-
-#: internals/PostTypes.php:37
-msgid "CMB2 Field"
-msgstr ""
-
-#: rest/Example.php:63
-msgid "Text field demo of Post type"
-msgstr ""
-
-#: rest/Example.php:106
-msgid "Failed to update post views."
 msgstr ""
 
 #: vendor/cmb2-grid/Test/Test.php:27
@@ -543,51 +434,12 @@ msgid ""
 "Scope under which the request is made; determines fields present in response."
 msgstr ""
 
-#: vendor/wpbp/pointerplus/pointerplus.php:78
-msgid "PointerPlus Error: post_type is not an array!"
-msgstr ""
-
-#: vendor/wpbp/pointerplus/pointerplus.php:102
-msgid "PointerPlus Error: pages is not an array!"
-msgstr ""
-
-#: vendor/wpbp/pointerplus/pointerplus.php:137
-msgid "Next"
-msgstr ""
-
-#: vendor/wpdesk/wp-builder/src/Plugin/AbstractPlugin.php:201
-msgid "Support"
-msgstr ""
-
-#: vendor/wpdesk/wp-builder/src/Plugin/AbstractPlugin.php:207
-msgid "Docs"
-msgstr ""
-
-#: vendor/yoast/i18n-module/src/i18n-v3.php:233
-#, php-format
-msgid ""
-"As you can see, there is a translation of this plugin in %1$s. This "
-"translation is currently %3$d%% complete. We need your help to make it "
-"complete and to fix any errors. Please register at %4$s to help complete the "
-"translation to %1$s!"
-msgstr ""
-
-#: vendor/yoast/i18n-module/src/i18n-v3.php:237
-#, php-format
-msgid ""
-"You're using WordPress in %1$s. While %2$s has been translated to %1$s for "
-"%3$d%%, it's not been shipped with the plugin yet. You can help! Register at "
-"%4$s to help complete the translation to %1$s!"
-msgstr ""
-
-#: vendor/yoast/i18n-module/src/i18n-v3.php:241
-#, php-format
-msgid ""
-"You're using WordPress in a language we don't support yet. We'd love for "
-"%2$s to be translated in that language too, but unfortunately, it isn't "
-"right now. You can change that! Register at %4$s to help translate it!"
-msgstr ""
-
-#: wp2x.php:57
+#: wp2x.php:58
 msgid "\"WP2X\" requires PHP 5.6 or newer."
 msgstr ""
+
+#~ msgid "Failed to import the settings."
+#~ msgstr "خطا در درون ریزی تنظیمات."
+
+#~ msgid "Updated Messages"
+#~ msgstr "پیام های به روز شده"

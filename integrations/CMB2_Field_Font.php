@@ -70,24 +70,26 @@ class CMB2_Field_Font extends Base {
 	 */
 	public function setup_admin_scripts() {
 
-		// https://github.com/typekit/webfontloader
-		wp_register_script( 'cmb-font-webfont', \plugins_url( 'assets/js/webfont.js', W_PLUGIN_ABSOLUTE ), array( 'jquery' ), self::VERSION, true );
-		wp_enqueue_script( 'cmb-font-webfont' );
+		if( get_locale() != 'fa_IR' ) {
+			// https://github.com/typekit/webfontloader
+			wp_register_script( 'cmb-font-webfont', \plugins_url( 'assets/js/webfont.js', W_PLUGIN_ABSOLUTE ), array( 'jquery' ), self::VERSION, true );
+			wp_enqueue_script( 'cmb-font-webfont' );
 
-		// https://select2.org/
-		wp_register_script( 'cmb-font-select2', \plugins_url( 'assets/js/select2.full.min.js', W_PLUGIN_ABSOLUTE ), array( 'jquery' ), self::VERSION, true );
-		wp_enqueue_script( 'cmb-font-select2' );
+			// https://select2.org/
+			wp_register_script( 'cmb-font-select2', \plugins_url( 'assets/js/select2.full.min.js', W_PLUGIN_ABSOLUTE ), array( 'jquery' ), self::VERSION, true );
+			wp_enqueue_script( 'cmb-font-select2' );
 
-		wp_enqueue_style( 'cmb-font-select2', \plugins_url( 'assets/css/select2.min.css', W_PLUGIN_ABSOLUTE ), array(), self::VERSION );
-		wp_enqueue_style( 'cmb-font-select2' );
+			wp_enqueue_style( 'cmb-font-select2', \plugins_url( 'assets/css/select2.min.css', W_PLUGIN_ABSOLUTE ), array(), self::VERSION );
+			wp_enqueue_style( 'cmb-font-select2' );
 
-		// https://github.com/saadqbal/HiGoogleFonts
-		// Note: HiGoogleFonts has been modified to add search box, custom placeholder and use select2 default theme (instead of the horrible classic theme)
-		wp_register_script( 'cmb-font-higooglefonts', \plugins_url( 'assets/js/higooglefonts.js', W_PLUGIN_ABSOLUTE ), array( 'jquery', 'cmb-font-webfont', 'cmb-font-select2' ), self::VERSION, true );
-		wp_enqueue_script( 'cmb-font-higooglefonts' );
+			// https://github.com/saadqbal/HiGoogleFonts
+			// Note: HiGoogleFonts has been modified to add search box, custom placeholder and use select2 default theme (instead of the horrible classic theme)
+			wp_register_script( 'cmb-font-higooglefonts', \plugins_url( 'assets/js/higooglefonts.js', W_PLUGIN_ABSOLUTE ), array( 'jquery', 'cmb-font-webfont', 'cmb-font-select2' ), self::VERSION, true );
+			wp_enqueue_script( 'cmb-font-higooglefonts' );
 
-		wp_enqueue_style( 'cmb-field-font', \plugins_url( 'assets/css/font.css', W_PLUGIN_ABSOLUTE ), array(), self::VERSION );
-		wp_enqueue_style( 'cmb-field-font' );
+			wp_enqueue_style( 'cmb-field-font', \plugins_url( 'assets/css/font.css', W_PLUGIN_ABSOLUTE ), array(), self::VERSION );
+			wp_enqueue_style( 'cmb-field-font' );
+		}
 
 	}
 
