@@ -24,6 +24,7 @@ class Settings_Page extends Base
 	 * @var false|mixed|void
 	 */
 	public $settings_option;
+	public $get_locale;
 
 	/**
 	 * Initialize the class.
@@ -32,6 +33,7 @@ class Settings_Page extends Base
 	 */
 	public function initialize()
 	{
+		$this->get_locale      = get_locale();
 		$this->settings_option = get_option('wp2x-settings');
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'change_admin_font' ), 30 );
@@ -112,28 +114,40 @@ class Settings_Page extends Base
 
 	public function change_admin_font()
 	{
-		$admin_font = $this->settings_option['admin-font'];
+		$font_styles = '';
+		$admin_font  = $this->settings_option['admin-font'];
 
 		if( isset( $admin_font ) && $admin_font != 'wp-default' )
 		{
-			add_action( 'wp_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
-			add_action( 'admin_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
+			if( $this->get_locale == 'fa_IR' )
+			{
+				add_action( 'wp_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
+				add_action( 'admin_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
+			}
+			else
+				$font_styles .= '@import url("https://fonts.googleapis.com/css?family=' . str_replace( ' ', '+', $admin_font ) . '"); ';
 
-			$font_styles = 'body, .rtl h1, .rtl h2, .rtl h3, .rtl h4, .rtl h5, .rtl h6, label, input, textarea, .components-notice, #wpadminbar *:not([class="ab-icon"]), .wp-core-ui, .media-menu, .media-frame *, .media-modal *{font-family:"'. $admin_font .'" !important;}';
+			$font_styles .= 'body, h1, h2, h3, h4, h5, h6, label, input, textarea, .components-notice, #wpadminbar *:not([class="ab-icon"]), .wp-core-ui, .media-menu, .media-frame *, .media-modal *{font-family:"'. $admin_font .'" !important;}';
 			wp_add_inline_style( W_TEXTDOMAIN . '-admin-styles', $font_styles );
 		}
 	}
 
 	public function change_editor_font()
 	{
+		$font_styles = '';
 		$editor_font = $this->settings_option['editor-font'];
 
 		if( isset( $editor_font ) && $editor_font != 'wp-default' )
 		{
-			add_action( 'wp_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
-			add_action( 'admin_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
+			if( $this->get_locale == 'fa_IR' )
+			{
+				add_action( 'wp_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
+				add_action( 'admin_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
+			}
+			else
+				$font_styles .= '@import url("https://fonts.googleapis.com/css?family=' . str_replace( ' ', '+', $editor_font ) . '"); ';
 
-			$font_styles = '#editorcontainer #content, #wp_mce_fullscreen, .block-editor-writing-flow input, .block-editor-writing-flow textarea, .block-editor-writing-flow p {font-family:"'. $editor_font .'" !important;}';
+			$font_styles .= '#editorcontainer #content, #wp_mce_fullscreen, .block-editor-writing-flow input, .block-editor-writing-flow textarea, .block-editor-writing-flow p {font-family:"'. $editor_font .'" !important;}';
 			wp_add_inline_style( W_TEXTDOMAIN . '-admin-styles', $font_styles );
 		}
 	}

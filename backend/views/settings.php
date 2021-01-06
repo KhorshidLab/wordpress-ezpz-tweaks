@@ -10,27 +10,52 @@
 		)
 	);
 
-	$cmb->add_field(
-		array(
-			'name'             => __( 'Admin Font', W_TEXTDOMAIN ),
-			'desc'             => __( 'Change WordPress admin font', W_TEXTDOMAIN ),
-			'id'               => 'admin-font',
-			'type'             => 'select',
-			'show_option_none' => false,
-			'options'          => $settings_page->custom_fonts(),
-		)
-	);
-
-	$cmb->add_field(
+	if ( get_locale() == 'fa_IR' )
+	{
+		$cmb->add_field(
 			array(
-					'name'             => __( 'Editor Font', W_TEXTDOMAIN ),
-					'desc'             => __( 'Change WordPress editor font', W_TEXTDOMAIN ),
-					'id'               => 'editor-font',
-					'type'             => 'select',
-					'show_option_none' => false,
-					'options'          => $settings_page->custom_fonts(),
+				'name'             => __( 'Admin Font', W_TEXTDOMAIN ),
+				'desc'             => __( 'Change WordPress admin font', W_TEXTDOMAIN ),
+				'id'               => 'admin-font',
+				'type'             => 'select',
+				'show_option_none' => false,
+				'options'          => $settings_page->custom_fonts(),
 			)
-	);
+		);
+
+		$cmb->add_field(
+			array(
+				'name'             => __( 'Editor Font', W_TEXTDOMAIN ),
+				'desc'             => __( 'Change WordPress editor font', W_TEXTDOMAIN ),
+				'id'               => 'editor-font',
+				'type'             => 'select',
+				'show_option_none' => false,
+				'options'          => $settings_page->custom_fonts(),
+			)
+		);
+	}
+	else
+	{
+		$cmb->add_field(
+			array(
+				'name'       => __( 'Admin Font', W_TEXTDOMAIN ),
+				'desc'       => __( 'Change WordPress admin font', W_TEXTDOMAIN ),
+				'id'         => 'admin-font',
+				'type'       => 'font',
+				'attributes' => array( 'data-placeholder' => __( 'Choose a font', 'cmb2' ) )
+			)
+		);
+
+		$cmb->add_field(
+			array(
+				'name'       => __( 'Editor Font', W_TEXTDOMAIN ),
+				'desc'       => __( 'Change WordPress editor font', W_TEXTDOMAIN ),
+				'id'         => 'editor-font',
+				'type'       => 'font',
+				'attributes' => array( 'data-placeholder' => __( 'Choose a font', 'cmb2' ) )
+			)
+		);
+	}
 
 	$cmb->add_field(
 		array(
