@@ -11,7 +11,10 @@
 				array(
 						'id'         => W_TEXTDOMAIN . '_options',
 						'hookup'     => false,
-						'show_on'    => array( 'key' => 'options-page', 'value' => array( W_TEXTDOMAIN . '-settings' ) ),
+						'show_on'    => array(
+								'key'   => 'options-page',
+								'value' => array( W_TEXTDOMAIN . '-settings' )
+						),
 						'show_names' => true,
 				)
 		);
@@ -116,11 +119,11 @@
 		);
 
 		$cmb->add_field(
-				array(
-						'name' => __( 'Disable Embeds', W_TEXTDOMAIN ),
-						'id'   => 'disable_wp_embed',
-						'type' => 'checkbox',
-				)
+			array(
+					'name' => __( 'Disable Embeds', W_TEXTDOMAIN ),
+					'id'   => 'disable_wp_embed',
+					'type' => 'checkbox',
+			)
 		);
 
 		$cmb->add_field(
@@ -189,6 +192,15 @@
 				)
 		);
 
+		$cmb->add_field(
+				array(
+						'name' => __( 'Custom CSS', W_TEXTDOMAIN ),
+						'desc' => __( 'Apply custom css to admin area', W_TEXTDOMAIN ),
+						'id'   => 'custom_css',
+						'type' => 'textarea',
+				)
+		);
+
 		cmb2_metabox_form( W_TEXTDOMAIN . '_options', W_TEXTDOMAIN . '-settings' );
 		?>
 	</div>
@@ -198,7 +210,7 @@
 			<div class="inside">
 				<p><?php _e( 'Export the plugin\'s settings for this site as a .json file. This will allows you to easily import the configuration to another installation.', W_TEXTDOMAIN ); ?></p>
 				<form method="post">
-					<p><input type="hidden" name="w_action" value="export_settings" /></p>
+					<p><input type="hidden" name="w_action" value="export_settings"/></p>
 					<p>
 						<?php wp_nonce_field( 'w_export_nonce', 'w_export_nonce' ); ?>
 						<?php submit_button( __( 'Export', W_TEXTDOMAIN ), 'secondary', 'submit', false ); ?>
@@ -216,7 +228,7 @@
 						<input type="file" name="w_import_file"/>
 					</p>
 					<p>
-						<input type="hidden" name="w_action" value="import_settings" />
+						<input type="hidden" name="w_action" value="import_settings"/>
 						<?php wp_nonce_field( 'w_import_nonce', 'w_import_nonce' ); ?>
 						<?php submit_button( __( 'Import', W_TEXTDOMAIN ), 'secondary', 'submit', false ); ?>
 					</p>

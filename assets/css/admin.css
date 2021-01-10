@@ -153,3 +153,7 @@
 .wp2x-tabs h3.hndle {
 	padding: 0 1em;
 }
+
+.wp2x-tabs .CodeMirror {
+	width: 700px !important;
+}

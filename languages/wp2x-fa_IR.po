@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-01-10 16:37+0330\n"
-"PO-Revision-Date: 2021-01-10 16:47+0330\n"
+"POT-Creation-Date: 2021-01-10 18:05+0330\n"
+"PO-Revision-Date: 2021-01-10 18:05+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -19,39 +19,39 @@ msgstr ""
 msgid "Failed to import the settings."
 msgstr "خطا در درون ریزی تنظیمات."
 
-#: backend/Settings_Page.php:68 backend/Settings_Page.php:115 wp2x.php:33
+#: backend/Settings_Page.php:69 backend/Settings_Page.php:116 wp2x.php:33
 msgid "Khorshid"
 msgstr "خورشيد"
 
-#: backend/Settings_Page.php:73 backend/Settings_Page.php:109
+#: backend/Settings_Page.php:74 backend/Settings_Page.php:110
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: backend/Settings_Page.php:110
+#: backend/Settings_Page.php:111
 msgid "Donate"
 msgstr "حمایت مالی"
 
-#: backend/Settings_Page.php:115
+#: backend/Settings_Page.php:116
 msgid "WordPress Support"
 msgstr "پشتیبانی وردپرس"
 
-#: backend/Settings_Page.php:243
+#: backend/Settings_Page.php:244
 msgid "WordPress Default"
 msgstr "پیشفرض وردپرس"
 
-#: backend/Settings_Page.php:244
+#: backend/Settings_Page.php:245
 msgid "Vazir"
 msgstr "وزیر"
 
-#: backend/Settings_Page.php:245
+#: backend/Settings_Page.php:246
 msgid "Estedad"
 msgstr "استعداد"
 
-#: backend/Settings_Page.php:246
+#: backend/Settings_Page.php:247
 msgid "Iranian"
 msgstr "ایرانیان"
 
-#: backend/Settings_Page.php:247
+#: backend/Settings_Page.php:248
 msgid "Noto"
 msgstr "نوتو"
 
@@ -63,43 +63,43 @@ msgstr "تنظیمات عمومی"
 msgid "Import & Export"
 msgstr "درون ریزی و برون بری"
 
-#: backend/views/settings.php:22 backend/views/settings.php:44
+#: backend/views/settings.php:25 backend/views/settings.php:47
 msgid "Admin Font"
 msgstr "فونت پنل مدیریت"
 
-#: backend/views/settings.php:23 backend/views/settings.php:45
+#: backend/views/settings.php:26 backend/views/settings.php:48
 msgid "Change WordPress admin font"
 msgstr "فونت پنل مدیریت را تغییر دهید"
 
-#: backend/views/settings.php:33 backend/views/settings.php:54
+#: backend/views/settings.php:36 backend/views/settings.php:57
 msgid "Editor Font"
 msgstr "فونت ویرایشگر"
 
-#: backend/views/settings.php:34 backend/views/settings.php:55
+#: backend/views/settings.php:37 backend/views/settings.php:58
 msgid "Change WordPress editor font"
 msgstr "فونت ویرایشگر وردپرس را تغییر دهید"
 
-#: backend/views/settings.php:48 backend/views/settings.php:58
+#: backend/views/settings.php:51 backend/views/settings.php:61
 msgid "Choose a font"
 msgstr "یک فونت را انتخاب کنید"
 
-#: backend/views/settings.php:65
+#: backend/views/settings.php:68
 msgid "Change WordPress Logo"
 msgstr "تغییر لوگو وردپرس"
 
-#: backend/views/settings.php:66
+#: backend/views/settings.php:69
 msgid "Upload an image or enter an URL."
 msgstr "تصویر را آپلود کنید یا URL تصویر را وارد کنید."
 
-#: backend/views/settings.php:73
+#: backend/views/settings.php:76
 msgid "Add File"
 msgstr "انتخاب فایل"
 
-#: backend/views/settings.php:87
+#: backend/views/settings.php:90
 msgid "Disable WP REST API"
 msgstr "غیرفعال کردن WP REST API"
 
-#: backend/views/settings.php:88
+#: backend/views/settings.php:91
 msgid ""
 " API consumers be authenticated, which effectively prevents anonymous "
 "external access."
@@ -107,99 +107,107 @@ msgstr ""
 " مصرف کنندگان API تصدیق می شوند که به طور مؤثری از دسترسی خارجی ناشناس "
 "جلوگیری می کند."
 
-#: backend/views/settings.php:96
+#: backend/views/settings.php:99
 msgid "Disable Comment Website Field"
 msgstr "غیرفعال کردن فیلد وبسایت در کامنت ها"
 
-#: backend/views/settings.php:104
+#: backend/views/settings.php:107
 msgid "Remove Welcome Panel"
 msgstr "حذف پنل خوش آمد گویی داشبورد"
 
-#: backend/views/settings.php:112
+#: backend/views/settings.php:115
 msgid "Disable Emojis"
 msgstr "غیرفعال کردن ایموجی ها"
 
-#: backend/views/settings.php:120
+#: backend/views/settings.php:123
 msgid "Disable Embeds"
 msgstr "غیرفعال کردن Embeds"
 
-#: backend/views/settings.php:128
+#: backend/views/settings.php:131
 msgid "Disable XML-RPC"
 msgstr "غیرفعال کردن XML-RPC"
 
-#: backend/views/settings.php:136
+#: backend/views/settings.php:139
 msgid "Remove Shortlink"
 msgstr "حذف لینک های کوتاه"
 
-#: backend/views/settings.php:144
+#: backend/views/settings.php:147
 msgid "Remove WP Version"
 msgstr "مخفی کردن ورژن وردپرس"
 
-#: backend/views/settings.php:154
+#: backend/views/settings.php:157
 msgid "Hide Admin Bar"
 msgstr "مخفی کردن نوار ادمین"
 
-#: backend/views/settings.php:155
+#: backend/views/settings.php:158
 msgid "Hide admin bar for user roles"
 msgstr "نوار ادمین را برای نقش های کاربری مختلف مخفی کنید"
 
-#: backend/views/settings.php:164
+#: backend/views/settings.php:167
 msgid "Hide Update Notifications"
 msgstr "مخفی کردن پیغام های به روز رسانی"
 
-#: backend/views/settings.php:165
+#: backend/views/settings.php:168
 msgid "Hide update notifications for user roles"
 msgstr "پیغام های به روزرسانی را برای نقش های کاربری مختلف مخفی کنید"
 
-#: backend/views/settings.php:174
+#: backend/views/settings.php:177
 msgid "Remove Dashboard Widgets"
 msgstr "حذف ویجت های داشبورد"
 
-#: backend/views/settings.php:175
+#: backend/views/settings.php:178
 msgid "Check widgets to remove from dashboard"
 msgstr "برای حذف شدن ویجت ها از داشبورد آن ها را انتخاب کنید"
 
-#: backend/views/settings.php:179
+#: backend/views/settings.php:182
 msgid "Dashboard Activity"
 msgstr "فعالیت"
 
-#: backend/views/settings.php:180
+#: backend/views/settings.php:183
 msgid "Dashboard Site Health"
 msgstr "وضعیت سلامت سایت"
 
-#: backend/views/settings.php:181
+#: backend/views/settings.php:184
 msgid "Dashboard Quick Press"
 msgstr "پیش‌نویس سریع"
 
-#: backend/views/settings.php:182
+#: backend/views/settings.php:185
 msgid "Dashboard Incoming Links"
 msgstr "اخبار و رویداد های وردپرس"
 
-#: backend/views/settings.php:183
+#: backend/views/settings.php:186
 msgid "Dashboard Right Now"
 msgstr "در یک نگاه"
 
-#: backend/views/settings.php:184
+#: backend/views/settings.php:187
 msgid "Dashboard Plugins"
 msgstr "پلاگین ها"
 
-#: backend/views/settings.php:185
+#: backend/views/settings.php:188
 msgid "Dashboard Recent Drafts"
 msgstr "آخرین نوشته ها"
 
-#: backend/views/settings.php:186
+#: backend/views/settings.php:189
 msgid "Dashboard Recent Comments"
 msgstr "کامنت های اخیر"
 
-#: backend/views/settings.php:187
+#: backend/views/settings.php:190
 msgid "Dashboard Primary"
 msgstr "اصلی"
 
 #: backend/views/settings.php:197
+msgid "Custom CSS"
+msgstr "استایل سفارشی"
+
+#: backend/views/settings.php:198
+msgid "Apply custom css to admin area"
+msgstr "اعمال CSS سفارشی به پنل مدیریت"
+
+#: backend/views/settings.php:209
 msgid "Export Settings"
 msgstr "برون بری تنظیمات"
 
-#: backend/views/settings.php:199
+#: backend/views/settings.php:211
 msgid ""
 "Export the plugin's settings for this site as a .json file. This will allows "
 "you to easily import the configuration to another installation."
@@ -207,15 +215,15 @@ msgstr ""
 "از تنظیمات مربوط به این سایت خروجی فایل .json بگیرید. این کار به شما امکان "
 "میدهد تا تنظیمات خود را به آسانی در یک سایت دیگر درون ریزی کنید."
 
-#: backend/views/settings.php:204
+#: backend/views/settings.php:216
 msgid "Export"
 msgstr "برون بری"
 
-#: backend/views/settings.php:211
+#: backend/views/settings.php:223
 msgid "Import Settings"
 msgstr "برون بری تنظیمات"
 
-#: backend/views/settings.php:213
+#: backend/views/settings.php:225
 msgid ""
 "Import the plugin's settings from a .json file. This file can be retrieved "
 "by exporting the settings from another installation."
@@ -223,7 +231,7 @@ msgstr ""
 "تنظیمات سایت را از طریق یک فایل .json درون ریزی کنید. این فایل میتواند از "
 "طریق برون بری تنظیمات ایجاد شود."
 
-#: backend/views/settings.php:221
+#: backend/views/settings.php:233
 msgid "Import"
 msgstr "درون ریزی"
 

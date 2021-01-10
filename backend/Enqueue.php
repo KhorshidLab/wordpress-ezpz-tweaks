@@ -55,6 +55,7 @@ class Enqueue extends Base {
 	 */
 	public function enqueue_admin_scripts() {
 		wp_enqueue_script( W_TEXTDOMAIN . '-admin-script', plugins_url( 'assets/js/admin.js', W_PLUGIN_ABSOLUTE ), array( 'jquery' ), W_VERSION, false );
+		wp_enqueue_code_editor( array( 'type' => 'text/css' ) );
 	}
 
 
