@@ -31,38 +31,37 @@ use function wp_get_current_user;
 /**
  * Plugin Name Is Methods
  */
-class Is_Methods
-{
+class Is_Methods {
 
 	/**
 	 * Whether given user is an administrator.
 	 *
 	 * @param WP_User|null $user The given user.
+	 *
 	 * @return bool
 	 */
-	public static function is_user_admin(WP_User $user = null)
-	{ //phpcs:ignore
-		if (is_null($user)) {
+	public static function is_user_admin( WP_User $user = null ) { //phpcs:ignore
+		if ( is_null( $user ) ) {
 			$user = wp_get_current_user();
 		}
 
-		if (!$user instanceof WP_User) {
-			_doing_it_wrong(__METHOD__, 'To check if the user is admin is required a WP_User object.', '1.0.0');
+		if ( ! $user instanceof WP_User ) {
+			_doing_it_wrong( __METHOD__, 'To check if the user is admin is required a WP_User object.', '1.0.0' );
 		}
 
-		return is_multisite() ? user_can($user, 'manage_network') : user_can($user, 'manage_options');
+		return is_multisite() ? user_can( $user, 'manage_network' ) : user_can( $user, 'manage_options' );
 	}
 
 	/**
 	 * What type of request is this?
 	 *
 	 * @param string $type admin, ajax, cron, cli, amp or frontend.
+	 *
 	 * @return bool
 	 * @since 1.0.0
 	 */
-	public function request(string $type)
-	{
-		switch ($type) {
+	public function request( string $type ) {
+		switch ( $type ) {
 			case 'backend':
 				return $this->is_admin_backend();
 
@@ -88,7 +87,7 @@ class Is_Methods
 				return $this->is_amp();
 
 			default:
-				_doing_it_wrong(__METHOD__, esc_html(sprintf('Unknown request type: %s', $type)), '1.0.0');
+				_doing_it_wrong( __METHOD__, esc_html( sprintf( 'Unknown request type: %s', $type ) ), '1.0.0' );
 
 				return false;
 		}
@@ -99,8 +98,7 @@ class Is_Methods
 	 *
 	 * @return bool
 	 */
-	public function is_admin_backend()
-	{
+	public function is_admin_backend() {
 		return is_user_logged_in() && is_admin();
 	}
 
@@ -109,9 +107,8 @@ class Is_Methods
 	 *
 	 * @return bool
 	 */
-	public function is_ajax()
-	{
-		return (function_exists('wp_doing_ajax') && wp_doing_ajax()) || defined('DOING_AJAX');
+	public function is_ajax() {
+		return ( function_exists( 'wp_doing_ajax' ) && wp_doing_ajax() ) || defined( 'DOING_AJAX' );
 	}
 
 	/**
@@ -119,9 +116,8 @@ class Is_Methods
 	 *
 	 * @return bool
 	 */
-	public function is_installing_wp()
-	{
-		return defined('WP_INSTALLING');
+	public function is_installing_wp() {
+		return defined( 'WP_INSTALLING' );
 	}
 
 	/**
@@ -129,9 +125,8 @@ class Is_Methods
 	 *
 	 * @return bool
 	 */
-	public function is_rest()
-	{
-		return defined('REST_REQUEST');
+	public function is_rest() {
+		return defined( 'REST_REQUEST' );
 	}
 
 	/**
@@ -139,9 +134,8 @@ class Is_Methods
 	 *
 	 * @return bool
 	 */
-	public function is_cron()
-	{
-		return (function_exists('wp_doing_cron') && wp_doing_cron()) || defined('DOING_CRON');
+	public function is_cron() {
+		return ( function_exists( 'wp_doing_cron' ) && wp_doing_cron() ) || defined( 'DOING_CRON' );
 	}
 
 	/**
@@ -149,9 +143,8 @@ class Is_Methods
 	 *
 	 * @return bool
 	 */
-	public function is_frontend()
-	{
-		return (!$this->is_admin_backend() || !$this->is_ajax()) && !$this->is_cron() && !$this->is_rest();
+	public function is_frontend() {
+		return ( ! $this->is_admin_backend() || ! $this->is_ajax() ) && ! $this->is_cron() && ! $this->is_rest();
 	}
 
 	/**
@@ -159,9 +152,8 @@ class Is_Methods
 	 *
 	 * @return bool
 	 */
-	public function is_cli()
-	{
-		return defined('WP_CLI') && WP_CLI;
+	public function is_cli() {
+		return defined( 'WP_CLI' ) && WP_CLI;
 	}
 
 	/**
@@ -169,9 +161,8 @@ class Is_Methods
 	 *
 	 * @return bool
 	 */
-	public function is_amp()
-	{
-		return function_exists('is_amp_endpoint') && is_amp_endpoint();
+	public function is_amp() {
+		return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
 	}
 
 }

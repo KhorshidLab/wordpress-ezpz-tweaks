@@ -9,6 +9,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: Vazir;
 	src: url('../fonts/vazir-v27.1.0/Vazir-Bold.eot');
@@ -23,14 +24,13 @@
 /* Estedad Font */
 @font-face {
 	font-family: Estedad;
-	url('../fonts/estedad/Estedad-Medium.woff2') format('woff2'),
-	font-weight: normal;
+url('../fonts/estedad/Estedad-Medium.woff2') format('woff2'), font-weight: normal;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: Estedad;
-	url('../fonts/estedad/Estedad-Bold.woff2') format('woff2'),
-	font-weight: bold;
+url('../fonts/estedad/Estedad-Bold.woff2') format('woff2'), font-weight: bold;
 	font-style: normal;
 }
 
@@ -48,17 +48,18 @@
 /* NotoSans Font */
 @font-face {
 	font-family: NotoSans;
-	url('../fonts/notosans/NotoSansArabic-Regular.woff2') format('woff2'),
-	url('../fonts/notosans/NotoSansArabic-Regular.woff') format('woff'),
-	url('../fonts/notosans/NotoSansArabic-Regular.ttf') format('truetype');
+url('../fonts/notosans/NotoSansArabic-Regular.woff2') format('woff2'),
+url('../fonts/notosans/NotoSansArabic-Regular.woff') format('woff'),
+url('../fonts/notosans/NotoSansArabic-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: NotoSans;
-	url('../fonts/notosans/NotoSansArabic-Bold.woff2') format('woff2'),
-	url('../fonts/notosans/NotoSansArabic-Bold.woff') format('woff'),
-	url('../fonts/notosans/NotoSansArabic-Bold.ttf') format('truetype');
+url('../fonts/notosans/NotoSansArabic-Bold.woff2') format('woff2'),
+url('../fonts/notosans/NotoSansArabic-Bold.woff') format('woff'),
+url('../fonts/notosans/NotoSansArabic-Bold.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 }

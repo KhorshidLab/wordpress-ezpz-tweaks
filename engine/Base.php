@@ -17,12 +17,10 @@ use function w_get_settings;
 /**
  * Base skeleton of the plugin
  */
-class Base
-{
+class Base {
 
 	/** Initialize the class and get the plugin settings */
-	public function initialize()
-	{
+	public function initialize() {
 
 	}
 
