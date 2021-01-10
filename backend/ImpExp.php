@@ -25,9 +25,9 @@ class ImpExp extends Base {
 	 * @return void
 	 */
 	public function initialize() {
-		if ( !parent::initialize() ) {
-			return;
-		}
+//		if ( !parent::initialize() ) {
+//			return;
+//		}
 
 		// Add the export settings method
 		\add_action( 'admin_init', array( $this, 'settings_export' ) );
@@ -54,9 +54,7 @@ class ImpExp extends Base {
 			return;
 		}
 
-		$settings      = array();
-		$settings[ 0 ] = \get_option( W_TEXTDOMAIN . '-settings' );
-		$settings[ 1 ] = \get_option( W_TEXTDOMAIN . '-settings-second' );
+		$settings = \get_option( W_TEXTDOMAIN . '-settings' );
 
 		\ignore_user_abort( true );
 
@@ -105,13 +103,12 @@ class ImpExp extends Base {
 		// Retrieve the settings from the file and convert the json object to an array.
 		$settings_file = file_get_contents( $import_file );// phpcs:ignore
 
-		if ( !$settings_file ) {
+		if ( $settings_file ) {
 			$settings = \json_decode( (string) $settings_file );
 
-			\update_option( W_TEXTDOMAIN . '-settings', \get_object_vars( $settings[ 0 ] ) );
-			\update_option( W_TEXTDOMAIN . '-settings-second', \get_object_vars( $settings[ 1 ] ) );
+			\update_option( W_TEXTDOMAIN . '-settings', \get_object_vars( $settings ) );
 
-			\wp_safe_redirect( \admin_url( 'options-general.php?page=' . W_TEXTDOMAIN ) );
+			\wp_safe_redirect( \admin_url( 'admin.php?page=' . W_TEXTDOMAIN . '-settings' ) );
 			exit;
 		}
 

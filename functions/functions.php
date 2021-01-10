@@ -9,6 +9,16 @@
  * @link      https://khorshidlab.com
  */
 
+/**
+ * Get the settings of the plugin in a filterable way
+ *
+ * @since 1.0.0
+ * @return array
+ */
+function w_get_settings() {
+	return apply_filters( 'w_get_settings', get_option( W_TEXTDOMAIN . '-settings' ) );
+}
+
 function wp_roles_array() {
 	if ( ! function_exists( 'get_editable_roles' ) ) {
 		require_once ABSPATH . 'wp-admin/includes/user.php';

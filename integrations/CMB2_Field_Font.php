@@ -91,9 +91,6 @@ class CMB2_Field_Font extends Base {
 				'cmb-font-select2'
 			), self::VERSION, true );
 			wp_enqueue_script( 'cmb-font-higooglefonts' );
-
-			wp_enqueue_style( 'cmb-field-font', plugins_url( 'assets/css/font.css', W_PLUGIN_ABSOLUTE ), array(), self::VERSION );
-			wp_enqueue_style( 'cmb-field-font' );
 		}
 
 	}
