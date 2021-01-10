@@ -1,4 +1,4 @@
-<div class="wp2x-tabs">
+<div class="wrap wp2x-tabs">
 	<!-- Start tabs -->
 	<ul class="wp-tab-bar">
 		<li class="wp-tab-active"><a href="#general"><?php _e( 'General', W_TEXTDOMAIN ) ?></a></li>
@@ -194,9 +194,9 @@
 	</div>
 	<div class="wp-tab-panel" id="import-export" style="display: none;">
 		<div class="postbox">
-			<h3 class="hndle"><span><?php esc_html_e( 'Export Settings', W_TEXTDOMAIN ); ?></span></h3>
+			<h3 class="hndle"><span><?php _e( 'Export Settings', W_TEXTDOMAIN ); ?></span></h3>
 			<div class="inside">
-				<p><?php esc_html_e( 'Export the plugin\'s settings for this site as a .json file. This will allows you to easily import the configuration to another installation.', W_TEXTDOMAIN ); ?></p>
+				<p><?php _e( 'Export the plugin\'s settings for this site as a .json file. This will allows you to easily import the configuration to another installation.', W_TEXTDOMAIN ); ?></p>
 				<form method="post">
 					<p><input type="hidden" name="w_action" value="export_settings" /></p>
 					<p>
@@ -208,9 +208,9 @@
 		</div>
 
 		<div class="postbox">
-			<h3 class="hndle"><span><?php esc_html_e( 'Import Settings', W_TEXTDOMAIN ); ?></span></h3>
+			<h3 class="hndle"><span><?php _e( 'Import Settings', W_TEXTDOMAIN ); ?></span></h3>
 			<div class="inside">
-				<p><?php esc_html_e( 'Import the plugin\'s settings from a .json file. This file can be retrieved by exporting the settings from another installation.', W_TEXTDOMAIN ); ?></p>
+				<p><?php _e( 'Import the plugin\'s settings from a .json file. This file can be retrieved by exporting the settings from another installation.', W_TEXTDOMAIN ); ?></p>
 				<form method="post" enctype="multipart/form-data">
 					<p>
 						<input type="file" name="w_import_file"/>

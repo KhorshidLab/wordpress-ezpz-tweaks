@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-01-06 13:30+0330\n"
-"PO-Revision-Date: 2021-01-06 13:32+0330\n"
+"POT-Creation-Date: 2021-01-10 16:37+0330\n"
+"PO-Revision-Date: 2021-01-10 16:47+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -15,79 +15,91 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;\\__\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: backend/Settings_Page.php:71 backend/Settings_Page.php:112 wp2x.php:30
+#: backend/ImpExp.php:117
+msgid "Failed to import the settings."
+msgstr "خطا در درون ریزی تنظیمات."
+
+#: backend/Settings_Page.php:68 backend/Settings_Page.php:115 wp2x.php:33
 msgid "Khorshid"
 msgstr "خورشيد"
 
-#: backend/Settings_Page.php:73 backend/Settings_Page.php:107
+#: backend/Settings_Page.php:73 backend/Settings_Page.php:109
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: backend/Settings_Page.php:107
+#: backend/Settings_Page.php:110
 msgid "Donate"
 msgstr "حمایت مالی"
 
-#: backend/Settings_Page.php:112
+#: backend/Settings_Page.php:115
 msgid "WordPress Support"
 msgstr "پشتیبانی وردپرس"
 
-#: backend/Settings_Page.php:247
+#: backend/Settings_Page.php:243
 msgid "WordPress Default"
 msgstr "پیشفرض وردپرس"
 
-#: backend/Settings_Page.php:248
+#: backend/Settings_Page.php:244
 msgid "Vazir"
 msgstr "وزیر"
 
-#: backend/Settings_Page.php:249
+#: backend/Settings_Page.php:245
 msgid "Estedad"
 msgstr "استعداد"
 
-#: backend/Settings_Page.php:250
+#: backend/Settings_Page.php:246
 msgid "Iranian"
 msgstr "ایرانیان"
 
-#: backend/Settings_Page.php:251
+#: backend/Settings_Page.php:247
 msgid "Noto"
 msgstr "نوتو"
 
-#: backend/views/settings.php:17 backend/views/settings.php:41
+#: backend/views/settings.php:4
+msgid "General"
+msgstr "تنظیمات عمومی"
+
+#: backend/views/settings.php:5
+msgid "Import & Export"
+msgstr "درون ریزی و برون بری"
+
+#: backend/views/settings.php:22 backend/views/settings.php:44
 msgid "Admin Font"
 msgstr "فونت پنل مدیریت"
 
-#: backend/views/settings.php:18 backend/views/settings.php:42
+#: backend/views/settings.php:23 backend/views/settings.php:45
 msgid "Change WordPress admin font"
 msgstr "فونت پنل مدیریت را تغییر دهید"
 
-#: backend/views/settings.php:28 backend/views/settings.php:51
+#: backend/views/settings.php:33 backend/views/settings.php:54
 msgid "Editor Font"
 msgstr "فونت ویرایشگر"
 
-#: backend/views/settings.php:29 backend/views/settings.php:52
+#: backend/views/settings.php:34 backend/views/settings.php:55
 msgid "Change WordPress editor font"
 msgstr "فونت ویرایشگر وردپرس را تغییر دهید"
 
-#: backend/views/settings.php:45 backend/views/settings.php:55
+#: backend/views/settings.php:48 backend/views/settings.php:58
 msgid "Choose a font"
 msgstr "یک فونت را انتخاب کنید"
 
-#: backend/views/settings.php:62
+#: backend/views/settings.php:65
 msgid "Change WordPress Logo"
 msgstr "تغییر لوگو وردپرس"
 
-#: backend/views/settings.php:63
+#: backend/views/settings.php:66
 msgid "Upload an image or enter an URL."
 msgstr "تصویر را آپلود کنید یا URL تصویر را وارد کنید."
 
-#: backend/views/settings.php:70
+#: backend/views/settings.php:73
 msgid "Add File"
 msgstr "انتخاب فایل"
 
-#: backend/views/settings.php:84
+#: backend/views/settings.php:87
 msgid "Disable WP REST API"
 msgstr "غیرفعال کردن WP REST API"
 
-#: backend/views/settings.php:85
+#: backend/views/settings.php:88
 msgid ""
 " API consumers be authenticated, which effectively prevents anonymous "
 "external access."
@@ -95,124 +107,128 @@ msgstr ""
 " مصرف کنندگان API تصدیق می شوند که به طور مؤثری از دسترسی خارجی ناشناس "
 "جلوگیری می کند."
 
-#: backend/views/settings.php:93
+#: backend/views/settings.php:96
 msgid "Disable Comment Website Field"
 msgstr "غیرفعال کردن فیلد وبسایت در کامنت ها"
 
-#: backend/views/settings.php:101
+#: backend/views/settings.php:104
 msgid "Remove Welcome Panel"
 msgstr "حذف پنل خوش آمد گویی داشبورد"
 
-#: backend/views/settings.php:109
+#: backend/views/settings.php:112
 msgid "Disable Emojis"
 msgstr "غیرفعال کردن ایموجی ها"
 
-#: backend/views/settings.php:117
+#: backend/views/settings.php:120
 msgid "Disable Embeds"
 msgstr "غیرفعال کردن Embeds"
 
-#: backend/views/settings.php:125
+#: backend/views/settings.php:128
 msgid "Disable XML-RPC"
 msgstr "غیرفعال کردن XML-RPC"
 
-#: backend/views/settings.php:133
+#: backend/views/settings.php:136
 msgid "Remove Shortlink"
 msgstr "حذف لینک های کوتاه"
 
-#: backend/views/settings.php:141
+#: backend/views/settings.php:144
 msgid "Remove WP Version"
 msgstr "مخفی کردن ورژن وردپرس"
 
-#: backend/views/settings.php:151
+#: backend/views/settings.php:154
 msgid "Hide Admin Bar"
 msgstr "مخفی کردن نوار ادمین"
 
-#: backend/views/settings.php:152
+#: backend/views/settings.php:155
 msgid "Hide admin bar for user roles"
 msgstr "نوار ادمین را برای نقش های کاربری مختلف مخفی کنید"
 
-#: backend/views/settings.php:161
+#: backend/views/settings.php:164
 msgid "Hide Update Notifications"
 msgstr "مخفی کردن پیغام های به روز رسانی"
 
-#: backend/views/settings.php:162
+#: backend/views/settings.php:165
 msgid "Hide update notifications for user roles"
 msgstr "پیغام های به روزرسانی را برای نقش های کاربری مختلف مخفی کنید"
 
-#: backend/views/settings.php:171
+#: backend/views/settings.php:174
 msgid "Remove Dashboard Widgets"
 msgstr "حذف ویجت های داشبورد"
 
-#: backend/views/settings.php:172
+#: backend/views/settings.php:175
 msgid "Check widgets to remove from dashboard"
 msgstr "برای حذف شدن ویجت ها از داشبورد آن ها را انتخاب کنید"
 
-#: backend/views/settings.php:176
+#: backend/views/settings.php:179
 msgid "Dashboard Activity"
 msgstr "فعالیت"
 
-#: backend/views/settings.php:177
+#: backend/views/settings.php:180
 msgid "Dashboard Site Health"
 msgstr "وضعیت سلامت سایت"
 
-#: backend/views/settings.php:178
+#: backend/views/settings.php:181
 msgid "Dashboard Quick Press"
 msgstr "پیش‌نویس سریع"
 
-#: backend/views/settings.php:179
+#: backend/views/settings.php:182
 msgid "Dashboard Incoming Links"
 msgstr "اخبار و رویداد های وردپرس"
 
-#: backend/views/settings.php:180
+#: backend/views/settings.php:183
 msgid "Dashboard Right Now"
 msgstr "در یک نگاه"
 
-#: backend/views/settings.php:181
+#: backend/views/settings.php:184
 msgid "Dashboard Plugins"
 msgstr "پلاگین ها"
 
-#: backend/views/settings.php:182
+#: backend/views/settings.php:185
 msgid "Dashboard Recent Drafts"
 msgstr "آخرین نوشته ها"
 
-#: backend/views/settings.php:183
+#: backend/views/settings.php:186
 msgid "Dashboard Recent Comments"
 msgstr "کامنت های اخیر"
 
-#: backend/views/settings.php:184
+#: backend/views/settings.php:187
 msgid "Dashboard Primary"
 msgstr "اصلی"
 
-#: frontend/Enqueue.php:69
+#: backend/views/settings.php:197
+msgid "Export Settings"
+msgstr "برون بری تنظیمات"
+
+#: backend/views/settings.php:199
+msgid ""
+"Export the plugin's settings for this site as a .json file. This will allows "
+"you to easily import the configuration to another installation."
+msgstr ""
+"از تنظیمات مربوط به این سایت خروجی فایل .json بگیرید. این کار به شما امکان "
+"میدهد تا تنظیمات خود را به آسانی در یک سایت دیگر درون ریزی کنید."
+
+#: backend/views/settings.php:204
+msgid "Export"
+msgstr "برون بری"
+
+#: backend/views/settings.php:211
+msgid "Import Settings"
+msgstr "برون بری تنظیمات"
+
+#: backend/views/settings.php:213
+msgid ""
+"Import the plugin's settings from a .json file. This file can be retrieved "
+"by exporting the settings from another installation."
+msgstr ""
+"تنظیمات سایت را از طریق یک فایل .json درون ریزی کنید. این فایل میتواند از "
+"طریق برون بری تنظیمات ایجاد شود."
+
+#: backend/views/settings.php:221
+msgid "Import"
+msgstr "درون ریزی"
+
+#: frontend/Enqueue.php:57
 msgid "Hey! You have clicked the button!"
-msgstr ""
-
-#: integrations/CMB.php:47
-msgid "Demo Metabox"
-msgstr ""
-
-#: integrations/CMB.php:58
-msgid "Text"
-msgstr ""
-
-#: integrations/CMB.php:59 integrations/CMB.php:67 integrations/CMB.php:76
-#: integrations/CMB.php:84 vendor/cmb2-grid/Test/Test.php:32
-#: vendor/cmb2-grid/Test/Test.php:38 vendor/cmb2-grid/Test/Test.php:102
-#: vendor/cmb2-grid/Test/Test.php:108 vendor/cmb2-grid/Test/Test.php:114
-#: vendor/cmb2-grid/Test/Test.php:120 vendor/cmb2-grid/Test/Test.php:126
-msgid "field description (optional)"
-msgstr ""
-
-#: integrations/CMB.php:66
-msgid "Text 2"
-msgstr ""
-
-#: integrations/CMB.php:75
-msgid "Text Small"
-msgstr ""
-
-#: integrations/CMB.php:83
-msgid "Text Small 2"
 msgstr ""
 
 #: vendor/cmb2-grid/Test/Test.php:27
@@ -221,6 +237,13 @@ msgstr ""
 
 #: vendor/cmb2-grid/Test/Test.php:31 vendor/cmb2-grid/Test/Test.php:101
 msgid "Test Text"
+msgstr ""
+
+#: vendor/cmb2-grid/Test/Test.php:32 vendor/cmb2-grid/Test/Test.php:38
+#: vendor/cmb2-grid/Test/Test.php:102 vendor/cmb2-grid/Test/Test.php:108
+#: vendor/cmb2-grid/Test/Test.php:114 vendor/cmb2-grid/Test/Test.php:120
+#: vendor/cmb2-grid/Test/Test.php:126
+msgid "field description (optional)"
 msgstr ""
 
 #: vendor/cmb2-grid/Test/Test.php:37 vendor/cmb2-grid/Test/Test.php:107
@@ -437,9 +460,6 @@ msgstr ""
 #: wp2x.php:58
 msgid "\"WP2X\" requires PHP 5.6 or newer."
 msgstr ""
-
-#~ msgid "Failed to import the settings."
-#~ msgstr "خطا در درون ریزی تنظیمات."
 
 #~ msgid "Updated Messages"
 #~ msgstr "پیام های به روز شده"
