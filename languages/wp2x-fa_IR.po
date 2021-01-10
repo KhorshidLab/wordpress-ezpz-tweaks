@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2021-01-10 18:05+0330\n"
-"PO-Revision-Date: 2021-01-10 18:05+0330\n"
+"PO-Revision-Date: 2021-01-10 21:44+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -221,7 +221,7 @@ msgstr "برون بری"
 
 #: backend/views/settings.php:223
 msgid "Import Settings"
-msgstr "برون بری تنظیمات"
+msgstr "درون ریزی تنظیمات"
 
 #: backend/views/settings.php:225
 msgid ""
