@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-01-10 18:05+0330\n"
-"PO-Revision-Date: 2021-01-10 21:44+0330\n"
+"POT-Creation-Date: 2021-01-11 10:33+0330\n"
+"PO-Revision-Date: 2021-01-11 10:38+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -465,8 +465,46 @@ msgid ""
 "Scope under which the request is made; determines fields present in response."
 msgstr ""
 
+#: vendor/micropackage/requirements/src/Checker/DocHooks.php:43
+msgid "Support for DocHooks is required"
+msgstr "پشتیبانی از DocHooks مورد نیاز است"
+
+#: vendor/micropackage/requirements/src/Checker/DocHooks.php:47
+msgid "Support for DocHooks is superfluous"
+msgstr "پشتیبانی از DocHooks فوق العاده است"
+
+#: vendor/micropackage/requirements/src/Checker/PHP.php:44
+#, php-format
+msgid "Minimum required version of PHP is %1$s. Your version is %2$s"
+msgstr "حداقل نسخه مورد نیاز پی اچ پی %1$s است. نسخه شما %2$s می باشد"
+
+#: vendor/micropackage/requirements/src/Checker/Plugins.php:65
+#, php-format
+msgid "Required plugin: %s"
+msgstr "افزونه های مورد نیاز: %s"
+
+#: vendor/micropackage/requirements/src/Checker/Plugins.php:73
+#, php-format
+msgid "Minimum required version of %1$s plugin is %2$s. Your version is %3$s"
+msgstr "حداقل نسخه مورد نیاز افزونه %1$s  %2$s  است. نسخه شما %3$s می باشد"
+
+#: vendor/micropackage/requirements/src/Checker/Theme.php:47
+#, php-format
+msgid "Required theme: %s"
+msgstr "قالب مورد نیاز: %s"
+
+#: vendor/micropackage/requirements/src/Checker/WP.php:44
+#, php-format
+msgid "Minimum required version of WordPress is %1$s. Your version is %2$s"
+msgstr "حداقل نسخه مورد نیاز وردپرس %1$s است. نسخه شما %2$s می باشد"
+
+#: vendor/micropackage/requirements/src/Requirements.php:255
+#, php-format
+msgid "The plugin: <strong>%s</strong> cannot be activated."
+msgstr "افزونه: <strong>%s</strong> نمی تواند فعال شود."
+
 #: wp2x.php:58
-msgid "\"WP2X\" requires PHP 5.6 or newer."
+msgid "\"WP2X\" requires PHP 7.0 or newer."
 msgstr ""
 
 #~ msgid "Updated Messages"

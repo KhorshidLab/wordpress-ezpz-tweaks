@@ -55,7 +55,7 @@ if ( version_compare( PHP_VERSION, '7.0.0', '<=' ) ) {
 			echo wp_kses_post(
 				sprintf(
 					'<div class="notice notice-error"><p>%s</p></div>',
-					__( '"WP2X" requires PHP 5.6 or newer.', W_TEXTDOMAIN )
+					__( '"WP2X" requires PHP 7 or newer.', W_TEXTDOMAIN )
 				)
 			);
 		}
@@ -70,6 +70,20 @@ $wp2x_libraries = require_once W_PLUGIN_ROOT . 'vendor/autoload.php';
 require_once W_PLUGIN_ROOT . 'functions/functions.php';
 
 // Add your new plugin on the wiki: https://github.com/WPBP/WordPress-Plugin-Boilerplate-Powered/wiki/Plugin-made-with-this-Boilerplate
+
+$requirements = new \Micropackage\Requirements\Requirements(
+	W_TEXTDOMAIN,
+	array(
+		'php'            => '7.0',
+		'wp'             => '5.3',
+	)
+);
+
+if ( ! $requirements->satisfied() ) {
+	$requirements->print_notice();
+
+	return;
+}
 
 if ( ! wp_installing() ) {
 	add_action(

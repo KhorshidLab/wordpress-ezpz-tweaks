@@ -15,7 +15,8 @@
         "php": ">=7.0",
         "cmb2\/cmb2": "2.7.*",
         "composer\/installers": "1.x",
-        "wpbp\/template": "1.0.*"
+        "wpbp\/template": "1.0.*",
+        "micropackage\/requirements": "^1.0"
     },
     "require-dev": {
         "ergebnis\/composer-normalize": "^2.6"
