@@ -37,6 +37,7 @@ class Settings extends Base {
 
 		add_filter( 'rest_authentication_errors', array( $this, 'disable_wp_rest_api' ) );
 		add_filter( 'comment_form_default_fields', array( $this, 'remove_website_field' ) );
+		add_filter( 'login_message', array( $this, 'add_login_page_custom_text' ) );
 	}
 
 	public function disable_emojis() {
@@ -235,5 +236,14 @@ class Settings extends Base {
 		return $src;
 	}
 
+	public function add_login_page_custom_text()
+	{
+		if ( isset( $this->settings_option['login_custom_text'] ) ) {
+			$message = '<div style="box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2); background: #e6f6fb; color: #444; border-top: 4px solid #00a0d2; margin: 0 0 1em; padding: 12px; font-size: 14px; text-align: center;">
+							<p><strong>'. $this->settings_option['login_custom_text'] .'</strong></p>
+						</div>';
 
+			return $message;
+		}
+	}
 }

@@ -87,6 +87,15 @@
 
 		$cmb->add_field(
 				array(
+						'name' => __( 'Login Page Custom Text', W_TEXTDOMAIN ),
+						'desc' => __( 'Add custom text to wordpress admin login page', W_TEXTDOMAIN ),
+						'id'   => 'login_custom_text',
+						'type' => 'textarea',
+				)
+		);
+
+		$cmb->add_field(
+				array(
 						'name' => __( 'Disable WP REST API', W_TEXTDOMAIN ),
 						'desc' => __( ' API consumers be authenticated, which effectively prevents anonymous external access.', W_TEXTDOMAIN ),
 						'id'   => 'disable_rest_api',
