@@ -6,6 +6,7 @@
 	</ul>
 	<div id="general" class="wp-tab-panel">
 		<?php
+		$locale		   = get_locale();
 		$settings_page = new WP2X\Backend\Settings_Page();
 		$cmb           = new_cmb2_box(
 				array(
@@ -19,7 +20,7 @@
 				)
 		);
 
-		if ( get_locale() == 'fa_IR' ) {
+		if ( $locale == 'fa_IR' ) {
 			$cmb->add_field(
 					array(
 							'name'             => __( 'Admin Font', W_TEXTDOMAIN ),
@@ -82,6 +83,16 @@
 								),
 						),
 						'preview_size' => array( 150, 150 ),
+				)
+		);
+
+		$cmb->add_field(
+				array(
+						'name' => __( 'Change WP Login URL', W_TEXTDOMAIN ),
+						'desc' => __( 'Protect your website by changing the login URL and preventing access to the wp-login.php page and the wp-admin directory to non-connected people.', W_TEXTDOMAIN ),
+						'id'   => 'custom_login_url',
+						'type' => 'text',
+						'before_field' => '<code>' . trailingslashit( home_url() ) . '</code>',
 				)
 		);
 

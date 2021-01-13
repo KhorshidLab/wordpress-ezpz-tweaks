@@ -15,8 +15,8 @@
  * @author       Ruben Garcia <rubengcdev@gmail.com>
  * @copyright    Copyright (c) Ruben Garcia
  *
- * Plugin Name: CMB2 Field Type: Font
- * Plugin URI: https://github.com/rubengc/cmb2-field-font
+ * Name: CMB2 Field Type: Font
+ * URI: https://github.com/rubengc/cmb2-field-font
  * GitHub Plugin URI: https://github.com/rubengc/cmb2-field-font
  * Description: CMB2 field type to allow pick a Google font.
  * Version: 1.0.0

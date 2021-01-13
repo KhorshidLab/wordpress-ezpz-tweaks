@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-01-10 18:04+0330\n"
-"PO-Revision-Date: 2021-01-10 18:05+0330\n"
+"POT-Creation-Date: 2021-01-13 12:51+0330\n"
+"PO-Revision-Date: 2021-01-13 12:53+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -63,43 +63,65 @@ msgstr "Général"
 msgid "Import & Export"
 msgstr "Importer & Exporter"
 
-#: backend/views/settings.php:25 backend/views/settings.php:47
+#: backend/views/settings.php:26 backend/views/settings.php:48
 msgid "Admin Font"
 msgstr "Panneau d'administration la fonte"
 
-#: backend/views/settings.php:26 backend/views/settings.php:48
+#: backend/views/settings.php:27 backend/views/settings.php:49
 msgid "Change WordPress admin font"
 msgstr "Changer la police d'administration de WordPress"
 
-#: backend/views/settings.php:36 backend/views/settings.php:57
+#: backend/views/settings.php:37 backend/views/settings.php:58
 msgid "Editor Font"
 msgstr "Police d’éditeur"
 
-#: backend/views/settings.php:37 backend/views/settings.php:58
+#: backend/views/settings.php:38 backend/views/settings.php:59
 msgid "Change WordPress editor font"
 msgstr "Modifier la police d’éditeur WordPress"
 
-#: backend/views/settings.php:51 backend/views/settings.php:61
+#: backend/views/settings.php:52 backend/views/settings.php:62
 msgid "Choose a font"
 msgstr "Choisissez une police"
 
-#: backend/views/settings.php:68
+#: backend/views/settings.php:69
+msgid "Change WP Login URL"
+msgstr "Modifier l’URL de connexion WP"
+
+#: backend/views/settings.php:70
+msgid ""
+"Protect your website by changing the login URL and preventing access to the "
+"wp-login.php page and the wp-admin directory to non-connected people."
+msgstr ""
+"Protégez votre site Web en modifiant l’URL de connexion et en empêchant "
+"l’accès à la page wp-login.php et au répertoire wp-admin pour les personnes "
+"non connectées."
+
+#: backend/views/settings.php:79
 msgid "Change WordPress Logo"
 msgstr "Changer le logo WordPress"
 
-#: backend/views/settings.php:69
+#: backend/views/settings.php:80
 msgid "Upload an image or enter an URL."
 msgstr "Téléchargez une image ou entrez une URL."
 
-#: backend/views/settings.php:76
+#: backend/views/settings.php:87
 msgid "Add File"
 msgstr "Ajouter le fichier"
 
-#: backend/views/settings.php:90
+#: backend/views/settings.php:101
+msgid "Login Page Custom Text"
+msgstr "Texte personnalisé de la page de connexion"
+
+#: backend/views/settings.php:102
+msgid "Add custom text to wordpress admin login page"
+msgstr ""
+"Ajouter du texte personnalisé à la page de connexion de wordpress admin"
+
+#: backend/views/settings.php:110
 msgid "Disable WP REST API"
 msgstr "Désactiver l'API WP REST"
 
-#: backend/views/settings.php:91
+#: backend/views/settings.php:111
 msgid ""
 " API consumers be authenticated, which effectively prevents anonymous "
 "external access."
@@ -107,107 +129,107 @@ msgstr ""
 "Les consommateurs d'API soient authentifiés, ce qui empêche efficacement "
 "l'accès externe anonyme."
 
-#: backend/views/settings.php:99
+#: backend/views/settings.php:119
 msgid "Disable Comment Website Field"
 msgstr "Désactiver le champ du site Web de commentaires"
 
-#: backend/views/settings.php:107
+#: backend/views/settings.php:127
 msgid "Remove Welcome Panel"
 msgstr "Supprimer le panneau de bienvenue"
 
-#: backend/views/settings.php:115
+#: backend/views/settings.php:135
 msgid "Disable Emojis"
 msgstr "Désactiver les émojis"
 
-#: backend/views/settings.php:123
+#: backend/views/settings.php:143
 msgid "Disable Embeds"
 msgstr "Désactiver les incorporations"
 
-#: backend/views/settings.php:131
+#: backend/views/settings.php:151
 msgid "Disable XML-RPC"
 msgstr "Désactiver XML-RPC"
 
-#: backend/views/settings.php:139
+#: backend/views/settings.php:159
 msgid "Remove Shortlink"
 msgstr "Supprimer le lien court"
 
-#: backend/views/settings.php:147
+#: backend/views/settings.php:167
 msgid "Remove WP Version"
 msgstr "Supprimer la version WP"
 
-#: backend/views/settings.php:157
+#: backend/views/settings.php:177
 msgid "Hide Admin Bar"
 msgstr "Masquer la barre d'administration"
 
-#: backend/views/settings.php:158
+#: backend/views/settings.php:178
 msgid "Hide admin bar for user roles"
 msgstr "Masquer la barre d'administration pour les rôles utilisateur"
 
-#: backend/views/settings.php:167
+#: backend/views/settings.php:187
 msgid "Hide Update Notifications"
 msgstr "Masquer les notifications de mise à jour"
 
-#: backend/views/settings.php:168
+#: backend/views/settings.php:188
 msgid "Hide update notifications for user roles"
 msgstr "Masquer les notifications de mise à jour pour les rôles utilisateur"
 
-#: backend/views/settings.php:177
+#: backend/views/settings.php:197
 msgid "Remove Dashboard Widgets"
 msgstr "Supprimer les widgets du tableau de bord"
 
-#: backend/views/settings.php:178
+#: backend/views/settings.php:198
 msgid "Check widgets to remove from dashboard"
 msgstr "Cochez les widgets à supprimer du tableau de bord"
 
-#: backend/views/settings.php:182
+#: backend/views/settings.php:202
 msgid "Dashboard Activity"
 msgstr "Activité du tableau de bord"
 
-#: backend/views/settings.php:183
+#: backend/views/settings.php:203
 msgid "Dashboard Site Health"
 msgstr "État du site du tableau de bord"
 
-#: backend/views/settings.php:184
+#: backend/views/settings.php:204
 msgid "Dashboard Quick Press"
 msgstr "Tableau de bord Quick Press"
 
-#: backend/views/settings.php:185
+#: backend/views/settings.php:205
 msgid "Dashboard Incoming Links"
 msgstr "Liens entrants du tableau de bord"
 
-#: backend/views/settings.php:186
+#: backend/views/settings.php:206
 msgid "Dashboard Right Now"
 msgstr "Tableau de bord en ce moment"
 
-#: backend/views/settings.php:187
+#: backend/views/settings.php:207
 msgid "Dashboard Plugins"
 msgstr "Plugins de tableau de bord"
 
-#: backend/views/settings.php:188
+#: backend/views/settings.php:208
 msgid "Dashboard Recent Drafts"
 msgstr "Brouillons récents du tableau de bord"
 
-#: backend/views/settings.php:189
+#: backend/views/settings.php:209
 msgid "Dashboard Recent Comments"
 msgstr "Commentaires récents du tableau de bord"
 
-#: backend/views/settings.php:190
+#: backend/views/settings.php:210
 msgid "Dashboard Primary"
 msgstr "Tableau de bord principal"
 
-#: backend/views/settings.php:197
+#: backend/views/settings.php:217
 msgid "Custom CSS"
 msgstr "CSS personnalisé"
 
-#: backend/views/settings.php:198
+#: backend/views/settings.php:218
 msgid "Apply custom css to admin area"
 msgstr "Appliquer des css personnalisés à la zone admin"
 
-#: backend/views/settings.php:209
+#: backend/views/settings.php:229
 msgid "Export Settings"
 msgstr "Exporter les paramètres"
 
-#: backend/views/settings.php:211
+#: backend/views/settings.php:231
 msgid ""
 "Export the plugin's settings for this site as a .json file. This will allows "
 "you to easily import the configuration to another installation."
@@ -216,15 +238,15 @@ msgstr ""
 "json. Cela vous permettra d’importer facilement la configuration vers une "
 "autre installation."
 
-#: backend/views/settings.php:216
+#: backend/views/settings.php:236
 msgid "Export"
 msgstr "Exporter"
 
-#: backend/views/settings.php:223
+#: backend/views/settings.php:243
 msgid "Import Settings"
 msgstr "Importer les paramètres"
 
-#: backend/views/settings.php:225
+#: backend/views/settings.php:245
 msgid ""
 "Import the plugin's settings from a .json file. This file can be retrieved "
 "by exporting the settings from another installation."
@@ -232,13 +254,38 @@ msgstr ""
 "Importez les paramètres du plugin à partir d’un fichier .json. Ce fichier "
 "peut être récupéré en exportant les paramètres d’une autre installation."
 
-#: backend/views/settings.php:233
+#: backend/views/settings.php:253
 msgid "Import"
 msgstr "Importer"
 
 #: frontend/Enqueue.php:57
 msgid "Hey! You have clicked the button!"
 msgstr ""
+
+#: integrations/WPS_Hide_Login.php:124
+msgid "Please upgrade to the latest version of WordPress to activate"
+msgstr ""
+"S’il vous plaît mettre à niveau vers la dernière version de WordPress pour "
+"activer"
+
+#: integrations/WPS_Hide_Login.php:139
+#, php-format
+msgid ""
+"Your login page is now here: <strong><a href=\"%1$s\">%2$s</a></strong>. "
+"Bookmark this page!"
+msgstr ""
+"Votre page de connexion est maintenant ici: <strong><a href=\"%1$s\">%2$s</"
+"a></strong> . Signet cette page!"
+
+#: integrations/WPS_Hide_Login.php:153
+msgid "This feature is not enabled."
+msgstr "Cette fonctionnalité n'est pas activée."
+
+#: integrations/WPS_Hide_Login.php:193
+msgid "This has been disabled"
+msgstr ""
+"A la Fredon LR, on ne plaisante pas avec la sécurité. Curieux passes donc "
+"ton chemin :)"
 
 #: vendor/cmb2-grid/Test/Test.php:27
 msgid "Repeating Field Group using a Grid"
@@ -466,8 +513,46 @@ msgid ""
 "Scope under which the request is made; determines fields present in response."
 msgstr ""
 
-#: wp2x.php:58
-msgid "\"WP2X\" requires PHP 5.6 or newer."
+#: vendor/micropackage/requirements/src/Checker/DocHooks.php:43
+msgid "Support for DocHooks is required"
+msgstr ""
+
+#: vendor/micropackage/requirements/src/Checker/DocHooks.php:47
+msgid "Support for DocHooks is superfluous"
+msgstr ""
+
+#: vendor/micropackage/requirements/src/Checker/PHP.php:44
+#, php-format
+msgid "Minimum required version of PHP is %1$s. Your version is %2$s"
+msgstr ""
+
+#: vendor/micropackage/requirements/src/Checker/Plugins.php:65
+#, php-format
+msgid "Required plugin: %s"
+msgstr ""
+
+#: vendor/micropackage/requirements/src/Checker/Plugins.php:73
+#, php-format
+msgid "Minimum required version of %1$s plugin is %2$s. Your version is %3$s"
+msgstr ""
+
+#: vendor/micropackage/requirements/src/Checker/Theme.php:47
+#, php-format
+msgid "Required theme: %s"
+msgstr ""
+
+#: vendor/micropackage/requirements/src/Checker/WP.php:44
+#, php-format
+msgid "Minimum required version of WordPress is %1$s. Your version is %2$s"
+msgstr ""
+
+#: vendor/micropackage/requirements/src/Requirements.php:255
+#, php-format
+msgid "The plugin: <strong>%s</strong> cannot be activated."
+msgstr ""
+
+#: wp2x.php:60
+msgid "\"WP2X\" requires PHP 7 or newer."
 msgstr ""
 
 #~ msgid "Updated Messages"

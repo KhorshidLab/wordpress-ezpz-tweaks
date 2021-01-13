@@ -157,3 +157,13 @@
 .wp2x-tabs .CodeMirror {
 	width: 700px !important;
 }
+
+.rtl .cmb2-id-custom-login-url #custom_login_url {
+	float: right;
+	text-align: left;
+}
+
+.rtl .cmb2-id-custom-login-url code {
+	padding: 7px;
+	display: inline-block;
+}

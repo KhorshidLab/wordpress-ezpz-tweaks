@@ -34,6 +34,8 @@ define( 'W_NAME', __( 'Khorshid', W_TEXTDOMAIN ) );
 define( 'W_PLUGIN_ROOT', plugin_dir_path( __FILE__ ) );
 define( 'W_PLUGIN_ROOT_URL', plugin_dir_url( __FILE__ ) );
 define( 'W_PLUGIN_ABSOLUTE', __FILE__ );
+define( 'W_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
+
 
 add_action(
 	'init',

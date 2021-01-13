@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-01-11 10:33+0330\n"
-"PO-Revision-Date: 2021-01-11 10:38+0330\n"
+"POT-Creation-Date: 2021-01-13 12:49+0330\n"
+"PO-Revision-Date: 2021-01-13 12:52+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -63,43 +63,63 @@ msgstr "تنظیمات عمومی"
 msgid "Import & Export"
 msgstr "درون ریزی و برون بری"
 
-#: backend/views/settings.php:25 backend/views/settings.php:47
+#: backend/views/settings.php:26 backend/views/settings.php:48
 msgid "Admin Font"
 msgstr "فونت پنل مدیریت"
 
-#: backend/views/settings.php:26 backend/views/settings.php:48
+#: backend/views/settings.php:27 backend/views/settings.php:49
 msgid "Change WordPress admin font"
 msgstr "فونت پنل مدیریت را تغییر دهید"
 
-#: backend/views/settings.php:36 backend/views/settings.php:57
+#: backend/views/settings.php:37 backend/views/settings.php:58
 msgid "Editor Font"
 msgstr "فونت ویرایشگر"
 
-#: backend/views/settings.php:37 backend/views/settings.php:58
+#: backend/views/settings.php:38 backend/views/settings.php:59
 msgid "Change WordPress editor font"
 msgstr "فونت ویرایشگر وردپرس را تغییر دهید"
 
-#: backend/views/settings.php:51 backend/views/settings.php:61
+#: backend/views/settings.php:52 backend/views/settings.php:62
 msgid "Choose a font"
 msgstr "یک فونت را انتخاب کنید"
 
-#: backend/views/settings.php:68
+#: backend/views/settings.php:69
+msgid "Change WP Login URL"
+msgstr "تغییر آدرس مدیریت وردپرس"
+
+#: backend/views/settings.php:70
+msgid ""
+"Protect your website by changing the login URL and preventing access to the "
+"wp-login.php page and the wp-admin directory to non-connected people."
+msgstr ""
+"با تغییر URL ورود و جلوگیری از دسترسی به صفحه wp-login.php و دایرکتوری wp-"
+"admin به افراد غیر مرتبط، از وبسایت خود محافظت کنید."
+
+#: backend/views/settings.php:79
 msgid "Change WordPress Logo"
 msgstr "تغییر لوگو وردپرس"
 
-#: backend/views/settings.php:69
+#: backend/views/settings.php:80
 msgid "Upload an image or enter an URL."
 msgstr "تصویر را آپلود کنید یا URL تصویر را وارد کنید."
 
-#: backend/views/settings.php:76
+#: backend/views/settings.php:87
 msgid "Add File"
 msgstr "انتخاب فایل"
 
-#: backend/views/settings.php:90
+#: backend/views/settings.php:101
+msgid "Login Page Custom Text"
+msgstr "متن دلخواه در صفحه ورود مدیریت"
+
+#: backend/views/settings.php:102
+msgid "Add custom text to wordpress admin login page"
+msgstr "به صفحه ورود مدیریت وردپرس متن سفارشی اضافه کنید"
+
+#: backend/views/settings.php:110
 msgid "Disable WP REST API"
 msgstr "غیرفعال کردن WP REST API"
 
-#: backend/views/settings.php:91
+#: backend/views/settings.php:111
 msgid ""
 " API consumers be authenticated, which effectively prevents anonymous "
 "external access."
@@ -107,107 +127,107 @@ msgstr ""
 " مصرف کنندگان API تصدیق می شوند که به طور مؤثری از دسترسی خارجی ناشناس "
 "جلوگیری می کند."
 
-#: backend/views/settings.php:99
+#: backend/views/settings.php:119
 msgid "Disable Comment Website Field"
 msgstr "غیرفعال کردن فیلد وبسایت در کامنت ها"
 
-#: backend/views/settings.php:107
+#: backend/views/settings.php:127
 msgid "Remove Welcome Panel"
 msgstr "حذف پنل خوش آمد گویی داشبورد"
 
-#: backend/views/settings.php:115
+#: backend/views/settings.php:135
 msgid "Disable Emojis"
 msgstr "غیرفعال کردن ایموجی ها"
 
-#: backend/views/settings.php:123
+#: backend/views/settings.php:143
 msgid "Disable Embeds"
 msgstr "غیرفعال کردن Embeds"
 
-#: backend/views/settings.php:131
+#: backend/views/settings.php:151
 msgid "Disable XML-RPC"
 msgstr "غیرفعال کردن XML-RPC"
 
-#: backend/views/settings.php:139
+#: backend/views/settings.php:159
 msgid "Remove Shortlink"
 msgstr "حذف لینک های کوتاه"
 
-#: backend/views/settings.php:147
+#: backend/views/settings.php:167
 msgid "Remove WP Version"
 msgstr "مخفی کردن ورژن وردپرس"
 
-#: backend/views/settings.php:157
+#: backend/views/settings.php:177
 msgid "Hide Admin Bar"
 msgstr "مخفی کردن نوار ادمین"
 
-#: backend/views/settings.php:158
+#: backend/views/settings.php:178
 msgid "Hide admin bar for user roles"
 msgstr "نوار ادمین را برای نقش های کاربری مختلف مخفی کنید"
 
-#: backend/views/settings.php:167
+#: backend/views/settings.php:187
 msgid "Hide Update Notifications"
 msgstr "مخفی کردن پیغام های به روز رسانی"
 
-#: backend/views/settings.php:168
+#: backend/views/settings.php:188
 msgid "Hide update notifications for user roles"
 msgstr "پیغام های به روزرسانی را برای نقش های کاربری مختلف مخفی کنید"
 
-#: backend/views/settings.php:177
+#: backend/views/settings.php:197
 msgid "Remove Dashboard Widgets"
 msgstr "حذف ویجت های داشبورد"
 
-#: backend/views/settings.php:178
+#: backend/views/settings.php:198
 msgid "Check widgets to remove from dashboard"
 msgstr "برای حذف شدن ویجت ها از داشبورد آن ها را انتخاب کنید"
 
-#: backend/views/settings.php:182
+#: backend/views/settings.php:202
 msgid "Dashboard Activity"
 msgstr "فعالیت"
 
-#: backend/views/settings.php:183
+#: backend/views/settings.php:203
 msgid "Dashboard Site Health"
 msgstr "وضعیت سلامت سایت"
 
-#: backend/views/settings.php:184
+#: backend/views/settings.php:204
 msgid "Dashboard Quick Press"
 msgstr "پیش‌نویس سریع"
 
-#: backend/views/settings.php:185
+#: backend/views/settings.php:205
 msgid "Dashboard Incoming Links"
 msgstr "اخبار و رویداد های وردپرس"
 
-#: backend/views/settings.php:186
+#: backend/views/settings.php:206
 msgid "Dashboard Right Now"
 msgstr "در یک نگاه"
 
-#: backend/views/settings.php:187
+#: backend/views/settings.php:207
 msgid "Dashboard Plugins"
 msgstr "پلاگین ها"
 
-#: backend/views/settings.php:188
+#: backend/views/settings.php:208
 msgid "Dashboard Recent Drafts"
 msgstr "آخرین نوشته ها"
 
-#: backend/views/settings.php:189
+#: backend/views/settings.php:209
 msgid "Dashboard Recent Comments"
 msgstr "کامنت های اخیر"
 
-#: backend/views/settings.php:190
+#: backend/views/settings.php:210
 msgid "Dashboard Primary"
 msgstr "اصلی"
 
-#: backend/views/settings.php:197
+#: backend/views/settings.php:217
 msgid "Custom CSS"
 msgstr "استایل سفارشی"
 
-#: backend/views/settings.php:198
+#: backend/views/settings.php:218
 msgid "Apply custom css to admin area"
 msgstr "اعمال CSS سفارشی به پنل مدیریت"
 
-#: backend/views/settings.php:209
+#: backend/views/settings.php:229
 msgid "Export Settings"
 msgstr "برون بری تنظیمات"
 
-#: backend/views/settings.php:211
+#: backend/views/settings.php:231
 msgid ""
 "Export the plugin's settings for this site as a .json file. This will allows "
 "you to easily import the configuration to another installation."
@@ -215,15 +235,15 @@ msgstr ""
 "از تنظیمات مربوط به این سایت خروجی فایل .json بگیرید. این کار به شما امکان "
 "میدهد تا تنظیمات خود را به آسانی در یک سایت دیگر درون ریزی کنید."
 
-#: backend/views/settings.php:216
+#: backend/views/settings.php:236
 msgid "Export"
 msgstr "برون بری"
 
-#: backend/views/settings.php:223
+#: backend/views/settings.php:243
 msgid "Import Settings"
 msgstr "درون ریزی تنظیمات"
 
-#: backend/views/settings.php:225
+#: backend/views/settings.php:245
 msgid ""
 "Import the plugin's settings from a .json file. This file can be retrieved "
 "by exporting the settings from another installation."
@@ -231,13 +251,34 @@ msgstr ""
 "تنظیمات سایت را از طریق یک فایل .json درون ریزی کنید. این فایل میتواند از "
 "طریق برون بری تنظیمات ایجاد شود."
 
-#: backend/views/settings.php:233
+#: backend/views/settings.php:253
 msgid "Import"
 msgstr "درون ریزی"
 
 #: frontend/Enqueue.php:57
 msgid "Hey! You have clicked the button!"
 msgstr ""
+
+#: integrations/WPS_Hide_Login.php:124
+msgid "Please upgrade to the latest version of WordPress to activate"
+msgstr "لطفا برای فعال شدن به آخرین نسخه وردپرس ارتقا دهید"
+
+#: integrations/WPS_Hide_Login.php:139
+#, php-format
+msgid ""
+"Your login page is now here: <strong><a href=\"%1$s\">%2$s</a></strong>. "
+"Bookmark this page!"
+msgstr ""
+"صفحه ورود شما اکنون در اینجا است: <strong><a href=\"%1$s\">%2$s</a></strong> "
+"این صفحه را نشانه گذاری(Bookmark) کنید!"
+
+#: integrations/WPS_Hide_Login.php:153
+msgid "This feature is not enabled."
+msgstr "این ویژگی فعال نیست."
+
+#: integrations/WPS_Hide_Login.php:193
+msgid "This has been disabled"
+msgstr "این مورد غیر فعال شده است"
 
 #: vendor/cmb2-grid/Test/Test.php:27
 msgid "Repeating Field Group using a Grid"
@@ -503,8 +544,8 @@ msgstr "حداقل نسخه مورد نیاز وردپرس %1$s است. نسخه
 msgid "The plugin: <strong>%s</strong> cannot be activated."
 msgstr "افزونه: <strong>%s</strong> نمی تواند فعال شود."
 
-#: wp2x.php:58
-msgid "\"WP2X\" requires PHP 7.0 or newer."
+#: wp2x.php:60
+msgid "\"WP2X\" requires PHP 7 or newer."
 msgstr ""
 
 #~ msgid "Updated Messages"
