@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-01-13 12:49+0330\n"
-"PO-Revision-Date: 2021-01-13 12:52+0330\n"
+"POT-Creation-Date: 2021-01-24 18:20+0330\n"
+"PO-Revision-Date: 2021-01-24 18:21+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -84,28 +84,28 @@ msgid "Choose a font"
 msgstr "یک فونت را انتخاب کنید"
 
 #: backend/views/settings.php:69
+msgid "Change WordPress Logo"
+msgstr "تغییر لوگو وردپرس"
+
+#: backend/views/settings.php:70
+msgid "Upload an image or enter an URL."
+msgstr "تصویر را آپلود کنید یا URL تصویر را وارد کنید."
+
+#: backend/views/settings.php:77
+msgid "Add File"
+msgstr "انتخاب فایل"
+
+#: backend/views/settings.php:91
 msgid "Change WP Login URL"
 msgstr "تغییر آدرس مدیریت وردپرس"
 
-#: backend/views/settings.php:70
+#: backend/views/settings.php:92
 msgid ""
 "Protect your website by changing the login URL and preventing access to the "
 "wp-login.php page and the wp-admin directory to non-connected people."
 msgstr ""
 "با تغییر URL ورود و جلوگیری از دسترسی به صفحه wp-login.php و دایرکتوری wp-"
 "admin به افراد غیر مرتبط، از وبسایت خود محافظت کنید."
-
-#: backend/views/settings.php:79
-msgid "Change WordPress Logo"
-msgstr "تغییر لوگو وردپرس"
-
-#: backend/views/settings.php:80
-msgid "Upload an image or enter an URL."
-msgstr "تصویر را آپلود کنید یا URL تصویر را وارد کنید."
-
-#: backend/views/settings.php:87
-msgid "Add File"
-msgstr "انتخاب فایل"
 
 #: backend/views/settings.php:101
 msgid "Login Page Custom Text"
@@ -115,11 +115,11 @@ msgstr "متن دلخواه در صفحه ورود مدیریت"
 msgid "Add custom text to wordpress admin login page"
 msgstr "به صفحه ورود مدیریت وردپرس متن سفارشی اضافه کنید"
 
-#: backend/views/settings.php:110
-msgid "Disable WP REST API"
-msgstr "غیرفعال کردن WP REST API"
-
 #: backend/views/settings.php:111
+msgid "Disable Public Access to WP REST API"
+msgstr "غیر فعال کردن دسترسی عمومی به WP REST API"
+
+#: backend/views/settings.php:112
 msgid ""
 " API consumers be authenticated, which effectively prevents anonymous "
 "external access."
@@ -127,107 +127,107 @@ msgstr ""
 " مصرف کنندگان API تصدیق می شوند که به طور مؤثری از دسترسی خارجی ناشناس "
 "جلوگیری می کند."
 
-#: backend/views/settings.php:119
+#: backend/views/settings.php:121
 msgid "Disable Comment Website Field"
 msgstr "غیرفعال کردن فیلد وبسایت در کامنت ها"
 
-#: backend/views/settings.php:127
+#: backend/views/settings.php:129
 msgid "Remove Welcome Panel"
 msgstr "حذف پنل خوش آمد گویی داشبورد"
 
-#: backend/views/settings.php:135
+#: backend/views/settings.php:137
 msgid "Disable Emojis"
 msgstr "غیرفعال کردن ایموجی ها"
 
-#: backend/views/settings.php:143
+#: backend/views/settings.php:145
 msgid "Disable Embeds"
 msgstr "غیرفعال کردن Embeds"
 
-#: backend/views/settings.php:151
+#: backend/views/settings.php:153
 msgid "Disable XML-RPC"
 msgstr "غیرفعال کردن XML-RPC"
 
-#: backend/views/settings.php:159
+#: backend/views/settings.php:161
 msgid "Remove Shortlink"
 msgstr "حذف لینک های کوتاه"
 
-#: backend/views/settings.php:167
+#: backend/views/settings.php:169
 msgid "Remove WP Version"
 msgstr "مخفی کردن ورژن وردپرس"
 
-#: backend/views/settings.php:177
+#: backend/views/settings.php:179
 msgid "Hide Admin Bar"
 msgstr "مخفی کردن نوار ادمین"
 
-#: backend/views/settings.php:178
+#: backend/views/settings.php:180
 msgid "Hide admin bar for user roles"
 msgstr "نوار ادمین را برای نقش های کاربری مختلف مخفی کنید"
 
-#: backend/views/settings.php:187
+#: backend/views/settings.php:189
 msgid "Hide Update Notifications"
 msgstr "مخفی کردن پیغام های به روز رسانی"
 
-#: backend/views/settings.php:188
+#: backend/views/settings.php:190
 msgid "Hide update notifications for user roles"
 msgstr "پیغام های به روزرسانی را برای نقش های کاربری مختلف مخفی کنید"
 
-#: backend/views/settings.php:197
+#: backend/views/settings.php:199
 msgid "Remove Dashboard Widgets"
 msgstr "حذف ویجت های داشبورد"
 
-#: backend/views/settings.php:198
+#: backend/views/settings.php:200
 msgid "Check widgets to remove from dashboard"
 msgstr "برای حذف شدن ویجت ها از داشبورد آن ها را انتخاب کنید"
 
-#: backend/views/settings.php:202
+#: backend/views/settings.php:204
 msgid "Dashboard Activity"
 msgstr "فعالیت"
 
-#: backend/views/settings.php:203
+#: backend/views/settings.php:205
 msgid "Dashboard Site Health"
 msgstr "وضعیت سلامت سایت"
 
-#: backend/views/settings.php:204
+#: backend/views/settings.php:206
 msgid "Dashboard Quick Press"
 msgstr "پیش‌نویس سریع"
 
-#: backend/views/settings.php:205
+#: backend/views/settings.php:207
 msgid "Dashboard Incoming Links"
 msgstr "اخبار و رویداد های وردپرس"
 
-#: backend/views/settings.php:206
+#: backend/views/settings.php:208
 msgid "Dashboard Right Now"
 msgstr "در یک نگاه"
 
-#: backend/views/settings.php:207
+#: backend/views/settings.php:209
 msgid "Dashboard Plugins"
 msgstr "پلاگین ها"
 
-#: backend/views/settings.php:208
+#: backend/views/settings.php:210
 msgid "Dashboard Recent Drafts"
 msgstr "آخرین نوشته ها"
 
-#: backend/views/settings.php:209
+#: backend/views/settings.php:211
 msgid "Dashboard Recent Comments"
 msgstr "کامنت های اخیر"
 
-#: backend/views/settings.php:210
+#: backend/views/settings.php:212
 msgid "Dashboard Primary"
 msgstr "اصلی"
 
-#: backend/views/settings.php:217
+#: backend/views/settings.php:219
 msgid "Custom CSS"
 msgstr "استایل سفارشی"
 
-#: backend/views/settings.php:218
+#: backend/views/settings.php:220
 msgid "Apply custom css to admin area"
 msgstr "اعمال CSS سفارشی به پنل مدیریت"
 
-#: backend/views/settings.php:229
+#: backend/views/settings.php:231
 msgid "Export Settings"
 msgstr "برون بری تنظیمات"
 
-#: backend/views/settings.php:231
+#: backend/views/settings.php:233
 msgid ""
 "Export the plugin's settings for this site as a .json file. This will allows "
 "you to easily import the configuration to another installation."
@@ -235,15 +235,15 @@ msgstr ""
 "از تنظیمات مربوط به این سایت خروجی فایل .json بگیرید. این کار به شما امکان "
 "میدهد تا تنظیمات خود را به آسانی در یک سایت دیگر درون ریزی کنید."
 
-#: backend/views/settings.php:236
+#: backend/views/settings.php:238
 msgid "Export"
 msgstr "برون بری"
 
-#: backend/views/settings.php:243
+#: backend/views/settings.php:245
 msgid "Import Settings"
 msgstr "درون ریزی تنظیمات"
 
-#: backend/views/settings.php:245
+#: backend/views/settings.php:247
 msgid ""
 "Import the plugin's settings from a .json file. This file can be retrieved "
 "by exporting the settings from another installation."
@@ -251,7 +251,7 @@ msgstr ""
 "تنظیمات سایت را از طریق یک فایل .json درون ریزی کنید. این فایل میتواند از "
 "طریق برون بری تنظیمات ایجاد شود."
 
-#: backend/views/settings.php:253
+#: backend/views/settings.php:255
 msgid "Import"
 msgstr "درون ریزی"
 

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-01-13 12:51+0330\n"
-"PO-Revision-Date: 2021-01-13 12:53+0330\n"
+"POT-Creation-Date: 2021-01-24 18:22+0330\n"
+"PO-Revision-Date: 2021-01-24 18:22+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -84,10 +84,22 @@ msgid "Choose a font"
 msgstr "Choisissez une police"
 
 #: backend/views/settings.php:69
+msgid "Change WordPress Logo"
+msgstr "Changer le logo WordPress"
+
+#: backend/views/settings.php:70
+msgid "Upload an image or enter an URL."
+msgstr "Téléchargez une image ou entrez une URL."
+
+#: backend/views/settings.php:77
+msgid "Add File"
+msgstr "Ajouter le fichier"
+
+#: backend/views/settings.php:91
 msgid "Change WP Login URL"
 msgstr "Modifier l’URL de connexion WP"
 
-#: backend/views/settings.php:70
+#: backend/views/settings.php:92
 msgid ""
 "Protect your website by changing the login URL and preventing access to the "
 "wp-login.php page and the wp-admin directory to non-connected people."
@@ -95,18 +107,6 @@ msgstr ""
 "Protégez votre site Web en modifiant l’URL de connexion et en empêchant "
 "l’accès à la page wp-login.php et au répertoire wp-admin pour les personnes "
 "non connectées."
-
-#: backend/views/settings.php:79
-msgid "Change WordPress Logo"
-msgstr "Changer le logo WordPress"
-
-#: backend/views/settings.php:80
-msgid "Upload an image or enter an URL."
-msgstr "Téléchargez une image ou entrez une URL."
-
-#: backend/views/settings.php:87
-msgid "Add File"
-msgstr "Ajouter le fichier"
 
 #: backend/views/settings.php:101
 msgid "Login Page Custom Text"
@@ -117,11 +117,11 @@ msgid "Add custom text to wordpress admin login page"
 msgstr ""
 "Ajouter du texte personnalisé à la page de connexion de wordpress admin"
 
-#: backend/views/settings.php:110
-msgid "Disable WP REST API"
-msgstr "Désactiver l'API WP REST"
-
 #: backend/views/settings.php:111
+msgid "Disable Public Access to WP REST API"
+msgstr "Désactiver l’accès du public à l’API WP REST"
+
+#: backend/views/settings.php:112
 msgid ""
 " API consumers be authenticated, which effectively prevents anonymous "
 "external access."
@@ -129,107 +129,107 @@ msgstr ""
 "Les consommateurs d'API soient authentifiés, ce qui empêche efficacement "
 "l'accès externe anonyme."
 
-#: backend/views/settings.php:119
+#: backend/views/settings.php:121
 msgid "Disable Comment Website Field"
 msgstr "Désactiver le champ du site Web de commentaires"
 
-#: backend/views/settings.php:127
+#: backend/views/settings.php:129
 msgid "Remove Welcome Panel"
 msgstr "Supprimer le panneau de bienvenue"
 
-#: backend/views/settings.php:135
+#: backend/views/settings.php:137
 msgid "Disable Emojis"
 msgstr "Désactiver les émojis"
 
-#: backend/views/settings.php:143
+#: backend/views/settings.php:145
 msgid "Disable Embeds"
 msgstr "Désactiver les incorporations"
 
-#: backend/views/settings.php:151
+#: backend/views/settings.php:153
 msgid "Disable XML-RPC"
 msgstr "Désactiver XML-RPC"
 
-#: backend/views/settings.php:159
+#: backend/views/settings.php:161
 msgid "Remove Shortlink"
 msgstr "Supprimer le lien court"
 
-#: backend/views/settings.php:167
+#: backend/views/settings.php:169
 msgid "Remove WP Version"
 msgstr "Supprimer la version WP"
 
-#: backend/views/settings.php:177
+#: backend/views/settings.php:179
 msgid "Hide Admin Bar"
 msgstr "Masquer la barre d'administration"
 
-#: backend/views/settings.php:178
+#: backend/views/settings.php:180
 msgid "Hide admin bar for user roles"
 msgstr "Masquer la barre d'administration pour les rôles utilisateur"
 
-#: backend/views/settings.php:187
+#: backend/views/settings.php:189
 msgid "Hide Update Notifications"
 msgstr "Masquer les notifications de mise à jour"
 
-#: backend/views/settings.php:188
+#: backend/views/settings.php:190
 msgid "Hide update notifications for user roles"
 msgstr "Masquer les notifications de mise à jour pour les rôles utilisateur"
 
-#: backend/views/settings.php:197
+#: backend/views/settings.php:199
 msgid "Remove Dashboard Widgets"
 msgstr "Supprimer les widgets du tableau de bord"
 
-#: backend/views/settings.php:198
+#: backend/views/settings.php:200
 msgid "Check widgets to remove from dashboard"
 msgstr "Cochez les widgets à supprimer du tableau de bord"
 
-#: backend/views/settings.php:202
+#: backend/views/settings.php:204
 msgid "Dashboard Activity"
 msgstr "Activité du tableau de bord"
 
-#: backend/views/settings.php:203
+#: backend/views/settings.php:205
 msgid "Dashboard Site Health"
 msgstr "État du site du tableau de bord"
 
-#: backend/views/settings.php:204
+#: backend/views/settings.php:206
 msgid "Dashboard Quick Press"
 msgstr "Tableau de bord Quick Press"
 
-#: backend/views/settings.php:205
+#: backend/views/settings.php:207
 msgid "Dashboard Incoming Links"
 msgstr "Liens entrants du tableau de bord"
 
-#: backend/views/settings.php:206
+#: backend/views/settings.php:208
 msgid "Dashboard Right Now"
 msgstr "Tableau de bord en ce moment"
 
-#: backend/views/settings.php:207
+#: backend/views/settings.php:209
 msgid "Dashboard Plugins"
 msgstr "Plugins de tableau de bord"
 
-#: backend/views/settings.php:208
+#: backend/views/settings.php:210
 msgid "Dashboard Recent Drafts"
 msgstr "Brouillons récents du tableau de bord"
 
-#: backend/views/settings.php:209
+#: backend/views/settings.php:211
 msgid "Dashboard Recent Comments"
 msgstr "Commentaires récents du tableau de bord"
 
-#: backend/views/settings.php:210
+#: backend/views/settings.php:212
 msgid "Dashboard Primary"
 msgstr "Tableau de bord principal"
 
-#: backend/views/settings.php:217
+#: backend/views/settings.php:219
 msgid "Custom CSS"
 msgstr "CSS personnalisé"
 
-#: backend/views/settings.php:218
+#: backend/views/settings.php:220
 msgid "Apply custom css to admin area"
 msgstr "Appliquer des css personnalisés à la zone admin"
 
-#: backend/views/settings.php:229
+#: backend/views/settings.php:231
 msgid "Export Settings"
 msgstr "Exporter les paramètres"
 
-#: backend/views/settings.php:231
+#: backend/views/settings.php:233
 msgid ""
 "Export the plugin's settings for this site as a .json file. This will allows "
 "you to easily import the configuration to another installation."
@@ -238,15 +238,15 @@ msgstr ""
 "json. Cela vous permettra d’importer facilement la configuration vers une "
 "autre installation."
 
-#: backend/views/settings.php:236
+#: backend/views/settings.php:238
 msgid "Export"
 msgstr "Exporter"
 
-#: backend/views/settings.php:243
+#: backend/views/settings.php:245
 msgid "Import Settings"
 msgstr "Importer les paramètres"
 
-#: backend/views/settings.php:245
+#: backend/views/settings.php:247
 msgid ""
 "Import the plugin's settings from a .json file. This file can be retrieved "
 "by exporting the settings from another installation."
@@ -254,7 +254,7 @@ msgstr ""
 "Importez les paramètres du plugin à partir d’un fichier .json. Ce fichier "
 "peut être récupéré en exportant les paramètres d’une autre installation."
 
-#: backend/views/settings.php:253
+#: backend/views/settings.php:255
 msgid "Import"
 msgstr "Importer"
 
