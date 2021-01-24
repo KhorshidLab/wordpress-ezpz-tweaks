@@ -6,7 +6,7 @@
 	</ul>
 	<div id="general" class="wp-tab-panel">
 		<?php
-		$locale		   = get_locale();
+		$locale        = get_locale();
 		$settings_page = new WP2X\Backend\Settings_Page();
 		$cmb           = new_cmb2_box(
 				array(
@@ -88,10 +88,10 @@
 
 		$cmb->add_field(
 				array(
-						'name' => __( 'Change WP Login URL', W_TEXTDOMAIN ),
-						'desc' => __( 'Protect your website by changing the login URL and preventing access to the wp-login.php page and the wp-admin directory to non-connected people.', W_TEXTDOMAIN ),
-						'id'   => 'custom_login_url',
-						'type' => 'text',
+						'name'         => __( 'Change WP Login URL', W_TEXTDOMAIN ),
+						'desc'         => __( 'Protect your website by changing the login URL and preventing access to the wp-login.php page and the wp-admin directory to non-connected people.', W_TEXTDOMAIN ),
+						'id'           => 'custom_login_url',
+						'type'         => 'text',
 						'before_field' => '<code>' . trailingslashit( home_url() ) . '</code>',
 				)
 		);
@@ -105,14 +105,16 @@
 				)
 		);
 
-		$cmb->add_field(
-				array(
-						'name' => __( 'Disable WP REST API', W_TEXTDOMAIN ),
-						'desc' => __( ' API consumers be authenticated, which effectively prevents anonymous external access.', W_TEXTDOMAIN ),
-						'id'   => 'disable_rest_api',
-						'type' => 'checkbox',
-				)
-		);
+		if ( current_user_can( 'administrator' ) ) {
+			$cmb->add_field(
+					array(
+							'name' => __( 'Disable Public Access to WP REST API', W_TEXTDOMAIN ),
+							'desc' => __( ' API consumers be authenticated, which effectively prevents anonymous external access.', W_TEXTDOMAIN ),
+							'id'   => 'disable_rest_api',
+							'type' => 'checkbox',
+					)
+			);
+		}
 
 		$cmb->add_field(
 				array(
@@ -139,11 +141,11 @@
 		);
 
 		$cmb->add_field(
-			array(
-					'name' => __( 'Disable Embeds', W_TEXTDOMAIN ),
-					'id'   => 'disable_wp_embed',
-					'type' => 'checkbox',
-			)
+				array(
+						'name' => __( 'Disable Embeds', W_TEXTDOMAIN ),
+						'id'   => 'disable_wp_embed',
+						'type' => 'checkbox',
+				)
 		);
 
 		$cmb->add_field(

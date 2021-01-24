@@ -72,18 +72,25 @@ class Settings extends Base {
 		return $urls;
 	}
 
-	public function disable_wp_rest_api( $result ) {
+	public function disable_wp_rest_api( $access ) {
 		if ( isset( $this->settings_option['disable_rest_api'] ) ) {
-			if ( ! empty( $result ) ) {
-				return $result;
+			// Remove REST API info from head and headers
+			remove_action( 'xmlrpc_rsd_apis', 'rest_output_rsd' );
+			remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+			remove_action( 'template_redirect', 'rest_output_link_header', 11 );
+
+			$error_message = esc_html__( 'Public access to the REST API has been limited.', W_TEXTDOMAIN );
+
+			if ( is_wp_error( $access ) ) {
+				$access->add( 'rest_cannot_access', $error_message, array( 'status' => rest_authorization_required_code() ) );
+
+				return $access;
 			}
 
-			if ( ! is_user_logged_in() ) {
-				return new WP_Error( 'rest_not_logged_in', 'You are not currently logged in.', array( 'status' => 401 ) );
-			}
+			return new \WP_Error( 'rest_cannot_access', $error_message, array( 'status' => rest_authorization_required_code() ) );
 		}
 
-		return $result;
+		return $access;
 	}
 
 	public function remove_website_field( $fields ) {
