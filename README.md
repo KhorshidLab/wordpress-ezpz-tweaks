@@ -36,6 +36,10 @@ composer update
 * Twitter: [@khorshidlab](https://twitter.com/khorshidlab)
 * Github: [@KhorshidLab](https://github.com/KhorshidLab)
 
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
 ## Show your support
 
 Give a ⭐️ if this project helped you!
