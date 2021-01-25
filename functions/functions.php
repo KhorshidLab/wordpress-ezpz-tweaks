@@ -1,8 +1,8 @@
 <?php
 /**
- * WP2X
+ * EZPZ_TWEAKS
  *
- * @package   WP2X
+ * @package   EZPZ_TWEAKS
  * @author    Khorshid <info@khorshidlab.com>
  * @copyright 2020 Khorshid
  * @license   GPL 2.0+
@@ -16,7 +16,7 @@
  * @return array
  */
 function w_get_settings() {
-	return apply_filters( 'w_get_settings', get_option( W_TEXTDOMAIN . '-settings' ) );
+	return apply_filters( 'w_get_settings', get_option( EZPZ_TWEAKS_TEXTDOMAIN . '-settings' ) );
 }
 
 function wp_roles_array() {

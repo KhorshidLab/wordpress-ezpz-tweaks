@@ -1,17 +1,17 @@
 <?php
 /**
- * WP2X
+ * EZPZ_TWEAKS
  *
- * @package   WP2X
+ * @package   EZPZ_TWEAKS
  * @author    Khorshid <info@khorshidlab.com>
  * @copyright 2020 Khorshid
  * @license   GPL 2.0+
  * @link      https://khorshidlab.com
  */
 
-namespace WP2X\Frontend;
+namespace EZPZ_TWEAKS\Frontend;
 
-use WP2X\Engine\Base;
+use EZPZ_TWEAKS\Engine\Base;
 use function add_action;
 use function plugins_url;
 use function wp_enqueue_script;
@@ -30,7 +30,7 @@ class Enqueue extends Base {
 	 * @since 1.0.0
 	 */
 	public static function enqueue_styles() {
-		wp_enqueue_style( W_TEXTDOMAIN . '-plugin-styles', plugins_url( 'assets/css/public.css', W_PLUGIN_ABSOLUTE ), array(), W_VERSION );
+		wp_enqueue_style( EZPZ_TWEAKS_TEXTDOMAIN . '-plugin-styles', plugins_url( 'assets/css/public.css', EZPZ_TWEAKS_PLUGIN_ABSOLUTE ), array(), EZPZ_TWEAKS_VERSION );
 	}
 
 	/**
@@ -40,7 +40,7 @@ class Enqueue extends Base {
 	 * @since 1.0.0
 	 */
 	public static function enqueue_scripts() {
-		wp_enqueue_script( W_TEXTDOMAIN . '-plugin-script', plugins_url( 'assets/js/public.js', W_PLUGIN_ABSOLUTE ), array( 'jquery' ), W_VERSION, false );
+		wp_enqueue_script( EZPZ_TWEAKS_TEXTDOMAIN . '-plugin-script', plugins_url( 'assets/js/public.js', EZPZ_TWEAKS_PLUGIN_ABSOLUTE ), array( 'jquery' ), EZPZ_TWEAKS_VERSION, false );
 	}
 
 	/**
@@ -51,10 +51,10 @@ class Enqueue extends Base {
 	 */
 	public static function enqueue_js_vars() {
 		wp_localize_script(
-			W_TEXTDOMAIN . '-plugin-script',
+			EZPZ_TWEAKS_TEXTDOMAIN . '-plugin-script',
 			'w_js_vars',
 			array(
-				'alert' => __( 'Hey! You have clicked the button!', W_TEXTDOMAIN ),
+				'alert' => __( 'Hey! You have clicked the button!', EZPZ_TWEAKS_TEXTDOMAIN ),
 			)
 		);
 	}

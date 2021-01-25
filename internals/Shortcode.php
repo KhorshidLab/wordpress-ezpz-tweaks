@@ -10,9 +10,9 @@
  * @link      https://khorshidlab.com
  */
 
-namespace WP2X\Internals;
+namespace EZPZ_TWEAKS\Internals;
 
-use WP2X\Engine\Base;
+use EZPZ_TWEAKS\Engine\Base;
 use function add_shortcode;
 use function shortcode_atts;
 

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * WP2X
+ * EZPZ_TWEAKS
  *
  * Fired when the plugin is uninstalled.
  *
@@ -15,7 +15,7 @@
  * - Repeat with other user roles. Best directly by using the links/query string parameters.
  * - Repeat things for multisite. Once for a single site in the network, once sitewide.
  *
- * @package   WP2X
+ * @package   EZPZ_TWEAKS
  * @author    Khorshid <info@khorshidlab.com>
  * @copyright 2020 Khorshid
  * @license   GPL 2.0+

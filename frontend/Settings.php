@@ -1,18 +1,18 @@
 <?php
 
 /**
- * WP2X
+ * EZPZ_TWEAKS
  *
- * @package   WP2X
+ * @package   EZPZ_TWEAKS
  * @author    Khorshid <info@khorshidlab.com>
  * @copyright 2020 Khorshid
  * @license   GPL 2.0+
  * @link      https://khorshidlab.com
  */
 
-namespace WP2X\Frontend;
+namespace EZPZ_TWEAKS\Frontend;
 
-use WP2X\Engine\Base;
+use EZPZ_TWEAKS\Engine\Base;
 
 class Settings extends Base {
 	/**
@@ -26,7 +26,7 @@ class Settings extends Base {
 	 * @return void
 	 */
 	public function initialize() {
-		$this->settings_option = get_option( 'wp2x-settings' );
+		$this->settings_option = get_option( 'ezpz-tweaks-settings' );
 
 		add_action( 'init', array( $this, 'disable_emojis' ) );
 		add_action( 'init', array( $this, 'disable_embeds_code_init' ), 9999 );
@@ -79,7 +79,7 @@ class Settings extends Base {
 			remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
 			remove_action( 'template_redirect', 'rest_output_link_header', 11 );
 
-			$error_message = esc_html__( 'Public access to the REST API has been limited.', W_TEXTDOMAIN );
+			$error_message = esc_html__( 'Public access to the REST API has been limited.', EZPZ_TWEAKS_TEXTDOMAIN );
 
 			if ( is_wp_error( $access ) ) {
 				$access->add( 'rest_cannot_access', $error_message, array( 'status' => rest_authorization_required_code() ) );

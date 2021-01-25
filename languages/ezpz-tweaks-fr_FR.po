@@ -19,7 +19,7 @@ msgstr ""
 msgid "Failed to import the settings."
 msgstr "N’a pas importé les paramètres."
 
-#: backend/Settings_Page.php:69 backend/Settings_Page.php:116 wp2x.php:33
+#: backend/Settings_Page.php:69 backend/Settings_Page.php:116 ezpz-tweaks.php:33
 msgid "Khorshid"
 msgstr "Khorshid"
 
@@ -551,8 +551,8 @@ msgstr ""
 msgid "The plugin: <strong>%s</strong> cannot be activated."
 msgstr ""
 
-#: wp2x.php:60
-msgid "\"WP2X\" requires PHP 7 or newer."
+#: ezpz-tweaks.php:60
+msgid "\"EZPZ_TWEAKS\" requires PHP 7 or newer."
 msgstr ""
 
 #~ msgid "Updated Messages"

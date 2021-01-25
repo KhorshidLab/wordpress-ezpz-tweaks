@@ -1,18 +1,18 @@
 <?php
 
 /**
- * WP2X
+ * EZPZ_TWEAKS
  *
- * @package   WP2X
+ * @package   EZPZ_TWEAKS
  * @author    Khorshid <info@khorshidlab.com>
  * @copyright 2020 Khorshid
  * @license   GPL 2.0+
  * @link      https://khorshidlab.com
  */
 
-namespace WP2X\Backend;
+namespace EZPZ_TWEAKS\Backend;
 
-use WP2X\Engine\Base;
+use EZPZ_TWEAKS\Engine\Base;
 use WP_Site;
 use function add_action;
 use function delete_option;
@@ -121,8 +121,8 @@ class ActDeact extends Base {
 		// Activate plugin when new blog is added
 		add_action( 'wpmu_new_blog', array( $this, 'activate_new_site' ) );
 
-		register_activation_hook( W_TEXTDOMAIN . '/' . W_TEXTDOMAIN . '.php', array( self::class, 'activate' ) );
-		register_deactivation_hook( W_TEXTDOMAIN . '/' . W_TEXTDOMAIN . '.php', array( self::class, 'deactivate' ) );
+		register_activation_hook( EZPZ_TWEAKS_TEXTDOMAIN . '/' . EZPZ_TWEAKS_TEXTDOMAIN . '.php', array( self::class, 'activate' ) );
+		register_deactivation_hook( EZPZ_TWEAKS_TEXTDOMAIN . '/' . EZPZ_TWEAKS_TEXTDOMAIN . '.php', array( self::class, 'deactivate' ) );
 		add_action( 'admin_init', array( $this, 'upgrade_procedure' ) );
 	}
 
@@ -244,14 +244,14 @@ class ActDeact extends Base {
 			return;
 		}
 
-		$version = get_option( 'wp2x-version' );
+		$version = get_option( 'ezpz-tweaks-version' );
 
-		if ( ! version_compare( W_VERSION, $version, '>' ) ) {
+		if ( ! version_compare( EZPZ_TWEAKS_VERSION, $version, '>' ) ) {
 			return;
 		}
 
-		update_option( 'wp2x-version', W_VERSION );
-		delete_option( W_TEXTDOMAIN . '_fake-meta' );
+		update_option( 'ezpz-tweaks-version', EZPZ_TWEAKS_VERSION );
+		delete_option( EZPZ_TWEAKS_TEXTDOMAIN . '_fake-meta' );
 	}
 
 }

@@ -1,18 +1,18 @@
 <?php
 
 /**
- * WP2X
+ * EZPZ_TWEAKS
  *
- * @package   WP2X
+ * @package   EZPZ_TWEAKS
  * @author    Khorshid <info@khorshidlab.com>
  * @copyright 2020 Khorshid
  * @license   GPL 2.0+
  * @link      https://khorshidlab.com
  */
 
-namespace WP2X\Backend;
+namespace EZPZ_TWEAKS\Backend;
 
-use WP2X\Engine\Base;
+use EZPZ_TWEAKS\Engine\Base;
 
 /**
  * Provide Import and Export of the settings of the plugin
@@ -54,13 +54,13 @@ class ImpExp extends Base {
 			return;
 		}
 
-		$settings = \get_option( W_TEXTDOMAIN . '-settings' );
+		$settings = \get_option( EZPZ_TWEAKS_TEXTDOMAIN . '-settings' );
 
 		\ignore_user_abort( true );
 
 		\nocache_headers();
 		\header( 'Content-Type: application/json; charset=utf-8' );
-		\header( 'Content-Disposition: attachment; filename=wp2x-settings-export-' . \gmdate( 'm-d-Y' ) . '.json' );
+		\header( 'Content-Disposition: attachment; filename=ezpz-tweaks-settings-export-' . \gmdate( 'm-d-Y' ) . '.json' );
 		\header( 'Expires: 0' );
 
 		echo \wp_json_encode( $settings, JSON_PRETTY_PRINT );
@@ -91,13 +91,13 @@ class ImpExp extends Base {
 		$extension       = \end( $file_name_parts );
 
 		if ( 'json' !== $extension ) {
-			\wp_die( \esc_html__( 'Please upload a valid .json file', W_TEXTDOMAIN ) );
+			\wp_die( \esc_html__( 'Please upload a valid .json file', EZPZ_TWEAKS_TEXTDOMAIN ) );
 		}
 
 		$import_file = $_FILES[ 'w_import_file' ][ 'tmp_name' ]; //phpcs:ignore WordPress.Security.ValidatedSanitizedInput
 
 		if ( empty( $import_file ) ) {
-			\wp_die( \esc_html__( 'Please upload a file to import', W_TEXTDOMAIN ) );
+			\wp_die( \esc_html__( 'Please upload a file to import', EZPZ_TWEAKS_TEXTDOMAIN ) );
 		}
 
 		// Retrieve the settings from the file and convert the json object to an array.
@@ -106,15 +106,15 @@ class ImpExp extends Base {
 		if ( $settings_file ) {
 			$settings = \json_decode( (string) $settings_file );
 
-			\update_option( W_TEXTDOMAIN . '-settings', \get_object_vars( $settings ) );
+			\update_option( EZPZ_TWEAKS_TEXTDOMAIN . '-settings', \get_object_vars( $settings ) );
 
-			\wp_safe_redirect( \admin_url( 'admin.php?page=' . W_TEXTDOMAIN . '-settings' ) );
+			\wp_safe_redirect( \admin_url( 'admin.php?page=' . EZPZ_TWEAKS_TEXTDOMAIN . '-settings' ) );
 			exit;
 		}
 
 		new \WP_Error(
-			'wp2x_import_settings_failed',
-			\__( 'Failed to import the settings.', W_TEXTDOMAIN )
+			'ezpz-tweaks_import_settings_failed',
+			\__( 'Failed to import the settings.', EZPZ_TWEAKS_TEXTDOMAIN )
 		);
 
 	}

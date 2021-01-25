@@ -126,35 +126,35 @@
 	border-bottom: 1px solid #e9e9e9;
 }
 
-.wp2x-tabs .wp-tab-bar {
+.ezpz-tweaks-tabs .wp-tab-bar {
 	margin-bottom: -7px !important;
 }
 
-.wp2x-tabs li {
+.ezpz-tweaks-tabs li {
 	padding: 10px 15px !important;
 	display: inline-block !important;
 }
 
-.wp2x-tabs li a {
+.ezpz-tweaks-tabs li a {
 	color: black;
 	font-size: 14px;
 }
 
-.wp2x-tabs li.wp-tab-active a {
+.ezpz-tweaks-tabs li.wp-tab-active a {
 	font-weight: bold;
 	color: #0052cc;
 }
 
-.wp2x-tabs .wp-tab-panel {
+.ezpz-tweaks-tabs .wp-tab-panel {
 	max-height: 100% !important;
 	padding: 20px !important;
 }
 
-.wp2x-tabs h3.hndle {
+.ezpz-tweaks-tabs h3.hndle {
 	padding: 0 1em;
 }
 
-.wp2x-tabs .CodeMirror {
+.ezpz-tweaks-tabs .CodeMirror {
 	width: 700px !important;
 }
 

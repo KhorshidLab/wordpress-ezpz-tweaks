@@ -1,16 +1,16 @@
 <?php
 
 /**
- * WP2X
+ * EZPZ_TWEAKS
  *
- * @package   WP2X
+ * @package   EZPZ_TWEAKS
  * @author    Khorshid <info@khorshidlab.com>
  * @copyright 2020 Khorshid
  * @license   GPL 2.0+
  * @link      https://khorshidlab.com
  */
 
-namespace WP2X\Engine;
+namespace EZPZ_TWEAKS\Engine;
 
 use WP_User;
 use function _doing_it_wrong;

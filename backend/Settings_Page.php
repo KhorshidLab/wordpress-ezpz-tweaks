@@ -1,18 +1,18 @@
 <?php
 
 /**
- * WP2X
+ * EZPZ_TWEAKS
  *
- * @package   WP2X
+ * @package   EZPZ_TWEAKS
  * @author    Khorshid <info@khorshidlab.com>
  * @copyright 2020 Khorshid
  * @license   GPL 2.0+
  * @link      https://khorshidlab.com
  */
 
-namespace WP2X\Backend;
+namespace EZPZ_TWEAKS\Backend;
 
-use WP2X\Engine\Base;
+use EZPZ_TWEAKS\Engine\Base;
 
 /**
  * Create the settings page in the backend
@@ -32,7 +32,7 @@ class Settings_Page extends Base {
 	 */
 	public function initialize() {
 		$this->get_locale      = get_locale();
-		$this->settings_option = get_option( 'wp2x-settings' );
+		$this->settings_option = get_option( 'ezpz-tweaks-settings' );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'change_admin_font' ), 30 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'change_editor_font' ), 30 );
@@ -46,7 +46,7 @@ class Settings_Page extends Base {
 
 		$realpath = realpath( dirname( __FILE__ ) );
 		assert( is_string( $realpath ) );
-		$plugin_basename = plugin_basename( plugin_dir_path( $realpath ) . W_TEXTDOMAIN . '.php' );
+		$plugin_basename = plugin_basename( plugin_dir_path( $realpath ) . EZPZ_TWEAKS_TEXTDOMAIN . '.php' );
 
 		add_filter( 'plugin_action_links_' . $plugin_basename, array( $this, 'add_action_links' ) );
 	}
@@ -66,12 +66,12 @@ class Settings_Page extends Base {
 		// Menu icon
 		$icon_svg = 'data:image/svg+xml;base64,PHN2ZyBpZD0iS0xfTG9nbyIgZGF0YS1uYW1lPSJLTCBMb2dvIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTkuMiAyNTUuODQiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMDA1MmNjfS5jbHMtMntmaWxsOiNmZmFiMDB9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTI5LjM5IDEyNi45Nkw3NC42IDE4MC4yNWw3NS43NCA3NS40OSAxMDguMzUuMS0xMjkuMy0xMjguODh6IiBpZD0iX2JvdCIgZGF0YS1uYW1lPSJcIGJvdCIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTI1OS4yIDBIMTUxLjk3TDIuMDcgMTUwLjE4bDI2LjggNzguMzJMMjU5LjIuMzdWMHoiIGlkPSJfIiBkYXRhLW5hbWU9Ii8iLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0wIC4wMWg3Ni40N3YyNTUuODNIMHoiIGlkPSJfMiIgZGF0YS1uYW1lPSJ8Ii8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMC0uMTlsLjEgMTA3LjIgNzUuNjIgNzQuOTUgNTMuMzgtNTQuMjFMMC0uMTl6IiBpZD0iXzMiIGRhdGEtbmFtZT0iXCIvPjxwYXRoIGZpbGw9IiMxNzJiNGQiIGQ9Ik0xMzAuNzMgMTI4LjMzbC0yNi4zIDI1LjE5LTI0IDI0LjI4IDcwLjU2LTI4LjgtMjAuMjYtMjAuNjd6IiBpZD0ic2hhZG93IiBvcGFjaXR5PSIuMiIvPjwvc3ZnPg==';
 
-		add_menu_page( __( 'Khorshid', W_TEXTDOMAIN ), __( 'Khorshid', W_TEXTDOMAIN ), 'manage_options', W_TEXTDOMAIN, array(
+		add_menu_page( __( 'Khorshid', EZPZ_TWEAKS_TEXTDOMAIN ), __( 'Khorshid', EZPZ_TWEAKS_TEXTDOMAIN ), 'manage_options', EZPZ_TWEAKS_TEXTDOMAIN, array(
 			$this,
 			'display_plugin_about_page'
 		), $icon_svg, 3 );
 
-		add_submenu_page( W_TEXTDOMAIN, __( 'Settings', W_TEXTDOMAIN ), __( 'Settings', W_TEXTDOMAIN ), 'manage_options', W_TEXTDOMAIN . '-settings', [
+		add_submenu_page( EZPZ_TWEAKS_TEXTDOMAIN, __( 'Settings', EZPZ_TWEAKS_TEXTDOMAIN ), __( 'Settings', EZPZ_TWEAKS_TEXTDOMAIN ), 'manage_options', EZPZ_TWEAKS_TEXTDOMAIN . '-settings', [
 			$this,
 			'display_plugin_settings_page'
 		] );
@@ -84,7 +84,7 @@ class Settings_Page extends Base {
 	 * @since 1.0.0
 	 */
 	public function display_plugin_about_page() {
-		include_once W_PLUGIN_ROOT . 'backend/views/about.php';
+		include_once EZPZ_TWEAKS_PLUGIN_ROOT . 'backend/views/about.php';
 	}
 
 	/**
@@ -94,7 +94,7 @@ class Settings_Page extends Base {
 	 * @since 1.0.0
 	 */
 	public function display_plugin_settings_page() {
-		include W_PLUGIN_ROOT . "backend/views/settings.php";
+		include EZPZ_TWEAKS_PLUGIN_ROOT . "backend/views/settings.php";
 	}
 
 	/**
@@ -107,13 +107,13 @@ class Settings_Page extends Base {
 	 */
 	public function add_action_links( array $links ) {
 		return array_merge( array(
-			'settings' => '<a href="' . admin_url( 'admin.php?page=' . W_TEXTDOMAIN . '-settings' ) . '">' . __( 'Settings', W_TEXTDOMAIN ) . '</a>',
-			'donate'   => '<a href="#">' . __( 'Donate', W_TEXTDOMAIN ) . '</a>',
+			'settings' => '<a href="' . admin_url( 'admin.php?page=' . EZPZ_TWEAKS_TEXTDOMAIN . '-settings' ) . '">' . __( 'Settings', EZPZ_TWEAKS_TEXTDOMAIN ) . '</a>',
+			'donate'   => '<a href="#">' . __( 'Donate', EZPZ_TWEAKS_TEXTDOMAIN ) . '</a>',
 		), $links );
 	}
 
 	public function custom_footer() {
-		return '<img src="' . W_PLUGIN_ROOT_URL . 'assets/img/khorshid-logo.svg" width="30" style="vertical-align: middle;" /><a href="https://khorshidlab.com" style="	text-decoration: none;color: #0052cc;margin-right: 5px;font-weight: bold;" target="_blank">' . __( 'WordPress Support', W_TEXTDOMAIN ) . ': ' . __( 'Khorshid', W_TEXTDOMAIN ) . '</a>';
+		return '<img src="' . EZPZ_TWEAKS_PLUGIN_ROOT_URL . 'assets/img/khorshid-logo.svg" width="30" style="vertical-align: middle;" /><a href="https://khorshidlab.com" style="	text-decoration: none;color: #0052cc;margin-right: 5px;font-weight: bold;" target="_blank">' . __( 'WordPress Support', EZPZ_TWEAKS_TEXTDOMAIN ) . ': ' . __( 'Khorshid', EZPZ_TWEAKS_TEXTDOMAIN ) . '</a>';
 	}
 
 	public function change_admin_font() {
@@ -129,7 +129,7 @@ class Settings_Page extends Base {
 			}
 
 			$font_styles .= 'body, h1, h2, h3, h4, h5, h6, label, input, textarea, .components-notice, #wpadminbar *:not([class="ab-icon"]), .wp-core-ui, .media-menu, .media-frame *, .media-modal *{font-family:"' . $admin_font . '" !important;}';
-			wp_add_inline_style( W_TEXTDOMAIN . '-admin-styles', $font_styles );
+			wp_add_inline_style( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-styles', $font_styles );
 		}
 	}
 
@@ -146,7 +146,7 @@ class Settings_Page extends Base {
 			}
 
 			$font_styles .= '#editorcontainer #content, #wp_mce_fullscreen, .block-editor-writing-flow input, .block-editor-writing-flow textarea, .block-editor-writing-flow p {font-family:"' . $editor_font . '" !important;}';
-			wp_add_inline_style( W_TEXTDOMAIN . '-admin-styles', $font_styles );
+			wp_add_inline_style( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-styles', $font_styles );
 		}
 	}
 
@@ -241,11 +241,11 @@ class Settings_Page extends Base {
 
 	public function custom_fonts() {
 		$fonts = array(
-			'wp-default'  => __( 'WordPress Default', W_TEXTDOMAIN ),
-			'Vazir'       => __( 'Vazir', W_TEXTDOMAIN ),
-			'Estedad'     => __( 'Estedad', W_TEXTDOMAIN ),
-			'IranianSans' => __( 'Iranian', W_TEXTDOMAIN ),
-			'NotoSans'    => __( 'Noto', W_TEXTDOMAIN ),
+			'wp-default'  => __( 'WordPress Default', EZPZ_TWEAKS_TEXTDOMAIN ),
+			'Vazir'       => __( 'Vazir', EZPZ_TWEAKS_TEXTDOMAIN ),
+			'Estedad'     => __( 'Estedad', EZPZ_TWEAKS_TEXTDOMAIN ),
+			'IranianSans' => __( 'Iranian', EZPZ_TWEAKS_TEXTDOMAIN ),
+			'NotoSans'    => __( 'Noto', EZPZ_TWEAKS_TEXTDOMAIN ),
 		);
 
 		return $fonts;
@@ -253,7 +253,7 @@ class Settings_Page extends Base {
 
 	public function apply_admin_custom_css() {
 		if ( isset( $this->settings_option['custom_css'] ) ) {
-			wp_add_inline_style( W_TEXTDOMAIN . '-admin-styles', $this->settings_option['custom_css'] );
+			wp_add_inline_style( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-styles', $this->settings_option['custom_css'] );
 		}
 	}
 

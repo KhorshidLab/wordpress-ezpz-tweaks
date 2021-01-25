@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-01-24 18:20+0330\n"
-"PO-Revision-Date: 2021-01-24 18:21+0330\n"
+"POT-Creation-Date: 2021-01-25 13:30+0330\n"
+"PO-Revision-Date: 2021-01-25 13:30+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Failed to import the settings."
 msgstr "خطا در درون ریزی تنظیمات."
 
-#: backend/Settings_Page.php:69 backend/Settings_Page.php:116 wp2x.php:33
+#: backend/Settings_Page.php:69 backend/Settings_Page.php:116
 msgid "Khorshid"
 msgstr "خورشيد"
 
@@ -544,8 +544,14 @@ msgstr "حداقل نسخه مورد نیاز وردپرس %1$s است. نسخه
 msgid "The plugin: <strong>%s</strong> cannot be activated."
 msgstr "افزونه: <strong>%s</strong> نمی تواند فعال شود."
 
-#: wp2x.php:60
-msgid "\"WP2X\" requires PHP 7 or newer."
+#: wordpress-ezpz-tweaks.php:33
+#, fuzzy
+#| msgid "WordPress Default"
+msgid "WordPress EzPz Tweaks"
+msgstr "پیشفرض وردپرس"
+
+#: wordpress-ezpz-tweaks.php:60
+msgid "\"WordPress EzPz Tweaks\" requires PHP 7 or newer."
 msgstr ""
 
 #~ msgid "Updated Messages"

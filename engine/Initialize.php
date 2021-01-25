@@ -1,21 +1,21 @@
 <?php
 
 /**
- * WP2X
+ * EZPZ_TWEAKS
  *
- * @package   WP2X
+ * @package   EZPZ_TWEAKS
  * @author    Khorshid <info@khorshidlab.com>
  * @copyright 2020 Khorshid
  * @license   GPL 2.0+
  * @link      https://khorshidlab.com
  */
 
-namespace WP2X\Engine;
+namespace EZPZ_TWEAKS\Engine;
 
 use Composer\Autoload\ClassLoader;
 use Exception;
 use Throwable;
-use WP2X\Engine;
+use EZPZ_TWEAKS\Engine;
 use function apply_filters;
 use function array_diff;
 use function array_keys;
@@ -94,10 +94,10 @@ class Initialize {
 	private function get_classes( string $namespace ) {
 		$prefix    = $this->composer->getPrefixesPsr4();
 		$classmap  = $this->composer->getClassMap();
-		$namespace = 'WP2X\\' . $namespace;
+		$namespace = 'EZPZ_TWEAKS\\' . $namespace;
 
 		// In case composer has autoload optimized
-		if ( isset( $classmap['WP2X\\Engine\\Initialize'] ) ) {
+		if ( isset( $classmap['EZPZ_TWEAKS\\Engine\\Initialize'] ) ) {
 			$classes = array_keys( $classmap );
 
 			foreach ( $classes as $class ) {
@@ -120,7 +120,7 @@ class Initialize {
 			$this->find_classes( $php_files, $folder, $namespace );
 
 			if ( ! WP_DEBUG ) {
-				wp_die( esc_html__( 'Plugin Name is on production environment with missing `composer dumpautoload -o` that will improve the performance on autoloading itself.', W_TEXTDOMAIN ) );
+				wp_die( esc_html__( 'Plugin Name is on production environment with missing `composer dumpautoload -o` that will improve the performance on autoloading itself.', EZPZ_TWEAKS_TEXTDOMAIN ) );
 			}
 
 			return $this->classes;
@@ -189,14 +189,14 @@ class Initialize {
 	 * @since 1.0.0
 	 */
 	private function load_classes() {
-		$this->classes = apply_filters( 'wp2x_classes_to_execute', $this->classes );
+		$this->classes = apply_filters( 'ezpz-tweaks_classes_to_execute', $this->classes );
 
 		foreach ( $this->classes as $class ) {
 			try {
 				$temp = new $class;
 				$temp->initialize();
 			} catch ( Throwable $err ) {
-				do_action( 'wp2x_initialize_failed', $err );
+				do_action( 'ezpz-tweaks_initialize_failed', $err );
 
 				if ( WP_DEBUG ) {
 					throw new Exception( $err->getMessage() );

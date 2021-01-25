@@ -1,19 +1,19 @@
 <?php
 
 /**
- * WP2X
+ * EZPZ_TWEAKS
  *
- * @package   WP2X
+ * @package   EZPZ_TWEAKS
  * @author    Khorshid <info@khorshidlab.com>
  * @copyright 2020 Khorshid
  * @license   GPL 2.0+
  * @link      https://khorshidlab.com
  */
 
-namespace WP2X\Integrations;
+namespace EZPZ_TWEAKS\Integrations;
 
 use Cmb2Grid\Grid\Cmb2Grid;
-use WP2X\Engine\Base;
+use EZPZ_TWEAKS\Engine\Base;
 use function add_action;
 use function new_cmb2_box;
 
@@ -30,8 +30,8 @@ class CMB extends Base {
 	public function initialize() {
 		parent::initialize();
 
-		require_once W_PLUGIN_ROOT . 'vendor/cmb2/init.php';
-		require_once W_PLUGIN_ROOT . 'vendor/cmb2-grid/Cmb2GridPluginLoad.php';
+		require_once EZPZ_TWEAKS_PLUGIN_ROOT . 'vendor/cmb2/init.php';
+		require_once EZPZ_TWEAKS_PLUGIN_ROOT . 'vendor/cmb2-grid/Cmb2GridPluginLoad.php';
 	}
 
 }

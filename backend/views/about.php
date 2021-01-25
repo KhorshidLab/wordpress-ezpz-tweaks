@@ -5,7 +5,7 @@
  * This includes the header, options, and other information that should provide
  * The User Interface to the end user.
  *
- * @package   WP2X
+ * @package   EZPZ_TWEAKS
  * @author    Khorshid <info@khorshidlab.com>
  * @copyright 2020 Khorshid
  * @license   GPL 2.0+
@@ -19,10 +19,10 @@
 
 	<div class="right-column-settings-page metabox-holder">
 		<div class="postbox">
-			<h3 class="hndle"><span><?php esc_html_e( 'About', W_TEXTDOMAIN ); ?></span></h3>
+			<h3 class="hndle"><span><?php esc_html_e( 'About', EZPZ_TWEAKS_TEXTDOMAIN ); ?></span></h3>
 			<div class="inside">
 				<p><a href="https://khorshidlab.com"><img
-								src="<?php echo W_PLUGIN_ROOT_URL ?>assets/img/khorshid-logo.svg" width="120"></a></p>
+								src="<?php echo EZPZ_TWEAKS_PLUGIN_ROOT_URL ?>assets/img/khorshid-logo.svg" width="120"></a></p>
 				<br>
 				<h4>Our History</h4>
 				<p>

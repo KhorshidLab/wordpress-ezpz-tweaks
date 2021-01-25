@@ -1,5 +1,5 @@
 {
-    "name": "khorshid-lab/wp2x",
+    "name": "khorshid-lab/ezpz-tweaks",
     "type": "wordpress-plugin",
     "description": "Wordpress Plugin Boilerplate with steroids!",
     "homepage": "https:\/\/github.com\/WPBP\/WordPress-Plugin-Boilerplate-Powered",
@@ -30,11 +30,11 @@
     },
     "autoload": {
         "psr-4": {
-            "WP2X\\Backend\\": "backend\/",
-            "WP2X\\Frontend\\": "frontend\/",
-            "WP2X\\Internals\\": "internals\/",
-            "WP2X\\Integrations\\": "integrations\/",
-            "WP2X\\Engine\\": "engine\/"
+            "EZPZ_TWEAKS\\Backend\\": "backend\/",
+            "EZPZ_TWEAKS\\Frontend\\": "frontend\/",
+            "EZPZ_TWEAKS\\Internals\\": "internals\/",
+            "EZPZ_TWEAKS\\Integrations\\": "integrations\/",
+            "EZPZ_TWEAKS\\Engine\\": "engine\/"
         }
     },
     "minimum-stability": "dev",

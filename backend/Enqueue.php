@@ -1,18 +1,18 @@
 <?php
 
 /**
- * WP2X
+ * EZPZ_TWEAKS
  *
- * @package   WP2X
+ * @package   EZPZ_TWEAKS
  * @author    Khorshid <info@khorshidlab.com>
  * @copyright 2020 Khorshid
  * @license   GPL 2.0+
  * @link      https://khorshidlab.com
  */
 
-namespace WP2X\Backend;
+namespace EZPZ_TWEAKS\Backend;
 
-use WP2X\Engine\Base;
+use EZPZ_TWEAKS\Engine\Base;
 use function add_action;
 use function plugins_url;
 use function wp_enqueue_script;
@@ -45,7 +45,7 @@ class Enqueue extends Base {
 	 * @since 1.0.0
 	 */
 	public function enqueue_admin_styles() {
-		wp_enqueue_style( W_TEXTDOMAIN . '-admin-styles', plugins_url( 'assets/css/admin.css', W_PLUGIN_ABSOLUTE ), array( 'dashicons' ), W_VERSION );
+		wp_enqueue_style( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-styles', plugins_url( 'assets/css/admin.css', EZPZ_TWEAKS_PLUGIN_ABSOLUTE ), array( 'dashicons' ), EZPZ_TWEAKS_VERSION );
 	}
 
 	/**
@@ -54,7 +54,7 @@ class Enqueue extends Base {
 	 * @since 1.0.0
 	 */
 	public function enqueue_admin_scripts() {
-		wp_enqueue_script( W_TEXTDOMAIN . '-admin-script', plugins_url( 'assets/js/admin.js', W_PLUGIN_ABSOLUTE ), array( 'jquery' ), W_VERSION, false );
+		wp_enqueue_script( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-script', plugins_url( 'assets/js/admin.js', EZPZ_TWEAKS_PLUGIN_ABSOLUTE ), array( 'jquery' ), EZPZ_TWEAKS_VERSION, false );
 		wp_enqueue_code_editor( array( 'type' => 'text/css' ) );
 	}
 

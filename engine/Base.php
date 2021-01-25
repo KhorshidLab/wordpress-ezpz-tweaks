@@ -10,7 +10,7 @@
  * @link      https://khorshidlab.com
  */
 
-namespace WP2X\Engine;
+namespace EZPZ_TWEAKS\Engine;
 
 use function w_get_settings;
 

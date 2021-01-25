@@ -11,9 +11,9 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-namespace WP2X\Integrations;
+namespace EZPZ_TWEAKS\Integrations;
 
-use WP2X\Engine\Base;
+use EZPZ_TWEAKS\Engine\Base;
 
 class WPS_Hide_Login extends Base {
 
@@ -22,7 +22,7 @@ class WPS_Hide_Login extends Base {
 
 	public function __construct() {
 		global $wp_version;
-		$this->settings_option = get_option( 'wp2x-settings' );
+		$this->settings_option = get_option( 'ezpz-tweaks-settings' );
 
 		if( isset( $this->settings_option['custom_login_url'] ) )
 		{
@@ -99,7 +99,7 @@ class WPS_Hide_Login extends Base {
 
 		if ( isset( $this->settings_option['custom_login_url'] ) ) {
 			return $this->settings_option['custom_login_url'];
-		} else if ( ( is_multisite() && is_plugin_active_for_network( W_PLUGIN_BASENAME ) && isset( $this->settings_option['custom_login_url'] ) ) ) {
+		} else if ( ( is_multisite() && is_plugin_active_for_network( EZPZ_TWEAKS_PLUGIN_BASENAME ) && isset( $this->settings_option['custom_login_url'] ) ) ) {
 			return $this->settings_option['custom_login_url'];
 		} else if ( $slug = 'login' ) {
 			return $slug;
@@ -121,7 +121,7 @@ class WPS_Hide_Login extends Base {
 
 	public function admin_notices_incompatible() {
 
-		echo '<div class="error notice is-dismissible"><p>' . __( 'Please upgrade to the latest version of WordPress to activate', W_TEXTDOMAIN ) . '</p></div>';
+		echo '<div class="error notice is-dismissible"><p>' . __( 'Please upgrade to the latest version of WordPress to activate', EZPZ_TWEAKS_TEXTDOMAIN ) . '</p></div>';
 
 	}
 
@@ -136,7 +136,7 @@ class WPS_Hide_Login extends Base {
 		     && isset( $_GET['settings-updated'] )
 		     && ! isset( $_GET['page'] ) ) {
 
-			echo '<div class="updated notice is-dismissible"><p>' . sprintf( __( 'Your login page is now here: <strong><a href="%1$s">%2$s</a></strong>. Bookmark this page!', W_TEXTDOMAIN ), $this->new_login_url(), $this->new_login_url() ) . '</p></div>';
+			echo '<div class="updated notice is-dismissible"><p>' . sprintf( __( 'Your login page is now here: <strong><a href="%1$s">%2$s</a></strong>. Bookmark this page!', EZPZ_TWEAKS_TEXTDOMAIN ), $this->new_login_url(), $this->new_login_url() ) . '</p></div>';
 
 		}
 
@@ -150,7 +150,7 @@ class WPS_Hide_Login extends Base {
 		     && ( strpos( $_SERVER['REQUEST_URI'], 'wp-signup' ) !== false
 		          || strpos( $_SERVER['REQUEST_URI'], 'wp-activate' ) !== false ) && apply_filters( 'wps_hide_login_signup_enable', false ) === false ) {
 
-			wp_die( __( 'This feature is not enabled.', W_TEXTDOMAIN ) );
+			wp_die( __( 'This feature is not enabled.', EZPZ_TWEAKS_TEXTDOMAIN ) );
 
 		}
 
@@ -190,7 +190,7 @@ class WPS_Hide_Login extends Base {
 		global $pagenow;
 
 		if ( ! is_user_logged_in() && 'customize.php' === $pagenow ) {
-			wp_die( __( 'This has been disabled', W_TEXTDOMAIN ), 403 );
+			wp_die( __( 'This has been disabled', EZPZ_TWEAKS_TEXTDOMAIN ), 403 );
 		}
 	}
 

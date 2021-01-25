@@ -9,9 +9,9 @@
  * @link      https://khorshidlab.com
  */
 
-namespace WP2X\Frontend\Extras;
+namespace EZPZ_TWEAKS\Frontend\Extras;
 
-use WP2X\Engine\Base;
+use EZPZ_TWEAKS\Engine\Base;
 use function add_filter;
 
 /**
@@ -28,7 +28,7 @@ class Body_Class extends Base {
 	 * @since 1.0.0
 	 */
 	public static function add_w_class( array $classes ) {
-		$classes[] = W_TEXTDOMAIN;
+		$classes[] = EZPZ_TWEAKS_TEXTDOMAIN;
 
 		return $classes;
 	}

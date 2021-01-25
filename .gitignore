@@ -36,5 +36,5 @@ intermediate
 cache
 vendor
 tests/_output
-/wp2x/vendor/
+/ezpz-tweaks/vendor/
 tests/_support/_generated

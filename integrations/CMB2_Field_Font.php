@@ -1,9 +1,9 @@
 <?php
 
 /**
- * WP2X
+ * EZPZ_TWEAKS
  *
- * @package   WP2X
+ * @package   EZPZ_TWEAKS
  * @author    Khorshid <info@khorshidlab.com>
  * @copyright 2020 Khorshid
  * @license   GPL 2.0+
@@ -25,9 +25,9 @@
  * License: GPLv2+
  */
 
-namespace WP2X\Integrations;
+namespace EZPZ_TWEAKS\Integrations;
 
-use WP2X\Engine\Base;
+use EZPZ_TWEAKS\Engine\Base;
 use function plugins_url;
 
 class CMB2_Field_Font extends Base {
@@ -73,19 +73,19 @@ class CMB2_Field_Font extends Base {
 
 		if ( get_locale() != 'fa_IR' ) {
 			// https://github.com/typekit/webfontloader
-			wp_register_script( 'cmb-font-webfont', plugins_url( 'assets/js/webfont.js', W_PLUGIN_ABSOLUTE ), array( 'jquery' ), self::VERSION, true );
+			wp_register_script( 'cmb-font-webfont', plugins_url( 'assets/js/webfont.js', EZPZ_TWEAKS_PLUGIN_ABSOLUTE ), array( 'jquery' ), self::VERSION, true );
 			wp_enqueue_script( 'cmb-font-webfont' );
 
 			// https://select2.org/
-			wp_register_script( 'cmb-font-select2', plugins_url( 'assets/js/select2.full.min.js', W_PLUGIN_ABSOLUTE ), array( 'jquery' ), self::VERSION, true );
+			wp_register_script( 'cmb-font-select2', plugins_url( 'assets/js/select2.full.min.js', EZPZ_TWEAKS_PLUGIN_ABSOLUTE ), array( 'jquery' ), self::VERSION, true );
 			wp_enqueue_script( 'cmb-font-select2' );
 
-			wp_enqueue_style( 'cmb-font-select2', plugins_url( 'assets/css/select2.min.css', W_PLUGIN_ABSOLUTE ), array(), self::VERSION );
+			wp_enqueue_style( 'cmb-font-select2', plugins_url( 'assets/css/select2.min.css', EZPZ_TWEAKS_PLUGIN_ABSOLUTE ), array(), self::VERSION );
 			wp_enqueue_style( 'cmb-font-select2' );
 
 			// https://github.com/saadqbal/HiGoogleFonts
 			// Note: HiGoogleFonts has been modified to add search box, custom placeholder and use select2 default theme (instead of the horrible classic theme)
-			wp_register_script( 'cmb-font-higooglefonts', plugins_url( 'assets/js/higooglefonts.js', W_PLUGIN_ABSOLUTE ), array(
+			wp_register_script( 'cmb-font-higooglefonts', plugins_url( 'assets/js/higooglefonts.js', EZPZ_TWEAKS_PLUGIN_ABSOLUTE ), array(
 				'jquery',
 				'cmb-font-webfont',
 				'cmb-font-select2'
