@@ -48,6 +48,3 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2021 [Khorshid](https://github.com/KhorshidLab).<br />
 This project is [GPL 2.0+](http://www.gnu.org/licenses/gpl-2.0.txt) licensed.
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
