@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-01-24 18:22+0330\n"
-"PO-Revision-Date: 2021-01-24 18:22+0330\n"
+"POT-Creation-Date: 2021-01-31 19:27+0330\n"
+"PO-Revision-Date: 2021-01-31 19:30+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -15,91 +15,90 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;\\__\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: backend/ImpExp.php:117
+#: backend/ImpExp.php:120
 msgid "Failed to import the settings."
 msgstr "N’a pas importé les paramètres."
 
-#: backend/Settings_Page.php:69 backend/Settings_Page.php:116 ezpz-tweaks.php:33
-msgid "Khorshid"
-msgstr "Khorshid"
+#: backend/Settings_Page.php:68
+msgid "EzPz Tweaks"
+msgstr ""
 
-#: backend/Settings_Page.php:74 backend/Settings_Page.php:110
+#: backend/Settings_Page.php:98
+msgid ""
+"Edit this page from: Settings > EzPz Tweaks > Branding tab > Page Content."
+msgstr ""
+"Modifier cette page à partir de : Paramètres > EzPz Tweaks > onglet Branding "
+"> Page Content."
+
+#: backend/Settings_Page.php:101
+msgid "Edit Page"
+msgstr "Modifier la page"
+
+#: backend/Settings_Page.php:130
 msgid "Settings"
 msgstr "Paramètres"
 
-#: backend/Settings_Page.php:111
+#: backend/Settings_Page.php:131
 msgid "Donate"
 msgstr "Faire un don"
 
-#: backend/Settings_Page.php:116
-msgid "WordPress Support"
-msgstr "Assistance WordPress"
-
-#: backend/Settings_Page.php:244
+#: backend/Settings_Page.php:272
 msgid "WordPress Default"
 msgstr "WordPress par défaut"
 
-#: backend/Settings_Page.php:245
+#: backend/Settings_Page.php:273
 msgid "Vazir"
 msgstr ""
 
-#: backend/Settings_Page.php:246
+#: backend/Settings_Page.php:274
 msgid "Estedad"
 msgstr ""
 
-#: backend/Settings_Page.php:247
+#: backend/Settings_Page.php:275
 msgid "Iranian"
 msgstr ""
 
-#: backend/Settings_Page.php:248
+#: backend/Settings_Page.php:276
 msgid "Noto"
 msgstr ""
 
-#: backend/views/settings.php:4
+#: backend/views/settings.php:6
 msgid "General"
 msgstr "Général"
 
-#: backend/views/settings.php:5
+#: backend/views/settings.php:7
+msgid "Branding"
+msgstr "Image de marque"
+
+#: backend/views/settings.php:8
 msgid "Import & Export"
 msgstr "Importer & Exporter"
 
-#: backend/views/settings.php:26 backend/views/settings.php:48
+#: backend/views/settings.php:29 backend/views/settings.php:51
 msgid "Admin Font"
 msgstr "Panneau d'administration la fonte"
 
-#: backend/views/settings.php:27 backend/views/settings.php:49
+#: backend/views/settings.php:30 backend/views/settings.php:52
 msgid "Change WordPress admin font"
 msgstr "Changer la police d'administration de WordPress"
 
-#: backend/views/settings.php:37 backend/views/settings.php:58
+#: backend/views/settings.php:40 backend/views/settings.php:61
 msgid "Editor Font"
 msgstr "Police d’éditeur"
 
-#: backend/views/settings.php:38 backend/views/settings.php:59
+#: backend/views/settings.php:41 backend/views/settings.php:62
 msgid "Change WordPress editor font"
 msgstr "Modifier la police d’éditeur WordPress"
 
-#: backend/views/settings.php:52 backend/views/settings.php:62
+#: backend/views/settings.php:55 backend/views/settings.php:65
 msgid "Choose a font"
 msgstr "Choisissez une police"
 
-#: backend/views/settings.php:69
-msgid "Change WordPress Logo"
-msgstr "Changer le logo WordPress"
-
-#: backend/views/settings.php:70
-msgid "Upload an image or enter an URL."
-msgstr "Téléchargez une image ou entrez une URL."
-
-#: backend/views/settings.php:77
-msgid "Add File"
-msgstr "Ajouter le fichier"
-
-#: backend/views/settings.php:91
+#: backend/views/settings.php:72
 msgid "Change WP Login URL"
 msgstr "Modifier l’URL de connexion WP"
 
-#: backend/views/settings.php:92
+#: backend/views/settings.php:73
 msgid ""
 "Protect your website by changing the login URL and preventing access to the "
 "wp-login.php page and the wp-admin directory to non-connected people."
@@ -108,20 +107,20 @@ msgstr ""
 "l’accès à la page wp-login.php et au répertoire wp-admin pour les personnes "
 "non connectées."
 
-#: backend/views/settings.php:101
+#: backend/views/settings.php:82
 msgid "Login Page Custom Text"
 msgstr "Texte personnalisé de la page de connexion"
 
-#: backend/views/settings.php:102
+#: backend/views/settings.php:83
 msgid "Add custom text to wordpress admin login page"
 msgstr ""
 "Ajouter du texte personnalisé à la page de connexion de wordpress admin"
 
-#: backend/views/settings.php:111
+#: backend/views/settings.php:92
 msgid "Disable Public Access to WP REST API"
 msgstr "Désactiver l’accès du public à l’API WP REST"
 
-#: backend/views/settings.php:112
+#: backend/views/settings.php:93
 msgid ""
 " API consumers be authenticated, which effectively prevents anonymous "
 "external access."
@@ -129,107 +128,167 @@ msgstr ""
 "Les consommateurs d'API soient authentifiés, ce qui empêche efficacement "
 "l'accès externe anonyme."
 
-#: backend/views/settings.php:121
+#: backend/views/settings.php:102
 msgid "Disable Comment Website Field"
 msgstr "Désactiver le champ du site Web de commentaires"
 
-#: backend/views/settings.php:129
+#: backend/views/settings.php:110
 msgid "Remove Welcome Panel"
 msgstr "Supprimer le panneau de bienvenue"
 
-#: backend/views/settings.php:137
+#: backend/views/settings.php:118
 msgid "Disable Emojis"
 msgstr "Désactiver les émojis"
 
-#: backend/views/settings.php:145
+#: backend/views/settings.php:126
 msgid "Disable Embeds"
 msgstr "Désactiver les incorporations"
 
-#: backend/views/settings.php:153
+#: backend/views/settings.php:134
 msgid "Disable XML-RPC"
 msgstr "Désactiver XML-RPC"
 
-#: backend/views/settings.php:161
+#: backend/views/settings.php:142
 msgid "Remove Shortlink"
 msgstr "Supprimer le lien court"
 
-#: backend/views/settings.php:169
+#: backend/views/settings.php:150
 msgid "Remove WP Version"
 msgstr "Supprimer la version WP"
 
-#: backend/views/settings.php:179
+#: backend/views/settings.php:160
 msgid "Hide Admin Bar"
 msgstr "Masquer la barre d'administration"
 
-#: backend/views/settings.php:180
+#: backend/views/settings.php:161
 msgid "Hide admin bar for user roles"
 msgstr "Masquer la barre d'administration pour les rôles utilisateur"
 
-#: backend/views/settings.php:189
+#: backend/views/settings.php:170
 msgid "Hide Update Notifications"
 msgstr "Masquer les notifications de mise à jour"
 
-#: backend/views/settings.php:190
+#: backend/views/settings.php:171
 msgid "Hide update notifications for user roles"
 msgstr "Masquer les notifications de mise à jour pour les rôles utilisateur"
 
-#: backend/views/settings.php:199
+#: backend/views/settings.php:180
 msgid "Remove Dashboard Widgets"
 msgstr "Supprimer les widgets du tableau de bord"
 
-#: backend/views/settings.php:200
+#: backend/views/settings.php:181
 msgid "Check widgets to remove from dashboard"
 msgstr "Cochez les widgets à supprimer du tableau de bord"
 
-#: backend/views/settings.php:204
+#: backend/views/settings.php:185
 msgid "Dashboard Activity"
 msgstr "Activité du tableau de bord"
 
-#: backend/views/settings.php:205
+#: backend/views/settings.php:186
 msgid "Dashboard Site Health"
 msgstr "État du site du tableau de bord"
 
-#: backend/views/settings.php:206
+#: backend/views/settings.php:187
 msgid "Dashboard Quick Press"
 msgstr "Tableau de bord Quick Press"
 
-#: backend/views/settings.php:207
+#: backend/views/settings.php:188
 msgid "Dashboard Incoming Links"
 msgstr "Liens entrants du tableau de bord"
 
-#: backend/views/settings.php:208
+#: backend/views/settings.php:189
 msgid "Dashboard Right Now"
 msgstr "Tableau de bord en ce moment"
 
-#: backend/views/settings.php:209
+#: backend/views/settings.php:190
 msgid "Dashboard Plugins"
 msgstr "Plugins de tableau de bord"
 
-#: backend/views/settings.php:210
+#: backend/views/settings.php:191
 msgid "Dashboard Recent Drafts"
 msgstr "Brouillons récents du tableau de bord"
 
-#: backend/views/settings.php:211
+#: backend/views/settings.php:192
 msgid "Dashboard Recent Comments"
 msgstr "Commentaires récents du tableau de bord"
 
-#: backend/views/settings.php:212
+#: backend/views/settings.php:193
 msgid "Dashboard Primary"
 msgstr "Tableau de bord principal"
 
-#: backend/views/settings.php:219
+#: backend/views/settings.php:200
 msgid "Custom CSS"
 msgstr "CSS personnalisé"
 
-#: backend/views/settings.php:220
+#: backend/views/settings.php:201
 msgid "Apply custom css to admin area"
 msgstr "Appliquer des css personnalisés à la zone admin"
 
-#: backend/views/settings.php:231
+#: backend/views/settings.php:226
+msgid "Enable Branding"
+msgstr "Activer l’image de marque"
+
+#: backend/views/settings.php:227
+msgid ""
+"By selecting this option, you can add your brand to the WordPress menu and "
+"customize how it displays."
+msgstr ""
+"En sélectionnant cette option, vous pouvez ajouter votre marque au menu "
+"WordPress et personnaliser la façon dont elle s’affiche."
+
+#: backend/views/settings.php:235
+msgid "Menu Title"
+msgstr "Titre du menu"
+
+#: backend/views/settings.php:243
+msgid "Menu Slug"
+msgstr "Menu Slug"
+
+#: backend/views/settings.php:251
+msgid "Change WordPress Logo"
+msgstr "Changer le logo WordPress"
+
+#: backend/views/settings.php:252
+msgid "Upload an image or enter an URL."
+msgstr "Téléchargez une image ou entrez une URL."
+
+#: backend/views/settings.php:259
+msgid "Add File"
+msgstr "Ajouter le fichier"
+
+#: backend/views/settings.php:273
+msgid "Page Content"
+msgstr "Contenu de la page"
+
+#: backend/views/settings.php:274
+msgid "You can use HTML to design branding page"
+msgstr "Vous pouvez utiliser HTML pour concevoir une page d’image de marque"
+
+#: backend/views/settings.php:286
+msgid "Admin Footer"
+msgstr "Pied de page administrateur"
+
+#: backend/views/settings.php:287
+msgid "Visibility"
+msgstr "Visibilité"
+
+#: backend/views/settings.php:288
+msgid "Hide the entire admin footer"
+msgstr "Masquer la barre d'administration"
+
+#: backend/views/settings.php:296
+msgid "Footer Text"
+msgstr "Texte de pied de page"
+
+#: backend/views/settings.php:297
+msgid "Change footer text"
+msgstr "Texte de pied de page"
+
+#: backend/views/settings.php:312
 msgid "Export Settings"
 msgstr "Exporter les paramètres"
 
-#: backend/views/settings.php:233
+#: backend/views/settings.php:314
 msgid ""
 "Export the plugin's settings for this site as a .json file. This will allows "
 "you to easily import the configuration to another installation."
@@ -238,15 +297,15 @@ msgstr ""
 "json. Cela vous permettra d’importer facilement la configuration vers une "
 "autre installation."
 
-#: backend/views/settings.php:238
+#: backend/views/settings.php:319
 msgid "Export"
 msgstr "Exporter"
 
-#: backend/views/settings.php:245
+#: backend/views/settings.php:326
 msgid "Import Settings"
 msgstr "Importer les paramètres"
 
-#: backend/views/settings.php:247
+#: backend/views/settings.php:328
 msgid ""
 "Import the plugin's settings from a .json file. This file can be retrieved "
 "by exporting the settings from another installation."
@@ -254,7 +313,7 @@ msgstr ""
 "Importez les paramètres du plugin à partir d’un fichier .json. Ce fichier "
 "peut être récupéré en exportant les paramètres d’une autre installation."
 
-#: backend/views/settings.php:255
+#: backend/views/settings.php:336
 msgid "Import"
 msgstr "Importer"
 
@@ -287,111 +346,52 @@ msgstr ""
 "A la Fredon LR, on ne plaisante pas avec la sécurité. Curieux passes donc "
 "ton chemin :)"
 
-#: vendor/cmb2-grid/Test/Test.php:27
-msgid "Repeating Field Group using a Grid"
-msgstr ""
-
-#: vendor/cmb2-grid/Test/Test.php:31 vendor/cmb2-grid/Test/Test.php:101
-msgid "Test Text"
-msgstr ""
-
-#: vendor/cmb2-grid/Test/Test.php:32 vendor/cmb2-grid/Test/Test.php:38
-#: vendor/cmb2-grid/Test/Test.php:102 vendor/cmb2-grid/Test/Test.php:108
-#: vendor/cmb2-grid/Test/Test.php:114 vendor/cmb2-grid/Test/Test.php:120
-#: vendor/cmb2-grid/Test/Test.php:126
-msgid "field description (optional)"
-msgstr ""
-
-#: vendor/cmb2-grid/Test/Test.php:37 vendor/cmb2-grid/Test/Test.php:107
-msgid "Test Text Small"
-msgstr ""
-
-#: vendor/cmb2-grid/Test/Test.php:48
-msgid "Entry {#}"
-msgstr ""
-
-#: vendor/cmb2-grid/Test/Test.php:49
-msgid "Add Another Entry"
-msgstr ""
-
-#: vendor/cmb2-grid/Test/Test.php:50
-msgid "Remove Entry"
-msgstr ""
-
-#: vendor/cmb2-grid/Test/Test.php:55
-msgid "Entry Title"
-msgstr ""
-
-#: vendor/cmb2-grid/Test/Test.php:60
-msgid "Description"
-msgstr ""
-
-#: vendor/cmb2-grid/Test/Test.php:61
-msgid "Write a short description for this entry"
-msgstr ""
-
-#: vendor/cmb2-grid/Test/Test.php:97
-msgid "Test Metabox using a Grid"
-msgstr ""
-
-#: vendor/cmb2-grid/Test/Test.php:113
-msgid "Test Text Medium"
-msgstr ""
-
-#: vendor/cmb2-grid/Test/Test.php:119
-msgid "Website URL"
-msgstr ""
-
-#: vendor/cmb2-grid/Test/Test.php:125
-msgid "Test Text Email"
-msgstr ""
-
-#: vendor/cmb2/includes/CMB2_Base.php:485
+#: vendor/cmb2/includes/CMB2_Base.php:498
 #, php-format
 msgid ""
 "The \"%1$s\" field parameter has been deprecated in favor of the \"%2$s\" "
 "parameter."
 msgstr ""
 
-#: vendor/cmb2/includes/CMB2_Base.php:489
+#: vendor/cmb2/includes/CMB2_Base.php:502
 #, php-format
 msgid ""
 "Using the \"%1$s\" field parameter as a callback has been deprecated in "
 "favor of the \"%2$s\" parameter."
 msgstr ""
 
-#: vendor/cmb2/includes/CMB2_Base.php:519
+#: vendor/cmb2/includes/CMB2_Base.php:534
 #, php-format
 msgid ""
 "%1$s was called with a parameter that is <strong>deprecated</strong> since "
 "version %2$s! %3$s"
 msgstr ""
 
-#: vendor/cmb2/includes/CMB2_Base.php:522
+#: vendor/cmb2/includes/CMB2_Base.php:536
 #, php-format
 msgid ""
 "%1$s was called with a parameter that is <strong>deprecated</strong> since "
 "version %2$s with no alternative available."
 msgstr ""
 
-#: vendor/cmb2/includes/CMB2_Field_Display.php:453
+#: vendor/cmb2/includes/CMB2_Field_Display.php:456
 msgid "File:"
 msgstr ""
 
-#: vendor/cmb2/includes/CMB2_Hookup.php:550
+#: vendor/cmb2/includes/CMB2_Hookup.php:677
 #, php-format
 msgid "Toggle panel: %s"
 msgstr ""
 
-#: vendor/cmb2/includes/CMB2_Options_Hookup.php:139
+#: vendor/cmb2/includes/CMB2_Options_Hookup.php:144
 msgid "Nothing to update."
 msgstr ""
 
-#: vendor/cmb2/includes/CMB2_Options_Hookup.php:143
+#: vendor/cmb2/includes/CMB2_Options_Hookup.php:148
 msgid "Settings updated."
 msgstr ""
 
-#: vendor/cmb2/includes/CMB2_Types.php:222
+#: vendor/cmb2/includes/CMB2_Types.php:255
 msgid "Custom CMB2 field type classes must extend CMB2_Type_Base."
 msgstr ""
 
@@ -399,40 +399,40 @@ msgstr ""
 msgid "A human-readable description of the object."
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:278
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:285
 msgid "The id for the object."
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:278
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:292
 msgid "The title for the object."
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:325
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:348
 msgid "This box does not have read permissions."
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:347
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:371
 msgid ""
 "No box found by that id. A box needs to be registered with the \"show_in_rest"
 "\" parameter configured."
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:404
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:427
 msgid "This box does not have write permissions."
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:53
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:52
 msgid "Includes the registered fields for the box in the response."
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:63
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:73
 msgid ""
 "Includes the fully rendered attributes, 'form_open', 'form_close', as well "
 "as the enqueued 'js_dependencies' script handles, and 'css_dependencies' "
 "stylesheet handles."
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:106
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Boxes.php:126
 msgid "No boxes found."
 msgstr ""
 
@@ -441,74 +441,75 @@ msgid ""
 "Includes the box object which the fields are registered to in the response."
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:28
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:31
 msgid ""
 "When the '_rendered' argument is passed, the renderable field attributes "
 "will be returned fully rendered. By default, the names of the callback "
 "handers for the renderable attributes will be returned."
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:28
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:34
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:37
 msgid ""
 "To view or modify the field's value, the 'object_id' and 'object_type' "
 "arguments are required."
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:187
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:233
 #, php-format
 msgid "Value Error for %s"
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:299
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:375
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:356
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:442
 msgid "No field found by that id."
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:347
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:407
 msgid ""
 "CMB2 Field value cannot be updated without the value parameter specified."
 msgstr ""
 
-#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:365
+#: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:427
 msgid ""
 "CMB2 Field value cannot be modified without the object_id and object_type "
 "parameters specified."
 msgstr ""
 
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:26
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:25
 #, php-format
 msgid "Method '%s' must be overridden."
 msgstr ""
 
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:37
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:48
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:59
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:70
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:81
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:92
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:103
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:36
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:49
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:62
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:75
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:88
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:101
 #: vendor/cmb2/includes/shim/WP_REST_Controller.php:114
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:125
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:136
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:148
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:456
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:127
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:140
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:153
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:167
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:508
 #, php-format
 msgid "Method '%s' not implemented. Must be overridden in subclass."
 msgstr ""
 
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:327
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:345
 msgid "Current page of the collection."
 msgstr ""
 
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:327
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:353
 msgid "Maximum number of items to be returned in result set."
 msgstr ""
 
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:327
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:362
 msgid "Limit results to those matching a string."
 msgstr ""
 
-#: vendor/cmb2/includes/shim/WP_REST_Controller.php:340
+#: vendor/cmb2/includes/shim/WP_REST_Controller.php:381
 msgid ""
 "Scope under which the request is made; determines fields present in response."
 msgstr ""
@@ -551,9 +552,19 @@ msgstr ""
 msgid "The plugin: <strong>%s</strong> cannot be activated."
 msgstr ""
 
-#: ezpz-tweaks.php:60
-msgid "\"EZPZ_TWEAKS\" requires PHP 7 or newer."
+#: wordpress-ezpz-tweaks.php:33
+msgid "WordPress EzPz Tweaks"
 msgstr ""
+
+#: wordpress-ezpz-tweaks.php:60
+msgid "\"WordPress EzPz Tweaks\" requires PHP 7 or newer."
+msgstr ""
+
+#~ msgid "Khorshid"
+#~ msgstr "Khorshid"
+
+#~ msgid "WordPress Support"
+#~ msgstr "Assistance WordPress"
 
 #~ msgid "Updated Messages"
 #~ msgstr "Messages mis à jour"

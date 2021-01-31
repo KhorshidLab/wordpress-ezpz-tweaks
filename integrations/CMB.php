@@ -31,7 +31,7 @@ class CMB extends Base {
 		parent::initialize();
 
 		require_once EZPZ_TWEAKS_PLUGIN_ROOT . 'vendor/cmb2/init.php';
-		require_once EZPZ_TWEAKS_PLUGIN_ROOT . 'vendor/cmb2-grid/Cmb2GridPluginLoad.php';
+//		require_once EZPZ_TWEAKS_PLUGIN_ROOT . 'vendor/cmb2-grid/Cmb2GridPluginLoad.php';
 	}
 
 }

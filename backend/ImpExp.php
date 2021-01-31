@@ -54,7 +54,9 @@ class ImpExp extends Base {
 			return;
 		}
 
-		$settings = \get_option( EZPZ_TWEAKS_TEXTDOMAIN . '-settings' );
+		$settings      = array();
+		$settings[ 0 ] = \get_option( PN_TEXTDOMAIN . '-settings' );
+		$settings[ 1 ] = \get_option( PN_TEXTDOMAIN . '-settings-branding' );
 
 		\ignore_user_abort( true );
 
@@ -106,7 +108,8 @@ class ImpExp extends Base {
 		if ( $settings_file ) {
 			$settings = \json_decode( (string) $settings_file );
 
-			\update_option( EZPZ_TWEAKS_TEXTDOMAIN . '-settings', \get_object_vars( $settings ) );
+			\update_option( EZPZ_TWEAKS_TEXTDOMAIN . '-settings', \get_object_vars( $settings[ 0 ] ) );
+			\update_option( EZPZ_TWEAKS_TEXTDOMAIN . '-settings-branding', \get_object_vars( $settings[ 1 ] ) );
 
 			\wp_safe_redirect( \admin_url( 'admin.php?page=' . EZPZ_TWEAKS_TEXTDOMAIN . '-settings' ) );
 			exit;

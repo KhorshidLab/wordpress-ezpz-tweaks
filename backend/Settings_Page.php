@@ -22,8 +22,9 @@ class Settings_Page extends Base {
 	/**
 	 * @var false|mixed|void
 	 */
-	public $settings_option;
 	public $get_locale;
+	public $settings_option;
+	public $branding_option;
 
 	/**
 	 * Initialize the class.
@@ -33,6 +34,7 @@ class Settings_Page extends Base {
 	public function initialize() {
 		$this->get_locale      = get_locale();
 		$this->settings_option = get_option( 'ezpz-tweaks-settings' );
+		$this->branding_option = get_option( 'ezpz-tweaks-settings-branding' );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'change_admin_font' ), 30 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'change_editor_font' ), 30 );
@@ -63,29 +65,47 @@ class Settings_Page extends Base {
 		 *
 		 */
 
-		// Menu icon
-		$icon_svg = 'data:image/svg+xml;base64,PHN2ZyBpZD0iS0xfTG9nbyIgZGF0YS1uYW1lPSJLTCBMb2dvIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTkuMiAyNTUuODQiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMDA1MmNjfS5jbHMtMntmaWxsOiNmZmFiMDB9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTI5LjM5IDEyNi45Nkw3NC42IDE4MC4yNWw3NS43NCA3NS40OSAxMDguMzUuMS0xMjkuMy0xMjguODh6IiBpZD0iX2JvdCIgZGF0YS1uYW1lPSJcIGJvdCIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTI1OS4yIDBIMTUxLjk3TDIuMDcgMTUwLjE4bDI2LjggNzguMzJMMjU5LjIuMzdWMHoiIGlkPSJfIiBkYXRhLW5hbWU9Ii8iLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0wIC4wMWg3Ni40N3YyNTUuODNIMHoiIGlkPSJfMiIgZGF0YS1uYW1lPSJ8Ii8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMC0uMTlsLjEgMTA3LjIgNzUuNjIgNzQuOTUgNTMuMzgtNTQuMjFMMC0uMTl6IiBpZD0iXzMiIGRhdGEtbmFtZT0iXCIvPjxwYXRoIGZpbGw9IiMxNzJiNGQiIGQ9Ik0xMzAuNzMgMTI4LjMzbC0yNi4zIDI1LjE5LTI0IDI0LjI4IDcwLjU2LTI4LjgtMjAuMjYtMjAuNjd6IiBpZD0ic2hhZG93IiBvcGFjaXR5PSIuMiIvPjwvc3ZnPg==';
-
-		add_menu_page( __( 'Khorshid', EZPZ_TWEAKS_TEXTDOMAIN ), __( 'Khorshid', EZPZ_TWEAKS_TEXTDOMAIN ), 'manage_options', EZPZ_TWEAKS_TEXTDOMAIN, array(
-			$this,
-			'display_plugin_about_page'
-		), $icon_svg, 3 );
-
-		add_submenu_page( EZPZ_TWEAKS_TEXTDOMAIN, __( 'Settings', EZPZ_TWEAKS_TEXTDOMAIN ), __( 'Settings', EZPZ_TWEAKS_TEXTDOMAIN ), 'manage_options', EZPZ_TWEAKS_TEXTDOMAIN . '-settings', [
+		add_submenu_page( 'options-general.php', __( 'EzPz Tweaks', EZPZ_TWEAKS_TEXTDOMAIN ), __( 'EzPz Tweaks', EZPZ_TWEAKS_TEXTDOMAIN ), 'update_core', EZPZ_TWEAKS_TEXTDOMAIN . '-settings', [
 			$this,
 			'display_plugin_settings_page'
 		] );
+
+		if( isset( $this->branding_option['enable_branding'] ) ) {
+			add_menu_page( $this->branding_option['menu_title'], $this->branding_option['menu_title'], 'manage_options', $this->branding_option['menu_slug'], array(
+				$this,
+				'display_branding_page'
+			), $this->branding_option['custom_logo'], 3 );
+
+			add_action( 'admin_enqueue_scripts', function() {
+				wp_add_inline_style( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-styles', '#toplevel_page_' . $this->branding_option['menu_slug'] . ' img { width: 16px !important; }' );
+			}, 30 );
+		}
 	}
 
 	/**
-	 * Render the about page for this plugin.
+	 * Render the branding page.
 	 *
 	 * @return void
 	 * @since 1.0.0
 	 */
-	public function display_plugin_about_page() {
-		include_once EZPZ_TWEAKS_PLUGIN_ROOT . 'backend/views/about.php';
+	public function display_branding_page() {
+		if( isset( $this->branding_option['page_content'] ) ) {
+			echo $this->branding_option['page_content'];
+		} else {
+			?>
+			<div class="notice notice-info is-dismissible">
+				<p>
+					<?php _e( 'Edit this page from: Settings > EzPz Tweaks > Branding tab > Page Content.', EZPZ_TWEAKS_TEXTDOMAIN ) ?>
+					<br>
+					<a target="_blank" href="<?php echo admin_url( '/options-general.php?page=ezpz-tweaks-settings&tab=branding' ) ?>">
+						<?php _e( 'Edit Page', EZPZ_TWEAKS_TEXTDOMAIN ) ?>
+					</a>
+				</p>
+			</div>
+			<?php
+		}
 	}
+
 
 	/**
 	 * Render the settings page for this plugin.
@@ -112,8 +132,16 @@ class Settings_Page extends Base {
 		), $links );
 	}
 
-	public function custom_footer() {
-		return '<img src="' . EZPZ_TWEAKS_PLUGIN_ROOT_URL . 'assets/img/khorshid-logo.svg" width="30" style="vertical-align: middle;" /><a href="https://khorshidlab.com" style="	text-decoration: none;color: #0052cc;margin-right: 5px;font-weight: bold;" target="_blank">' . __( 'WordPress Support', EZPZ_TWEAKS_TEXTDOMAIN ) . ': ' . __( 'Khorshid', EZPZ_TWEAKS_TEXTDOMAIN ) . '</a>';
+	public function custom_footer( $text ) {
+		if ( isset( $this->branding_option['footer_visibility'] ) ) {
+			return;
+		} else {
+			if ( isset( $this->branding_option['footer_text'] ) ) {
+				return $this->branding_option['footer_text'];
+			} else {
+				return $text;
+			}
+		}
 	}
 
 	public function change_admin_font() {
@@ -145,7 +173,7 @@ class Settings_Page extends Base {
 				$font_styles .= '@import url("https://fonts.googleapis.com/css?family=' . str_replace( ' ', '+', $editor_font ) . '"); ';
 			}
 
-			$font_styles .= '#editorcontainer #content, #wp_mce_fullscreen, .block-editor-writing-flow input, .block-editor-writing-flow textarea, .block-editor-writing-flow p {font-family:"' . $editor_font . '" !important;}';
+			$font_styles .= 'body#tinymce, #editorcontainer #content, #wp_mce_fullscreen, .block-editor-writing-flow input, .block-editor-writing-flow textarea, .block-editor-writing-flow p {font-family:"' . $editor_font . '" !important;}';
 			wp_add_inline_style( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-styles', $font_styles );
 		}
 	}
@@ -158,11 +186,11 @@ class Settings_Page extends Base {
 	}
 
 	public function adminbar_logo() {
-		if ( isset( $this->settings_option['custom_logo'] ) ) {
+		if ( isset( $this->branding_option['enable_branding'] ) && isset( $this->branding_option['custom_logo'] ) ) {
 			echo '<style type="text/css">
 			#wpadminbar #wp-admin-bar-wp-logo>.ab-item {
 			    padding: 0 7px;
-			    background-image: url(' . $this->settings_option['custom_logo'] . ') !important;
+			    background-image: url(' . $this->branding_option['custom_logo'] . ') !important;
 			    background-size: 50%;
 			    background-position: center;
 			    background-repeat: no-repeat;
@@ -178,7 +206,7 @@ class Settings_Page extends Base {
 
 	public function hide_core_update_notifications_from_users() {
 		if ( isset( $this->settings_option['hide_update_notifications'] ) ) {
-			$user_roles = wp_roles_array();
+			$user_roles = ezpz_tweaks_wp_roles_array();
 
 			foreach ( $user_roles as $role => $name ) {
 				if ( current_user_can( $role ) ) {

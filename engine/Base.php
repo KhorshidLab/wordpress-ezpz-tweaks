@@ -12,7 +12,7 @@
 
 namespace EZPZ_TWEAKS\Engine;
 
-use function w_get_settings;
+use function ezpz_tweaks_get_settings;
 
 /**
  * Base skeleton of the plugin
@@ -26,7 +26,7 @@ class Base {
 
 	/** Initialize the class and get the plugin settings */
 	public function initialize() {
-		$this->settings = \w_get_settings();
+		$this->settings = ezpz_tweaks_get_settings();
 	}
 
 }

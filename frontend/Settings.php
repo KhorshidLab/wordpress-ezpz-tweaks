@@ -198,7 +198,7 @@ class Settings extends Base {
 
 	public function hide_admin_bar() {
 		if ( isset( $this->settings_option['hide_admin_bar'] ) ) {
-			$user_roles = wp_roles_array();
+			$user_roles = ezpz_tweaks_wp_roles_array();
 
 			foreach ( $user_roles as $role => $name ) {
 				if ( current_user_can( $role ) ) {

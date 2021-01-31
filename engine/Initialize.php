@@ -14,8 +14,8 @@ namespace EZPZ_TWEAKS\Engine;
 
 use Composer\Autoload\ClassLoader;
 use Exception;
-use Throwable;
 use EZPZ_TWEAKS\Engine;
+use Throwable;
 use function apply_filters;
 use function array_diff;
 use function array_keys;

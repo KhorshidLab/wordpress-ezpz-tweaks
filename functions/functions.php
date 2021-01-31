@@ -15,11 +15,14 @@
  * @since 1.0.0
  * @return array
  */
-function w_get_settings() {
-	return apply_filters( 'w_get_settings', get_option( EZPZ_TWEAKS_TEXTDOMAIN . '-settings' ) );
+function ezpz_tweaks_get_settings(): array {
+	return apply_filters( 'ezpz_tweaks_get_settings', get_option( EZPZ_TWEAKS_TEXTDOMAIN . '-settings' ) );
 }
 
-function wp_roles_array() {
+/**
+ * @return array
+ */
+function ezpz_tweaks_wp_roles_array(): array {
 	if ( ! function_exists( 'get_editable_roles' ) ) {
 		require_once ABSPATH . 'wp-admin/includes/user.php';
 	}
