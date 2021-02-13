@@ -69,6 +69,28 @@
 
 		$cmb->add_field(
 			array(
+				'name'         => __( 'Change WordPress Logo', EZPZ_TWEAKS_TEXTDOMAIN ),
+				'desc'         => __( 'Upload an image or enter an URL.', EZPZ_TWEAKS_TEXTDOMAIN ),
+				'id'           => 'custom_logo',
+				'type'         => 'file',
+				'options'      => array(
+					'url' => true, // Hide the text input for the url
+				),
+				'text'         => array(
+					'add_upload_file_text' => __( 'Add File', EZPZ_TWEAKS_TEXTDOMAIN )
+				),
+				'query_args'   => array(
+					'type' => array(
+						'image/jpeg',
+						'image/png',
+					),
+				),
+				'preview_size' => array( 150, 150 ),
+			)
+		);
+
+		$cmb->add_field(
+			array(
 				'name'         => __( 'Change WP Login URL', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'desc'         => __( 'Protect your website by changing the login URL and preventing access to the wp-login.php page and the wp-admin directory to non-connected people.', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'           => 'custom_login_url',
@@ -248,9 +270,9 @@
 
 		$cmb->add_field(
 			array(
-				'name'         => __( 'Change WordPress Logo', EZPZ_TWEAKS_TEXTDOMAIN ),
+				'name'         => __( 'Menu Logo', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'desc'         => __( 'Upload an image or enter an URL.', EZPZ_TWEAKS_TEXTDOMAIN ),
-				'id'           => 'custom_logo',
+				'id'           => 'branding_menu_logo',
 				'type'         => 'file',
 				'options'      => array(
 					'url' => true, // Hide the text input for the url

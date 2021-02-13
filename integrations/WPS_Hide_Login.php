@@ -40,8 +40,6 @@ class WPS_Hide_Login extends Base {
 			}
 
 			add_action( 'plugins_loaded', array( $this, 'plugins_loaded' ), 9999 );
-			add_action( 'admin_notices', array( $this, 'admin_notices' ) );
-			add_action( 'network_admin_notices', array( $this, 'admin_notices' ) );
 			add_action( 'wp_loaded', array( $this, 'wp_loaded' ) );
 			add_action( 'setup_theme', array( $this, 'setup_theme' ), 1 );
 
@@ -122,23 +120,6 @@ class WPS_Hide_Login extends Base {
 	public function admin_notices_incompatible() {
 
 		echo '<div class="error notice is-dismissible"><p>' . __( 'Please upgrade to the latest version of WordPress to activate', EZPZ_TWEAKS_TEXTDOMAIN ) . '</p></div>';
-
-	}
-
-	public function admin_notices() {
-
-		global $pagenow;
-
-		$out = '';
-
-		if ( ! is_network_admin()
-		     && $pagenow === 'options-general.php'
-		     && isset( $_GET['settings-updated'] )
-		     && ! isset( $_GET['page'] ) ) {
-
-			echo '<div class="updated notice is-dismissible"><p>' . sprintf( __( 'Your login page is now here: <strong><a href="%1$s">%2$s</a></strong>. Bookmark this page!', EZPZ_TWEAKS_TEXTDOMAIN ), $this->new_login_url(), $this->new_login_url() ) . '</p></div>';
-
-		}
 
 	}
 

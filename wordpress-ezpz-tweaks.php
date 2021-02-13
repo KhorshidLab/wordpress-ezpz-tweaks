@@ -97,10 +97,10 @@ if ( ! wp_installing() ) {
 }
 
 function change_login_logo() {
-	$branding_option = get_option( 'ezpz-tweaks-settings-branding' );
+	$settings_option = get_option( 'ezpz-tweaks-settings' );
 
-	if ( isset( $branding_option['enable_branding'] ) && isset( $branding_option['custom_logo'] ) ) {
-		echo '<style type="text/css">h1 a {background-image: url( "' . $branding_option['custom_logo'] . '" ) !important; }</style>';
+	if ( isset( $settings_option['custom_logo'] ) ) {
+		echo '<style type="text/css">h1 a {background-image: url( "' . $settings_option['custom_logo'] . '" ) !important; }</style>';
 	}
 }
 

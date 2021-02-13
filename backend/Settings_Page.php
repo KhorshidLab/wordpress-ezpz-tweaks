@@ -74,7 +74,7 @@ class Settings_Page extends Base {
 			add_menu_page( $this->branding_option['menu_title'], $this->branding_option['menu_title'], 'manage_options', $this->branding_option['menu_slug'], array(
 				$this,
 				'display_branding_page'
-			), $this->branding_option['custom_logo'], 3 );
+			), $this->branding_option['branding_menu_logo'], 3 );
 
 			add_action( 'admin_enqueue_scripts', function() {
 				wp_add_inline_style( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-styles', '#toplevel_page_' . $this->branding_option['menu_slug'] . ' img { width: 16px !important; }' );
@@ -186,11 +186,11 @@ class Settings_Page extends Base {
 	}
 
 	public function adminbar_logo() {
-		if ( isset( $this->branding_option['enable_branding'] ) && isset( $this->branding_option['custom_logo'] ) ) {
+		if ( isset( $this->settings_option['custom_logo'] ) ) {
 			echo '<style type="text/css">
 			#wpadminbar #wp-admin-bar-wp-logo>.ab-item {
 			    padding: 0 7px;
-			    background-image: url(' . $this->branding_option['custom_logo'] . ') !important;
+			    background-image: url(' . $this->settings_option['custom_logo'] . ') !important;
 			    background-size: 50%;
 			    background-position: center;
 			    background-repeat: no-repeat;
