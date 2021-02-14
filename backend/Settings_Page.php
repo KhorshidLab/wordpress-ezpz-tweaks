@@ -45,6 +45,7 @@ class Settings_Page extends Base {
 		add_action( 'admin_head', array( $this, 'hide_core_update_notifications_from_users' ), 1 );
 		add_action( 'admin_init', array( $this, 'remove_welcome_panel' ) );
 		add_action( 'wp_dashboard_setup', array( $this, 'remove_dashboard_widgets' ) );
+		add_action( "cmb2_save_options-page_fields_" . EZPZ_TWEAKS_TEXTDOMAIN . "_options", array( $this, 'show_notices_on_custom_url_change' ), 30, 3 );
 
 		$realpath = realpath( dirname( __FILE__ ) );
 		assert( is_string( $realpath ) );
@@ -282,6 +283,15 @@ class Settings_Page extends Base {
 	public function apply_admin_custom_css() {
 		if ( isset( $this->settings_option['custom_css'] ) ) {
 			wp_add_inline_style( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-styles', $this->settings_option['custom_css'] );
+		}
+	}
+
+	public function show_notices_on_custom_url_change( $object_id, $updated, $cmb ) {
+
+		if( in_array( 'custom_login_url', $updated ) ) {
+			$hide_login = new \EZPZ_TWEAKS\Integrations\WPS_Hide_Login();
+
+			echo '<div class="updated notice is-dismissible"><p>' . sprintf( __( 'Your login page is now here: <strong><a href="%1$s">%2$s</a></strong>. Bookmark this page!', EZPZ_TWEAKS_TEXTDOMAIN ), $hide_login->new_login_url(), $hide_login->new_login_url() ) . '</p></div>';
 		}
 	}
 

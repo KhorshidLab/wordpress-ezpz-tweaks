@@ -1,6 +1,8 @@
 <?php $fragment = isset( $_GET['tab'] ) ? $_GET['tab'] : 'general'; ?>
 
 <div class="wrap ezpz-tweaks-tabs">
+	<h2><?php echo EZPZ_TWEAKS_NAME ?></h2>
+
 	<!-- Start tabs -->
 	<ul class="wp-tab-bar">
 		<li class="<?php echo $fragment == 'general' ? 'wp-tab-active' : '' ?>"><a href="#general"><?php _e( 'General', EZPZ_TWEAKS_TEXTDOMAIN ) ?></a></li>
@@ -13,13 +15,14 @@
 		$settings_page = new EZPZ_TWEAKS\Backend\Settings_Page();
 		$cmb           = new_cmb2_box(
 			array(
-				'id'         => EZPZ_TWEAKS_TEXTDOMAIN . '_options',
-				'hookup'     => false,
-				'show_on'    => array(
-					'key'   => 'options-page',
-					'value' => array( EZPZ_TWEAKS_TEXTDOMAIN . '-settings' )
+				'id'           => EZPZ_TWEAKS_TEXTDOMAIN . '_options',
+				'object_types' => array( 'options-page' ),
+				'hookup'       => true,
+				'show_names'   => true,
+				'show_on'      => array(
+					'key'      => 'options-page',
+					'value'    => array( EZPZ_TWEAKS_TEXTDOMAIN . '-settings' )
 				),
-				'show_names' => true,
 			)
 		);
 

@@ -12,10 +12,7 @@
 
 namespace EZPZ_TWEAKS\Integrations;
 
-use Cmb2Grid\Grid\Cmb2Grid;
 use EZPZ_TWEAKS\Engine\Base;
-use function add_action;
-use function new_cmb2_box;
 
 /**
  * All the CMB related code.
