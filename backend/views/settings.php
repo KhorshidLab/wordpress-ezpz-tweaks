@@ -325,15 +325,6 @@
 		$cmb->add_field(
 			array(
 				'before_row' => '<h2 class="title">'. __( 'Admin Footer', EZPZ_TWEAKS_TEXTDOMAIN ) .'</h2>',
-				'name' => __( 'Visibility', EZPZ_TWEAKS_TEXTDOMAIN ),
-				'desc' => __( 'Hide the entire admin footer', EZPZ_TWEAKS_TEXTDOMAIN ),
-				'id'   => 'footer_visibility',
-				'type' => 'checkbox',
-			)
-		);
-
-		$cmb->add_field(
-			array(
 				'name'    => __( 'Footer Text', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'desc'    => __( 'Change footer text', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'      => 'footer_text',
@@ -342,6 +333,15 @@
 					'wpautop' => true, // use wpautop?
 					'textarea_rows' => get_option('default_post_edit_rows', 10)
 				),
+			)
+		);
+
+		$cmb->add_field(
+			array(
+				'name' => __( 'Visibility', EZPZ_TWEAKS_TEXTDOMAIN ),
+				'desc' => __( 'Hide the entire admin footer', EZPZ_TWEAKS_TEXTDOMAIN ),
+				'id'   => 'footer_visibility',
+				'type' => 'checkbox',
 			)
 		);
 
