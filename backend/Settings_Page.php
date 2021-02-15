@@ -36,8 +36,6 @@ class Settings_Page extends Base {
 		$this->settings_option = get_option( 'ezpz-tweaks-settings' );
 		$this->branding_option = get_option( 'ezpz-tweaks-settings-branding' );
 
-		add_action( 'admin_enqueue_scripts', array( $this, 'change_admin_font' ), 30 );
-		add_action( 'admin_enqueue_scripts', array( $this, 'change_editor_font' ), 30 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'apply_admin_custom_css' ), 30 );
 		add_action( 'admin_menu', array( $this, 'add_plugin_admin_menu' ) );
 		add_action( 'admin_footer_text', array( $this, 'custom_footer' ) );
@@ -46,6 +44,8 @@ class Settings_Page extends Base {
 		add_action( 'admin_init', array( $this, 'remove_welcome_panel' ) );
 		add_action( 'wp_dashboard_setup', array( $this, 'remove_dashboard_widgets' ) );
 		add_action( "cmb2_save_options-page_fields_" . EZPZ_TWEAKS_TEXTDOMAIN . "_options", array( $this, 'show_notices_on_custom_url_change' ), 30, 3 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'change_admin_font' ), 30 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'change_editor_font' ), 30 );
 
 		$realpath = realpath( dirname( __FILE__ ) );
 		assert( is_string( $realpath ) );
@@ -147,7 +147,7 @@ class Settings_Page extends Base {
 
 	public function change_admin_font() {
 		$font_styles = '';
-		$admin_font  = $this->settings_option['admin-font'];
+		$admin_font  = isset( $_POST['admin-font'] ) ? $_POST['admin-font'] : $this->settings_option['admin-font'];
 
 		if ( isset( $admin_font ) && $admin_font != 'wp-default' ) {
 			if ( $this->get_locale == 'fa_IR' ) {
@@ -287,7 +287,6 @@ class Settings_Page extends Base {
 	}
 
 	public function show_notices_on_custom_url_change( $object_id, $updated, $cmb ) {
-
 		if( in_array( 'custom_login_url', $updated ) ) {
 			$hide_login = new \EZPZ_TWEAKS\Integrations\WPS_Hide_Login();
 
