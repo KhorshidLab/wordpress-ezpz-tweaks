@@ -130,7 +130,7 @@ url('../fonts/notosans/NotoSansArabic-Bold.ttf') format('truetype');
 	margin-bottom: -7px !important;
 }
 
-.ezpz-tweaks-tabs li {
+.ezpz-tweaks-tabs .wp-tab-bar li {
 	padding: 10px 15px !important;
 	display: inline-block !important;
 }

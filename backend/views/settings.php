@@ -114,6 +114,22 @@
 		if ( current_user_can( 'administrator' ) ) {
 			$cmb->add_field(
 				array(
+					'name' 		=> __( 'Who can access this plugin', EZPZ_TWEAKS_TEXTDOMAIN ),
+					'id'   		=> 'plugin_access',
+					'type' 		=> 'radio',
+					'options'   => array(
+						'super_admin'   	  => __( 'Super Admin', EZPZ_TWEAKS_TEXTDOMAIN ),
+						'manage_options'	  => __( 'Anyone with the "mange_options" capability', EZPZ_TWEAKS_TEXTDOMAIN ),
+						get_current_user_id() => __( 'Only the current user', EZPZ_TWEAKS_TEXTDOMAIN ),
+					),
+					'default' 	=> 'super_admin',
+				)
+			);
+		}
+
+		if ( current_user_can( 'administrator' ) ) {
+			$cmb->add_field(
+				array(
 					'name' => __( 'Disable Public Access to WP REST API', EZPZ_TWEAKS_TEXTDOMAIN ),
 					'desc' => __( ' API consumers be authenticated, which effectively prevents anonymous external access.', EZPZ_TWEAKS_TEXTDOMAIN ),
 					'id'   => 'disable_rest_api',

@@ -66,10 +66,15 @@ class Settings_Page extends Base {
 		 *
 		 */
 
-		add_submenu_page( 'options-general.php', __( 'EzPz Tweaks', EZPZ_TWEAKS_TEXTDOMAIN ), __( 'EzPz Tweaks', EZPZ_TWEAKS_TEXTDOMAIN ), 'update_core', EZPZ_TWEAKS_TEXTDOMAIN . '-settings', [
-			$this,
-			'display_plugin_settings_page'
-		] );
+		$plugin_access = isset( $this->settings_option['plugin_access'] ) ? $this->settings_option['plugin_access'] : 'super_admin';
+		$capability	   = $plugin_access == 'super_admin' ? 'delete_users' : 'manage_options';
+
+		if( $plugin_access == 'super_admin' || $plugin_access == 'manage_options' || $plugin_access == get_current_user_id() ) {
+			add_submenu_page( 'options-general.php', __( 'EzPz Tweaks', EZPZ_TWEAKS_TEXTDOMAIN ), __( 'EzPz Tweaks', EZPZ_TWEAKS_TEXTDOMAIN ), $capability, EZPZ_TWEAKS_TEXTDOMAIN . '-settings', [
+				$this,
+				'display_plugin_settings_page'
+			] );
+		}
 
 		if( isset( $this->branding_option['enable_branding'] ) ) {
 			add_menu_page( $this->branding_option['menu_title'], $this->branding_option['menu_title'], 'manage_options', $this->branding_option['menu_slug'], array(
