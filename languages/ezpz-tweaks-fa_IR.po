@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-02-15 17:04+0330\n"
-"PO-Revision-Date: 2021-02-15 17:07+0330\n"
+"POT-Creation-Date: 2021-02-16 18:13+0330\n"
+"PO-Revision-Date: 2021-02-16 18:18+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -14,6 +14,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 "X-Poedit-KeywordsList: __;_e;\\__\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: backend/Admin_Menu_Editor.php:74 backend/Admin_Menu_Editor.php:93
+msgid "Edit Menu"
+msgstr "ویرایش منو"
+
+#: backend/Admin_Menu_Editor.php:75
+msgid "Save"
+msgstr "ذخیره"
+
+#: backend/Admin_Menu_Editor.php:76
+msgid "Saving&hellip;"
+msgstr "در حال ذخیره&hellip;"
+
+#: backend/Admin_Menu_Editor.php:77
+msgid "Saved!"
+msgstr "ذخیره شد!"
 
 #: backend/ImpExp.php:120
 msgid "Failed to import the settings."
@@ -279,10 +295,8 @@ msgid "Menu Slug"
 msgstr "نامک منو"
 
 #: backend/views/settings.php:292
-#, fuzzy
-#| msgid "Menu Slug"
 msgid "Menu Logo"
-msgstr "نامک منو"
+msgstr "لوگو منو"
 
 #: backend/views/settings.php:314
 msgid "Page Content"
@@ -297,20 +311,20 @@ msgid "Admin Footer"
 msgstr "فوتر ادمین"
 
 #: backend/views/settings.php:328
-msgid "Visibility"
-msgstr "قابلیت نمایش"
-
-#: backend/views/settings.php:329
-msgid "Hide the entire admin footer"
-msgstr "مخفی کردن فوتر"
-
-#: backend/views/settings.php:337
 msgid "Footer Text"
 msgstr "متن فوتر"
 
-#: backend/views/settings.php:338
+#: backend/views/settings.php:329
 msgid "Change footer text"
-msgstr "متن فوتر مدیریت را تغییر دهید."
+msgstr "متن فوتر مدیریت را تغییر دهید"
+
+#: backend/views/settings.php:341
+msgid "Visibility"
+msgstr "قابلیت نمایش"
+
+#: backend/views/settings.php:342
+msgid "Hide the entire admin footer"
+msgstr "مخفی کردن فوتر"
 
 #: backend/views/settings.php:353
 msgid "Export Settings"

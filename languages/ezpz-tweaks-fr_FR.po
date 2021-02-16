@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-02-15 17:07+0330\n"
-"PO-Revision-Date: 2021-02-15 17:08+0330\n"
+"POT-Creation-Date: 2021-02-16 18:18+0330\n"
+"PO-Revision-Date: 2021-02-16 18:19+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -14,6 +14,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: __;_e;\\__\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: backend/Admin_Menu_Editor.php:74 backend/Admin_Menu_Editor.php:93
+#, fuzzy
+#| msgid "Edit Page"
+msgid "Edit Menu"
+msgstr "Modifier la page"
+
+#: backend/Admin_Menu_Editor.php:75
+msgid "Save"
+msgstr "Sauvegarder"
+
+#: backend/Admin_Menu_Editor.php:76
+msgid "Saving&hellip;"
+msgstr "Sauvegarde &hellip;"
+
+#: backend/Admin_Menu_Editor.php:77
+msgid "Saved!"
+msgstr "Sauvegardé !"
 
 #: backend/ImpExp.php:120
 msgid "Failed to import the settings."
@@ -282,10 +300,8 @@ msgid "Menu Slug"
 msgstr "Menu Slug"
 
 #: backend/views/settings.php:292
-#, fuzzy
-#| msgid "Menu Slug"
 msgid "Menu Logo"
-msgstr "Menu Slug"
+msgstr "Logo du Menu"
 
 #: backend/views/settings.php:314
 msgid "Page Content"
@@ -300,20 +316,20 @@ msgid "Admin Footer"
 msgstr "Pied de page administrateur"
 
 #: backend/views/settings.php:328
-msgid "Visibility"
-msgstr "Visibilité"
-
-#: backend/views/settings.php:329
-msgid "Hide the entire admin footer"
-msgstr "Masquer la barre d'administration"
-
-#: backend/views/settings.php:337
 msgid "Footer Text"
 msgstr "Texte de pied de page"
 
-#: backend/views/settings.php:338
+#: backend/views/settings.php:329
 msgid "Change footer text"
 msgstr "Texte de pied de page"
+
+#: backend/views/settings.php:341
+msgid "Visibility"
+msgstr "Visibilité"
+
+#: backend/views/settings.php:342
+msgid "Hide the entire admin footer"
+msgstr "Masquer la barre d'administration"
 
 #: backend/views/settings.php:353
 msgid "Export Settings"
