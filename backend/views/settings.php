@@ -1,7 +1,7 @@
 <?php $fragment = isset( $_GET['tab'] ) ? $_GET['tab'] : 'general'; ?>
 
 <div class="wrap ezpz-tweaks-tabs">
-	<h2><?php echo EZPZ_TWEAKS_NAME ?></h2>
+	<h2><img src="<?php echo EZPZ_TWEAKS_PLUGIN_ROOT_URL . 'assets/img/WordpressEzPz-Logo.svg' ?>" style="width: 50px;vertical-align: middle;padding: 15px;"><?php echo EZPZ_TWEAKS_NAME ?></h2>
 
 	<!-- Start tabs -->
 	<ul class="wp-tab-bar">
