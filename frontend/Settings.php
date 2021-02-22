@@ -73,7 +73,7 @@ class Settings extends Base {
 	}
 
 	public function disable_wp_rest_api( $access ) {
-		if ( isset( $this->settings_option['disable_rest_api'] ) ) {
+		if ( !is_user_logged_in() && !is_admin() && isset( $this->settings_option['disable_rest_api'] ) ) {
 			// Remove REST API info from head and headers
 			remove_action( 'xmlrpc_rsd_apis', 'rest_output_rsd' );
 			remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
