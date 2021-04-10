@@ -25,9 +25,9 @@ class ImpExp extends Base {
 	 * @return void
 	 */
 	public function initialize() {
-//		if ( !parent::initialize() ) {
-//			return;
-//		}
+		// if ( !parent::initialize() ) {
+		// 	return;
+		// }
 
 		// Add the export settings method
 		\add_action( 'admin_init', array( $this, 'settings_export' ) );
@@ -55,8 +55,8 @@ class ImpExp extends Base {
 		}
 
 		$settings      = array();
-		$settings[ 0 ] = \get_option( PN_TEXTDOMAIN . '-settings' );
-		$settings[ 1 ] = \get_option( PN_TEXTDOMAIN . '-settings-branding' );
+		$settings[ 0 ] = \get_option( EZPZ_TWEAKS_TEXTDOMAIN . '-settings' );
+		$settings[ 1 ] = \get_option( EZPZ_TWEAKS_TEXTDOMAIN . '-settings-branding' );
 
 		\ignore_user_abort( true );
 
