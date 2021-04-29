@@ -69,6 +69,8 @@ if ( version_compare( PHP_VERSION, '7.0.0', '<=' ) ) {
 
 $ezpz_tweaks_libraries = require_once EZPZ_TWEAKS_PLUGIN_ROOT . 'vendor/autoload.php';
 
+require_once EZPZ_TWEAKS_PLUGIN_ROOT . 'vendor/cmb2/init.php';
+
 require_once EZPZ_TWEAKS_PLUGIN_ROOT . 'functions/functions.php';
 
 // Add your new plugin on the wiki: https://github.com/WPBP/WordPress-Plugin-Boilerplate-Powered/wiki/Plugin-made-with-this-Boilerplate
@@ -96,6 +98,18 @@ if ( ! wp_installing() ) {
 	);
 }
 
+function ezpz_tweaks_activate() {
+	ezpz_tweaks_upgrade_procedure();
+	
+	flush_rewrite_rules();
+}
+register_activation_hook( __FILE__, 'ezpz_tweaks_activate' );
+
+function ezpz_tweaks_deactivate() {
+	flush_rewrite_rules();
+}
+register_deactivation_hook( __FILE__, 'ezpz_tweaks_deactivate' );
+
 function change_login_logo() {
 	$settings_option = get_option( 'ezpz-tweaks-settings' );
 
@@ -105,3 +119,38 @@ function change_login_logo() {
 }
 
 add_action( 'login_head', 'change_login_logo' );
+
+/**
+ * Upgrade procedure
+ *
+ * @return void
+ */
+function ezpz_tweaks_upgrade_procedure() {
+	if ( ! is_admin() ) {
+		return;
+	}
+
+	$version = get_option( 'ezpz-tweaks-version' );
+
+	if ( ! version_compare( EZPZ_TWEAKS_VERSION, $version, '>' ) ) {
+		return;
+	}
+
+	update_option( 'ezpz-tweaks-version', EZPZ_TWEAKS_VERSION );
+	delete_option( EZPZ_TWEAKS_TEXTDOMAIN . '_fake-meta' );
+}
+
+add_action( 'admin_init', ezpz_tweaks_upgrade_procedure() );
+
+function ezpz_tweaks_change_plugin_priority() {
+	$wp_path_to_this_file = preg_replace('/(.*)plugins\/(.*)$/', WP_PLUGIN_DIR."/$2", __FILE__);
+	$this_plugin = plugin_basename(trim($wp_path_to_this_file));
+	$active_plugins = get_option('active_plugins');
+	$this_plugin_key = array_search($this_plugin, $active_plugins);
+	
+    array_splice($active_plugins, $this_plugin_key, 1);
+    array_unshift($active_plugins, $this_plugin);
+
+    update_option('active_plugins', $active_plugins);
+}
+add_action( 'activated_plugin', 'ezpz_tweaks_change_plugin_priority' );
