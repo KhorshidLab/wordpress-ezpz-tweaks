@@ -1,7 +1,7 @@
 <?php $fragment = isset( $_GET['tab'] ) ? $_GET['tab'] : 'general'; ?>
 
 <div class="wrap ezpz-tweaks-tabs">
-	<h2><img src="<?php echo EZPZ_TWEAKS_PLUGIN_ROOT_URL . 'assets/img/WordpressEzPz-Logo.svg' ?>" style="width: 50px;vertical-align: middle;padding: 15px;"><?php echo EZPZ_TWEAKS_NAME ?></h2>
+	<h2><img src="<?php echo EZPZ_TWEAKS_PLUGIN_ROOT_URL . 'assets/img/EzPzTweaks-logo.svg' ?>" style="width: 50px;vertical-align: middle;padding: 15px;"><?php echo EZPZ_TWEAKS_NAME ?></h2>
 
 	<!-- Start tabs -->
 	<ul class="wp-tab-bar">
@@ -141,6 +141,7 @@
 		$cmb->add_field(
 			array(
 				'name' => __( 'Disable Comment Website Field', EZPZ_TWEAKS_TEXTDOMAIN ),
+				'desc' => __( 'Remove website field from comment form', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'   => 'disable_website_field',
 				'type' => 'checkbox',
 			)
@@ -149,6 +150,7 @@
 		$cmb->add_field(
 			array(
 				'name' => __( 'Remove Welcome Panel', EZPZ_TWEAKS_TEXTDOMAIN ),
+				'desc' => __( 'Welcome panel is a meta box added to the dashboard screen of admin area. It shows shortcuts to different sections of your WordPress site', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'   => 'remove_welcome_panel',
 				'type' => 'checkbox',
 			)
@@ -157,6 +159,7 @@
 		$cmb->add_field(
 			array(
 				'name' => __( 'Disable Emojis', EZPZ_TWEAKS_TEXTDOMAIN ),
+				'desc' => __( 'Remove wp-emoji-release.min.js file', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'   => 'disable_wp_emoji',
 				'type' => 'checkbox',
 			)
@@ -165,6 +168,7 @@
 		$cmb->add_field(
 			array(
 				'name' => __( 'Disable Embeds', EZPZ_TWEAKS_TEXTDOMAIN ),
+				'desc' => __( 'Remove wp-embed.min.js file and reduce HTTP requests', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'   => 'disable_wp_embed',
 				'type' => 'checkbox',
 			)
@@ -173,6 +177,7 @@
 		$cmb->add_field(
 			array(
 				'name' => __( 'Disable XML-RPC', EZPZ_TWEAKS_TEXTDOMAIN ),
+				'desc' => __( 'Disabling this feature makes your site more secure', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'   => 'disable_xmlrpc',
 				'type' => 'checkbox',
 			)
@@ -181,6 +186,7 @@
 		$cmb->add_field(
 			array(
 				'name' => __( 'Remove Shortlink', EZPZ_TWEAKS_TEXTDOMAIN ),
+				'desc' => __( 'This is used for a shortlink to your pages and posts. However, if you are already using pretty permalinks, then there is no reason to keep this', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'   => 'remove_shortlink',
 				'type' => 'checkbox',
 			)
@@ -189,6 +195,7 @@
 		$cmb->add_field(
 			array(
 				'name' => __( 'Remove WP Version', EZPZ_TWEAKS_TEXTDOMAIN ),
+				'desc' => __( 'Remove the WordPress version number from all different areas on your site', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'   => 'remove_wp_version',
 				'type' => 'checkbox',
 			)
