@@ -31,7 +31,7 @@
 				array(
 					'name'             => __( 'Admin Font', EZPZ_TWEAKS_TEXTDOMAIN ),
 					'desc'             => __( 'Change WordPress admin font', EZPZ_TWEAKS_TEXTDOMAIN ),
-					'id'               => 'admin-font',
+					'id'               => 'admin-font-fa',
 					'type'             => 'select',
 					'show_option_none' => false,
 					'options'          => $settings_page->custom_fonts(),
@@ -42,7 +42,7 @@
 				array(
 					'name'             => __( 'Editor Font', EZPZ_TWEAKS_TEXTDOMAIN ),
 					'desc'             => __( 'Change WordPress editor font', EZPZ_TWEAKS_TEXTDOMAIN ),
-					'id'               => 'editor-font',
+					'id'               => 'editor-font-fa',
 					'type'             => 'select',
 					'show_option_none' => false,
 					'options'          => $settings_page->custom_fonts(),
@@ -54,8 +54,8 @@
 					'name'       => __( 'Admin Font', EZPZ_TWEAKS_TEXTDOMAIN ),
 					'desc'       => __( 'Change WordPress admin font', EZPZ_TWEAKS_TEXTDOMAIN ),
 					'id'         => 'admin-font',
-					'type'       => 'font',
-					'attributes' => array( 'data-placeholder' => __( 'Choose a font', 'cmb2' ) )
+					'type'       => 'text',
+					'attributes' => array( 'data-placeholder' => __( 'Choose a font', EZPZ_TWEAKS_TEXTDOMAIN ), 'data-placeholder_search' => __( 'Type to search...', EZPZ_TWEAKS_TEXTDOMAIN ) )
 				)
 			);
 
@@ -64,8 +64,8 @@
 					'name'       => __( 'Editor Font', EZPZ_TWEAKS_TEXTDOMAIN ),
 					'desc'       => __( 'Change WordPress editor font', EZPZ_TWEAKS_TEXTDOMAIN ),
 					'id'         => 'editor-font',
-					'type'       => 'font',
-					'attributes' => array( 'data-placeholder' => __( 'Choose a font', 'cmb2' ) )
+					'type'       => 'text',
+					'attributes' => array( 'data-placeholder' => __( 'Choose a font', EZPZ_TWEAKS_TEXTDOMAIN ), 'data-placeholder_search' => __( 'Type to search...', EZPZ_TWEAKS_TEXTDOMAIN ) )
 				)
 			);
 		}

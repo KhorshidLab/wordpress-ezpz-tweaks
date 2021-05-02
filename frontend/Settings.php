@@ -26,12 +26,19 @@ class Settings extends Base {
 	 * @return void
 	 */
 	public function initialize() {
+		if ( !parent::initialize() ) {
+			return;
+		}
+
+		$this->get_locale      = get_locale();
 		$this->settings_option = get_option( 'ezpz-tweaks-settings' );
 
 		add_action( 'init', array( $this, 'disable_emojis' ) );
 		add_action( 'init', array( $this, 'disable_embeds_code_init' ), 9999 );
 		add_action( 'init', array( $this, 'disable_xmlrpc' ) );
 		add_action( 'init', array( $this, 'hide_admin_bar' ), 9999 );
+		add_action( 'wp_head', array( $this, 'change_adminbar_font' ), 30 );
+		add_action( 'login_head', array( $this, 'change_login_font' ), 30 );
 		add_action( 'after_setup_theme', array( $this, 'remove_shortlink' ) );
 		add_filter( 'after_setup_theme', array( $this, 'remove_wp_version_from_head' ) );
 
@@ -205,6 +212,46 @@ class Settings extends Base {
 					show_admin_bar( false );
 					break;
 				}
+			}
+		}
+	}
+
+	public function change_adminbar_font() {
+		if( is_admin_bar_showing() ) {
+			$font_styles = '';
+			$field_name  = $this->get_locale == 'fa_IR' ? 'admin-font-fa': 'admin-font';
+			$admin_font  = $this->settings_option[ $field_name ];
+
+			if ( isset( $admin_font ) && $admin_font != 'wp-default' ) {
+				if ( $this->get_locale != 'fa_IR' ) {
+					$font_styles .= '<style>@import url("https://fonts.googleapis.com/css?family=' . $admin_font . '");</style>';
+					$admin_font   = ezpz_tweaks_get_google_font_name( $admin_font );
+				}
+	
+				$font_styles .= '<style>#wpadminbar *:not([class="ab-icon"]) {font-family:"' . $admin_font . '" !important;}</style>';
+	
+				echo $font_styles;
+			}
+		}
+	}
+
+	public function change_login_font() {
+		if( !is_user_logged_in() ) {
+			$font_styles = '';
+			$field_name  = $this->get_locale == 'fa_IR' ? 'admin-font-fa': 'admin-font';
+			$admin_font  = $this->settings_option[ $field_name ];
+
+			if ( isset( $admin_font ) && $admin_font != 'wp-default' ) {
+				if ( $this->get_locale != 'fa_IR' ) {
+					$font_styles .= '<style>@import url("https://fonts.googleapis.com/css?family=' . $admin_font . '");</style>';
+					$admin_font   = ezpz_tweaks_get_google_font_name( $admin_font );
+				} else {
+					$font_styles .= '<style>@import url("' . EZPZ_TWEAKS_PLUGIN_ROOT_URL . 'assets/css/perisanfonts.css");</style>';
+				}
+	
+				$font_styles .= '<style>body {font-family:"' . $admin_font . '" !important;}</style>';
+	
+				echo $font_styles;
 			}
 		}
 	}

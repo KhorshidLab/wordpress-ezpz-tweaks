@@ -35,3 +35,10 @@ function ezpz_tweaks_wp_roles_array(): array {
 
 	return $roles;
 }
+
+function ezpz_tweaks_get_google_font_name($font) {
+	$font 		 = str_replace( '+', ' ', $font );
+	$font 		 = explode( ':', $font );
+	
+	return $font[0];
+}

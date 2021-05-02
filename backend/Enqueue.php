@@ -29,9 +29,9 @@ class Enqueue extends Base {
 	 * @return void
 	 */
 	public function initialize() {
-//		if ( !parent::initialize() ) {
-//			return;
-//		}
+		if ( !parent::initialize() ) {
+			return;
+		}
 
 		// Load admin style sheet and JavaScript.
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_styles' ) );
@@ -45,6 +45,10 @@ class Enqueue extends Base {
 	 * @since 1.0.0
 	 */
 	public function enqueue_admin_styles() {
+		if( get_locale() == 'fa_IR' ) {
+			wp_enqueue_style( EZPZ_TWEAKS_TEXTDOMAIN . '-persianfonts', plugins_url( 'assets/css/persianfonts.css', EZPZ_TWEAKS_PLUGIN_ABSOLUTE ), '', EZPZ_TWEAKS_VERSION );
+		}
+
 		wp_enqueue_style( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-styles', plugins_url( 'assets/css/admin.css', EZPZ_TWEAKS_PLUGIN_ABSOLUTE ), array( 'dashicons' ), EZPZ_TWEAKS_VERSION );
 	}
 
@@ -54,6 +58,7 @@ class Enqueue extends Base {
 	 * @since 1.0.0
 	 */
 	public function enqueue_admin_scripts() {
+		wp_enqueue_script( EZPZ_TWEAKS_TEXTDOMAIN . '-fontselect', plugins_url( 'assets/js/jquery.fontselect.js', EZPZ_TWEAKS_PLUGIN_ABSOLUTE ), array( 'jquery' ), EZPZ_TWEAKS_VERSION, false );
 		wp_enqueue_script( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-script', plugins_url( 'assets/js/admin.js', EZPZ_TWEAKS_PLUGIN_ABSOLUTE ), array( 'jquery', 'jquery-ui-sortable', 'underscore' ), EZPZ_TWEAKS_VERSION, false );
 		wp_enqueue_code_editor( array( 'type' => 'text/css' ) );
 	}

@@ -33,6 +33,10 @@ class Settings_Page extends Base {
 	 * @return void
 	 */
 	public function initialize() {
+		if ( !parent::initialize() ) {
+			return;
+		}
+
 		$this->get_locale      = get_locale();
 		$this->settings_option = get_option( 'ezpz-tweaks-settings' );
 		$this->branding_option = get_option( 'ezpz-tweaks-settings-branding' );
@@ -45,8 +49,8 @@ class Settings_Page extends Base {
 		add_action( 'admin_init', array( $this, 'remove_welcome_panel' ) );
 		add_action( 'wp_dashboard_setup', array( $this, 'remove_dashboard_widgets' ) );
 		add_action( "cmb2_save_options-page_fields_" . EZPZ_TWEAKS_TEXTDOMAIN . "_options", array( $this, 'show_notices_on_custom_url_change' ), 30, 3 );
-		add_action( 'admin_enqueue_scripts', array( $this, 'change_admin_font' ), 30 );
-		add_action( 'admin_enqueue_scripts', array( $this, 'change_editor_font' ), 30 );
+		add_action( 'admin_head', array( $this, 'change_admin_font' ), 30 );
+		add_action( 'admin_head', array( $this, 'change_editor_font' ), 30 );
 
 		$realpath = realpath( dirname( __FILE__ ) );
 		assert( is_string( $realpath ) );
@@ -153,35 +157,41 @@ class Settings_Page extends Base {
 
 	public function change_admin_font() {
 		$font_styles = '';
-		$admin_font  = isset( $_POST['admin-font'] ) ? $_POST['admin-font'] : $this->settings_option['admin-font'];
+		$field_name  = $this->get_locale == 'fa_IR' ? 'admin-font-fa': 'admin-font';
+		$admin_font  = isset( $_POST[ $field_name ] ) ? $_POST[ $field_name ] : $this->settings_option[ $field_name ];
 
 		if ( isset( $admin_font ) && $admin_font != 'wp-default' ) {
 			if ( $this->get_locale == 'fa_IR' ) {
 				add_action( 'wp_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
 				add_action( 'admin_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
 			} else {
-				$font_styles .= '@import url("https://fonts.googleapis.com/css?family=' . str_replace( ' ', '+', $admin_font ) . '"); ';
+				$font_styles .= '<style>@import url("https://fonts.googleapis.com/css?family=' . $admin_font . '");</style>';
+				$admin_font   = ezpz_tweaks_get_google_font_name( $admin_font );
 			}
 
-			$font_styles .= 'body, h1, h2, h3, h4, h5, h6, label, input, textarea, .components-notice, #wpadminbar *:not([class="ab-icon"]), .wp-core-ui, .media-menu, .media-frame *, .media-modal *{font-family:"' . $admin_font . '" !important;}';
-			wp_add_inline_style( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-styles', $font_styles );
+			$font_styles .= '<style>body, h1, h2, h3, h4, h5, h6, label, input, textarea, .components-notice, #wpadminbar *:not([class="ab-icon"]), .wp-core-ui, .media-menu, .media-frame *, .media-modal * {font-family:"' . $admin_font . '" !important;}</style>';
+
+			echo $font_styles;
 		}
 	}
 
 	public function change_editor_font() {
 		$font_styles = '';
-		$editor_font = $this->settings_option['editor-font'];
+		$field_name  = $this->get_locale == 'fa_IR' ? 'editor-font-fa': 'editor-font';
+		$editor_font = $this->settings_option[ $field_name ];
 
 		if ( isset( $editor_font ) && $editor_font != 'wp-default' ) {
 			if ( $this->get_locale == 'fa_IR' ) {
 				add_action( 'wp_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
 				add_action( 'admin_enqueue_scripts', array( $this, 'remove_google_fonts' ) );
 			} else {
-				$font_styles .= '@import url("https://fonts.googleapis.com/css?family=' . str_replace( ' ', '+', $editor_font ) . '"); ';
+				$font_styles .= '<style>@import url("https://fonts.googleapis.com/css?family=' . $editor_font . '");</style>';
+				$editor_font   = ezpz_tweaks_get_google_font_name( $editor_font );
 			}
 
-			$font_styles .= 'body#tinymce, #editorcontainer #content, #wp_mce_fullscreen, .block-editor-writing-flow input, .block-editor-writing-flow textarea, .block-editor-writing-flow p {font-family:"' . $editor_font . '" !important;}';
-			wp_add_inline_style( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-styles', $font_styles );
+			$font_styles .= '<style>body#tinymce, #editorcontainer #content, #wp_mce_fullscreen, .block-editor-writing-flow input, .block-editor-writing-flow textarea, .block-editor-writing-flow p {font-family:"' . $editor_font . '" !important;}</style>';
+
+			echo $font_styles;
 		}
 	}
 
@@ -194,7 +204,7 @@ class Settings_Page extends Base {
 
 	public function adminbar_logo() {
 		if ( isset( $this->settings_option['custom_logo'] ) ) {
-			echo '<style type="text/css">
+			echo '< type="text/css">
 			#wpadminbar #wp-admin-bar-wp-logo>.ab-item {
 			    padding: 0 7px;
 			    background-image: url(' . $this->settings_option['custom_logo'] . ') !important;
@@ -276,11 +286,11 @@ class Settings_Page extends Base {
 
 	public function custom_fonts() {
 		$fonts = array(
-			'wp-default'  => __( 'WordPress Default', EZPZ_TWEAKS_TEXTDOMAIN ),
-			'Vazir'       => __( 'Vazir', EZPZ_TWEAKS_TEXTDOMAIN ),
-			'Estedad'     => __( 'Estedad', EZPZ_TWEAKS_TEXTDOMAIN ),
-			'IranianSans' => __( 'Iranian', EZPZ_TWEAKS_TEXTDOMAIN ),
-			'NotoSans'    => __( 'Noto', EZPZ_TWEAKS_TEXTDOMAIN ),
+			'wp-default'  => 'پیشفرض وردپرس',
+			'Vazir'       => 'وزیر',
+			'Estedad'     => 'استعداد',
+			'Shabnam'     => 'شبنم',
+			'Samim'       => 'صمیم',
 		);
 
 		return $fonts;

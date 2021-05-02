@@ -25,7 +25,9 @@ class Admin_Menu_Editor extends Base {
 	 * @return void
 	 */
 	public function initialize() {
-		parent::initialize();
+		if ( !parent::initialize() ) {
+			return;
+		}
 
 		// Load admin style sheet and JavaScript.
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ), 30 );

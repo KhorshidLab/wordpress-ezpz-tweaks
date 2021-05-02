@@ -27,6 +27,8 @@ class Base {
 	/** Initialize the class and get the plugin settings */
 	public function initialize() {
 		$this->settings = ezpz_tweaks_get_settings();
+
+		return true;
 	}
 
 }

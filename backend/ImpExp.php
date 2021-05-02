@@ -25,9 +25,9 @@ class ImpExp extends Base {
 	 * @return void
 	 */
 	public function initialize() {
-		// if ( !parent::initialize() ) {
-		// 	return;
-		// }
+		if ( !parent::initialize() ) {
+			return;
+		}
 
 		// Add the export settings method
 		\add_action( 'admin_init', array( $this, 'settings_export' ) );
