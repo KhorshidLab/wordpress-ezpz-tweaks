@@ -52,11 +52,7 @@ class Settings_Page extends Base {
 		add_action( 'admin_head', array( $this, 'change_admin_font' ), 30 );
 		add_action( 'admin_head', array( $this, 'change_editor_font' ), 30 );
 
-		$realpath = realpath( dirname( __FILE__ ) );
-		assert( is_string( $realpath ) );
-		$plugin_basename = plugin_basename( plugin_dir_path( $realpath ) . EZPZ_TWEAKS_TEXTDOMAIN . '.php' );
-
-		add_filter( 'plugin_action_links_' . $plugin_basename, array( $this, 'add_action_links' ) );
+		add_filter( 'plugin_action_links_' . EZPZ_TWEAKS_PLUGIN_BASENAME, array( $this, 'add_action_links' ) );
 	}
 
 	/**
@@ -139,7 +135,6 @@ class Settings_Page extends Base {
 	public function add_action_links( array $links ) {
 		return array_merge( array(
 			'settings' => '<a href="' . admin_url( 'admin.php?page=' . EZPZ_TWEAKS_TEXTDOMAIN . '-settings' ) . '">' . __( 'Settings', EZPZ_TWEAKS_TEXTDOMAIN ) . '</a>',
-			'donate'   => '<a href="#">' . __( 'Donate', EZPZ_TWEAKS_TEXTDOMAIN ) . '</a>',
 		), $links );
 	}
 

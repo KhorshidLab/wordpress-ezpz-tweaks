@@ -2,17 +2,17 @@
 
 /**
  * @package   WordPress EzPz Tweaks
- * @author    Khorshid <info@khorshidlab.com>
- * @copyright 2020 Khorshid
+ * @author    WordPress EzPz <info@wordpressezpz.com/>
+ * @copyright 2020 WordPress EzPz
  * @license   GPL 2.0+
- * @link      https://khorshidlab.com
+ * @link      https://wordpressezpz.com/
  *
  * Plugin Name:     WordPress EzPz Tweaks
- * Plugin URI:      https://khorshidlab.com
+ * Plugin URI:      https://wordpressezpz.com/
  * Description:     Plugin for wordpress tweaks
  * Version:         1.0.0
- * Author:          Khorshid
- * Author URI:      https://khorshidlab.com
+ * Author:          WordPress EzPz
+ * Author URI:      https://wordpressezpz.com/
  * Text Domain:     ezpz-tweaks
  * License:         GPL 2.0+
  * License URI:     http://www.gnu.org/licenses/gpl-2.0.txt

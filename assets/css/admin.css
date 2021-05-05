@@ -145,7 +145,12 @@
 
 /* Admin Menu Editor */
 #collapse-menu {
-	overflow: hidden; }
+	overflow: hidden; 
+}
+
+#adminmenu li.menu-top {
+	min-height: auto !important
+}
 
 #adminmenu #admin-menu-editor-edit {
 	margin-top: 20px;
