@@ -1,18 +1,18 @@
 <?php
 
 /**
- * @package   WordPress EzPz Tweaks
+ * @package   WPEzPz Tweaks
  * @author    WordPress EzPz <info@wordpressezpz.com/>
  * @copyright 2020 WordPress EzPz
  * @license   GPL 2.0+
- * @link      https://wordpressezpz.com/
+ * @link      https://wpezpz.dev/
  *
  * Plugin Name:     WordPress EzPz Tweaks
- * Plugin URI:      https://wordpressezpz.com/
+ * Plugin URI:      https://wpezpz.dev/
  * Description:     Plugin for wordpress tweaks
  * Version:         1.0.0
  * Author:          WordPress EzPz
- * Author URI:      https://wordpressezpz.com/
+ * Author URI:      https://wpezpz.dev/
  * Text Domain:     ezpz-tweaks
  * License:         GPL 2.0+
  * License URI:     http://www.gnu.org/licenses/gpl-2.0.txt

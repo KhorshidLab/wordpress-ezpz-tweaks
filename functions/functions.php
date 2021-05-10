@@ -3,10 +3,10 @@
  * EZPZ_TWEAKS
  *
  * @package   EZPZ_TWEAKS
- * @author    Khorshid <info@khorshidlab.com>
- * @copyright 2020 Khorshid
+ * @author    WordPress EzPz <info@wpezpz.dev>
+ * @copyright 2020 WordPress EzPz
  * @license   GPL 2.0+
- * @link      https://khorshidlab.com
+ * @link      https://wpezpz.dev
  */
 
 /**

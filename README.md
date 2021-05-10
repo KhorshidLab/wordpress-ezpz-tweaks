@@ -1,20 +1,20 @@
 <h1 align="center">Welcome to WordPress EzPz Tweaks 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://khorshidlab.com" target="_blank">
+  <a href="https://wpezpz.dev/" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
   <a href="http://www.gnu.org/licenses/gpl-2.0.txt" target="_blank">
     <img alt="License: GPL 2.0+" src="https://img.shields.io/badge/License-GPL 2.0+-yellow.svg" />
   </a>
-  <a href="https://twitter.com/khorshidlab" target="_blank">
-    <img alt="Twitter: khorshidlab" src="https://img.shields.io/twitter/follow/khorshidlab.svg?style=social" />
+  <a href="https://twitter.com/wordpressezpz" target="_blank">
+    <img alt="Twitter: khorshidlab" src="https://img.shields.io/twitter/follow/WordpressEzPz.svg?style=social" />
   </a>
 </p>
 
 > Plugin for wordpress tweaks
 
-### 🏠 [Homepage](https://khorshidlab.com)
+### 🏠 [Homepage](https://wpezpz.dev)
 
 ## Install
 
@@ -30,11 +30,11 @@ composer update
 
 ## Author
 
-👤 **Khorshid**
+👤 **WordPress EzPz**
 
-* Website: https://khorshidlab.com
-* Twitter: [@khorshidlab](https://twitter.com/khorshidlab)
-* Github: [@KhorshidLab](https://github.com/KhorshidLab)
+* Website: https://wpezpz.dev
+* Twitter: [@WordpressEzPz](https://twitter.com/wordpressezpz)
+* Github: [@WordpressEzPz](https://github.com/WordpressEzPz)
 
 ## 🤝 Contributing
 
@@ -46,5 +46,5 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2021 [Khorshid](https://github.com/KhorshidLab).<br />
+Copyright © 2021 [WordPress EzPz](https://github.com/WordPressEzPz).<br />
 This project is [GPL 2.0+](http://www.gnu.org/licenses/gpl-2.0.txt) licensed.
