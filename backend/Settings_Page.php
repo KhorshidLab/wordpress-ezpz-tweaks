@@ -43,7 +43,7 @@ class Settings_Page extends Base {
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'apply_admin_custom_css' ), 30 );
 		add_action( 'admin_menu', array( $this, 'add_plugin_admin_menu' ) );
-		add_action( 'admin_footer_text', array( $this, 'custom_footer' ) );
+		add_action( 'admin_footer_text', array( $this, 'custom_footer' ), PHP_INT_MAX );
 		add_action( 'wp_before_admin_bar_render', array( $this, 'adminbar_logo' ) );
 		add_action( 'admin_head', array( $this, 'hide_core_update_notifications_from_users' ), 1 );
 		add_action( 'admin_init', array( $this, 'remove_welcome_panel' ) );
