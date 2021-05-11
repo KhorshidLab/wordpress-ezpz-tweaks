@@ -199,7 +199,7 @@ class Settings_Page extends Base {
 
 	public function adminbar_logo() {
 		if ( isset( $this->settings_option['custom_logo'] ) ) {
-			echo '< type="text/css">
+			echo '<style type="text/css">
 			#wpadminbar #wp-admin-bar-wp-logo>.ab-item {
 			    padding: 0 7px;
 			    background-image: url(' . $this->settings_option['custom_logo'] . ') !important;
