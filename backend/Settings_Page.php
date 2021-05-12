@@ -298,7 +298,7 @@ class Settings_Page extends Base {
 	}
 
 	public function show_notices_on_custom_url_change( $object_id, $updated, $cmb ) {
-		if( in_array( 'custom_login_url', $updated ) && $updated['custom_login_url'] != null ) {
+		if( in_array( 'custom_login_url', $updated ) ) {
 			$hide_login = new \EZPZ_TWEAKS\Integrations\WPS_Hide_Login();
 
 			echo '<div class="updated notice is-dismissible"><p>' . sprintf( __( 'Your login page is now here: <strong><a href="%1$s">%2$s</a></strong>. Bookmark this page!', EZPZ_TWEAKS_TEXTDOMAIN ), $hide_login->new_login_url(), $hide_login->new_login_url() ) . '</p></div>';
