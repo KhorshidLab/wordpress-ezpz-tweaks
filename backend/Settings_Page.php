@@ -81,7 +81,7 @@ class Settings_Page extends Base {
 			add_menu_page( $this->branding_option['menu_title'], $this->branding_option['menu_title'], 'manage_options', $this->branding_option['menu_slug'], array(
 				$this,
 				'display_branding_page'
-			), $this->branding_option['branding_menu_logo'], 3 );
+			), $this->branding_option['branding_menu_logo'], 79 );
 
 			add_action( 'admin_enqueue_scripts', function() {
 				wp_add_inline_style( EZPZ_TWEAKS_TEXTDOMAIN . '-admin-styles', '#toplevel_page_' . $this->branding_option['menu_slug'] . ' img { width: 16px !important; }' );
