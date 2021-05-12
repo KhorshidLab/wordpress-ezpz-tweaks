@@ -271,6 +271,7 @@
 
 		$cmb->add_field(
 			array(
+				'before_row' => '<h2 class="title">'. __( 'Brand Custom Menu', EZPZ_TWEAKS_TEXTDOMAIN ) .'</h2>',
 				'name' => __( 'Enable Branding', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'desc' => __( 'By selecting this option, you can add your brand to the WordPress menu and customize how it displays.', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'   => 'enable_branding',
@@ -283,6 +284,11 @@
 				'name'         => __( 'Menu Title', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'           => 'menu_title',
 				'type'         => 'text',
+				'attributes'    => array(
+					'data-conditional-id'     => 'enable_branding',
+					'data-conditional-value'  => 'on',
+					'required' => true,
+				),
 			)
 		);
 
@@ -291,6 +297,11 @@
 				'name'         => __( 'Menu Slug', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'           => 'menu_slug',
 				'type'         => 'text',
+				'attributes'    => array(
+					'data-conditional-id'     => 'enable_branding',
+					'data-conditional-value'  => 'on',
+					'required' => true,
+				),
 			)
 		);
 
@@ -300,6 +311,11 @@
 				'desc'         => __( 'Upload an image or enter an URL.', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'           => 'branding_menu_logo',
 				'type'         => 'file',
+				'attributes'    => array(
+					'data-conditional-id'     => 'enable_branding',
+					'data-conditional-value'  => 'on',
+					'required' => true,
+				),
 				'options'      => array(
 					'url' => true, // Hide the text input for the url
 				),
@@ -322,6 +338,8 @@
 				'desc'    => __( 'You can use HTML to design branding page', EZPZ_TWEAKS_TEXTDOMAIN ),
 				'id'      => 'page_content',
 				'type'    => 'wysiwyg',
+				'before' => '<div data-conditional-id="enable_branding" data-conditional-value="on">',
+    			'after' => '</div>',
 				'options' => array(
 					'wpautop' => true, // use wpautop?
 					'textarea_rows' => get_option('default_post_edit_rows', 10)

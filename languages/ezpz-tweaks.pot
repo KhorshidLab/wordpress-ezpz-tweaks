@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-05 16:56+0430\n"
+"POT-Creation-Date: 2021-05-12 12:02+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,28 +56,24 @@ msgstr ""
 msgid "Failed to import the settings."
 msgstr ""
 
-#: backend/Settings_Page.php:78
+#: backend/Settings_Page.php:74
 msgid "EzPz Tweaks"
 msgstr ""
 
-#: backend/Settings_Page.php:109
+#: backend/Settings_Page.php:105
 msgid ""
 "Edit this page from: Settings > EzPz Tweaks > Branding tab > Page Content."
 msgstr ""
 
-#: backend/Settings_Page.php:112
+#: backend/Settings_Page.php:108
 msgid "Edit Page"
 msgstr ""
 
-#: backend/Settings_Page.php:141
+#: backend/Settings_Page.php:137
 msgid "Settings"
 msgstr ""
 
-#: backend/Settings_Page.php:142
-msgid "Donate"
-msgstr ""
-
-#: backend/Settings_Page.php:309
+#: backend/Settings_Page.php:304
 #, php-format
 msgid ""
 "Your login page is now here: <strong><a href=\"%1$s\">%2$s</a></strong>. "
@@ -124,11 +120,11 @@ msgstr ""
 msgid "Change WordPress Logo"
 msgstr ""
 
-#: backend/views/settings.php:76 backend/views/settings.php:300
+#: backend/views/settings.php:76 backend/views/settings.php:311
 msgid "Upload an image or enter an URL."
 msgstr ""
 
-#: backend/views/settings.php:83 backend/views/settings.php:307
+#: backend/views/settings.php:83 backend/views/settings.php:323
 msgid "Add File"
 msgstr ""
 
@@ -306,80 +302,84 @@ msgid "Apply custom css to admin area"
 msgstr ""
 
 #: backend/views/settings.php:274
-msgid "Enable Branding"
+msgid "Brand Custom Menu"
 msgstr ""
 
 #: backend/views/settings.php:275
+msgid "Enable Branding"
+msgstr ""
+
+#: backend/views/settings.php:276
 msgid ""
 "By selecting this option, you can add your brand to the WordPress menu and "
 "customize how it displays."
 msgstr ""
 
-#: backend/views/settings.php:283
+#: backend/views/settings.php:284
 msgid "Menu Title"
 msgstr ""
 
-#: backend/views/settings.php:291
+#: backend/views/settings.php:297
 msgid "Menu Slug"
 msgstr ""
 
-#: backend/views/settings.php:299
+#: backend/views/settings.php:310
 msgid "Menu Logo"
 msgstr ""
 
-#: backend/views/settings.php:321
+#: backend/views/settings.php:337
 msgid "Page Content"
 msgstr ""
 
-#: backend/views/settings.php:322
+#: backend/views/settings.php:338
 msgid "You can use HTML to design branding page"
 msgstr ""
 
-#: backend/views/settings.php:334
+#: backend/views/settings.php:350
 msgid "Admin Footer"
 msgstr ""
 
-#: backend/views/settings.php:335
+#: backend/views/settings.php:351
 msgid "Footer Text"
 msgstr ""
 
-#: backend/views/settings.php:336
+#: backend/views/settings.php:352
 msgid "Change footer text"
 msgstr ""
 
-#: backend/views/settings.php:348
+#: backend/views/settings.php:364
 msgid "Visibility"
 msgstr ""
 
-#: backend/views/settings.php:349
+#: backend/views/settings.php:365
 msgid "Hide the entire admin footer"
 msgstr ""
 
-#: backend/views/settings.php:360
+#: backend/views/settings.php:376
 msgid "Export Settings"
 msgstr ""
 
-#: backend/views/settings.php:362
+#: backend/views/settings.php:378
 msgid ""
 "Export the plugin's settings for this site as a .json file. This will allows "
 "you to easily import the configuration to another installation."
 msgstr ""
 
-#: backend/views/settings.php:367
+#: backend/views/settings.php:383
 msgid "Export"
 msgstr ""
 
-#: backend/views/settings.php:374
+#: backend/views/settings.php:390
 msgid "Import Settings"
 msgstr ""
 
-#: backend/views/settings.php:376
+#: backend/views/settings.php:392
 msgid ""
 "Import the plugin's settings from a .json file. This file can be retrieved "
 "by exporting the settings from another installation."
 msgstr ""
 
-#: backend/views/settings.php:384
+#: backend/views/settings.php:400
 msgid "Import"
 msgstr ""
 

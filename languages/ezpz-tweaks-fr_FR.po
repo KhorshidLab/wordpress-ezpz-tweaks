@@ -1,86 +1,79 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-02-16 18:18+0330\n"
-"PO-Revision-Date: 2021-02-16 18:19+0330\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-12 12:02+0430\n"
+"PO-Revision-Date: 2021-05-12 12:07+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 2.4.3\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: __;_e;\\__\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: backend/Admin_Menu_Editor.php:74 backend/Admin_Menu_Editor.php:93
-#, fuzzy
-#| msgid "Edit Page"
-msgid "Edit Menu"
-msgstr "Modifier la page"
+#: wordpress-ezpz-tweaks.php:33
+msgid "WordPress EzPz Tweaks"
+msgstr ""
 
-#: backend/Admin_Menu_Editor.php:75
+#: wordpress-ezpz-tweaks.php:60
+msgid "\"WordPress EzPz Tweaks\" requires PHP 7 or newer."
+msgstr "« WordPress EzPz Tweaks » nécessite PHP 7 ou plus nouveau."
+
+#: backend/Admin_Menu_Editor.php:76 backend/Admin_Menu_Editor.php:93
+#: backend/Admin_Menu_Editor.php:95
+msgid "Edit Menu"
+msgstr "Modifier le menu"
+
+#: backend/Admin_Menu_Editor.php:77
+#: vendor/cmb2/includes/helper-functions.php:308
 msgid "Save"
 msgstr "Sauvegarder"
 
-#: backend/Admin_Menu_Editor.php:76
+#: backend/Admin_Menu_Editor.php:78
 msgid "Saving&hellip;"
 msgstr "Sauvegarde &hellip;"
 
-#: backend/Admin_Menu_Editor.php:77
+#: backend/Admin_Menu_Editor.php:79
 msgid "Saved!"
 msgstr "Sauvegardé !"
+
+#: backend/ImpExp.php:96
+msgid "Please upload a valid .json file"
+msgstr "Veuillez téléverser un fichier .json valide"
+
+#: backend/ImpExp.php:102
+msgid "Please upload a file to import"
+msgstr "Veuillez téléverser un fichier à importer"
 
 #: backend/ImpExp.php:120
 msgid "Failed to import the settings."
 msgstr "N’a pas importé les paramètres."
 
-#: backend/Settings_Page.php:73
+#: backend/Settings_Page.php:74
 msgid "EzPz Tweaks"
 msgstr ""
 
-#: backend/Settings_Page.php:104
+#: backend/Settings_Page.php:105
 msgid ""
 "Edit this page from: Settings > EzPz Tweaks > Branding tab > Page Content."
 msgstr ""
 "Modifier cette page à partir de : Paramètres > EzPz Tweaks > onglet Branding "
 "> Page Content."
 
-#: backend/Settings_Page.php:107
+#: backend/Settings_Page.php:108
 msgid "Edit Page"
 msgstr "Modifier la page"
 
-#: backend/Settings_Page.php:136
+#: backend/Settings_Page.php:137
 msgid "Settings"
 msgstr "Paramètres"
 
-#: backend/Settings_Page.php:137
-msgid "Donate"
-msgstr "Faire un don"
-
-#: backend/Settings_Page.php:278
-msgid "WordPress Default"
-msgstr "WordPress par défaut"
-
-#: backend/Settings_Page.php:279
-msgid "Vazir"
-msgstr ""
-
-#: backend/Settings_Page.php:280
-msgid "Estedad"
-msgstr ""
-
-#: backend/Settings_Page.php:281
-msgid "Iranian"
-msgstr ""
-
-#: backend/Settings_Page.php:282
-msgid "Noto"
-msgstr ""
-
-#: backend/Settings_Page.php:298
+#: backend/Settings_Page.php:304
 #, php-format
 msgid ""
 "Your login page is now here: <strong><a href=\"%1$s\">%2$s</a></strong>. "
@@ -121,15 +114,19 @@ msgstr "Modifier la police d’éditeur WordPress"
 msgid "Choose a font"
 msgstr "Choisissez une police"
 
+#: backend/views/settings.php:58 backend/views/settings.php:68
+msgid "Type to search..."
+msgstr "Type à rechercher…"
+
 #: backend/views/settings.php:75
 msgid "Change WordPress Logo"
 msgstr "Changer le logo WordPress"
 
-#: backend/views/settings.php:76 backend/views/settings.php:293
+#: backend/views/settings.php:76 backend/views/settings.php:311
 msgid "Upload an image or enter an URL."
 msgstr "Téléchargez une image ou entrez une URL."
 
-#: backend/views/settings.php:83 backend/views/settings.php:300
+#: backend/views/settings.php:83 backend/views/settings.php:323
 msgid "Add File"
 msgstr "Ajouter le fichier"
 
@@ -187,103 +184,140 @@ msgstr ""
 msgid "Disable Comment Website Field"
 msgstr "Désactiver le champ du site Web de commentaires"
 
-#: backend/views/settings.php:151
+#: backend/views/settings.php:144
+msgid "Remove website field from comment form"
+msgstr ""
+
+#: backend/views/settings.php:152
 msgid "Remove Welcome Panel"
 msgstr "Supprimer le panneau de bienvenue"
 
-#: backend/views/settings.php:159
+#: backend/views/settings.php:153
+msgid ""
+"Welcome panel is a meta box added to the dashboard screen of admin area. It "
+"shows shortcuts to different sections of your WordPress site"
+msgstr ""
+
+#: backend/views/settings.php:161
 msgid "Disable Emojis"
 msgstr "Désactiver les émojis"
 
-#: backend/views/settings.php:167
+#: backend/views/settings.php:162
+msgid "Remove wp-emoji-release.min.js file"
+msgstr ""
+
+#: backend/views/settings.php:170
 msgid "Disable Embeds"
 msgstr "Désactiver les incorporations"
 
-#: backend/views/settings.php:175
+#: backend/views/settings.php:171
+msgid "Remove wp-embed.min.js file and reduce HTTP requests"
+msgstr ""
+
+#: backend/views/settings.php:179
 msgid "Disable XML-RPC"
 msgstr "Désactiver XML-RPC"
 
-#: backend/views/settings.php:183
+#: backend/views/settings.php:180
+msgid "Disabling this feature makes your site more secure"
+msgstr ""
+
+#: backend/views/settings.php:188
 msgid "Remove Shortlink"
 msgstr "Supprimer le lien court"
 
-#: backend/views/settings.php:191
+#: backend/views/settings.php:189
+msgid ""
+"This is used for a shortlink to your pages and posts. However, if you are "
+"already using pretty permalinks, then there is no reason to keep this"
+msgstr ""
+
+#: backend/views/settings.php:197
 msgid "Remove WP Version"
 msgstr "Supprimer la version WP"
 
-#: backend/views/settings.php:201
+#: backend/views/settings.php:198
+msgid ""
+"Remove the WordPress version number from all different areas on your site"
+msgstr ""
+
+#: backend/views/settings.php:208
 msgid "Hide Admin Bar"
 msgstr "Masquer la barre d'administration"
 
-#: backend/views/settings.php:202
+#: backend/views/settings.php:209
 msgid "Hide admin bar for user roles"
 msgstr "Masquer la barre d'administration pour les rôles utilisateur"
 
-#: backend/views/settings.php:211
+#: backend/views/settings.php:218
 msgid "Hide Update Notifications"
 msgstr "Masquer les notifications de mise à jour"
 
-#: backend/views/settings.php:212
+#: backend/views/settings.php:219
 msgid "Hide update notifications for user roles"
 msgstr "Masquer les notifications de mise à jour pour les rôles utilisateur"
 
-#: backend/views/settings.php:221
+#: backend/views/settings.php:228
 msgid "Remove Dashboard Widgets"
 msgstr "Supprimer les widgets du tableau de bord"
 
-#: backend/views/settings.php:222
+#: backend/views/settings.php:229
 msgid "Check widgets to remove from dashboard"
 msgstr "Cochez les widgets à supprimer du tableau de bord"
 
-#: backend/views/settings.php:226
+#: backend/views/settings.php:233
 msgid "Dashboard Activity"
 msgstr "Activité du tableau de bord"
 
-#: backend/views/settings.php:227
+#: backend/views/settings.php:234
 msgid "Dashboard Site Health"
 msgstr "État du site du tableau de bord"
 
-#: backend/views/settings.php:228
+#: backend/views/settings.php:235
 msgid "Dashboard Quick Press"
 msgstr "Tableau de bord Quick Press"
 
-#: backend/views/settings.php:229
+#: backend/views/settings.php:236
 msgid "Dashboard Incoming Links"
 msgstr "Liens entrants du tableau de bord"
 
-#: backend/views/settings.php:230
+#: backend/views/settings.php:237
 msgid "Dashboard Right Now"
 msgstr "Tableau de bord en ce moment"
 
-#: backend/views/settings.php:231
+#: backend/views/settings.php:238
 msgid "Dashboard Plugins"
 msgstr "Plugins de tableau de bord"
 
-#: backend/views/settings.php:232
+#: backend/views/settings.php:239
 msgid "Dashboard Recent Drafts"
 msgstr "Brouillons récents du tableau de bord"
 
-#: backend/views/settings.php:233
+#: backend/views/settings.php:240
 msgid "Dashboard Recent Comments"
 msgstr "Commentaires récents du tableau de bord"
 
-#: backend/views/settings.php:234
+#: backend/views/settings.php:241
 msgid "Dashboard Primary"
 msgstr "Tableau de bord principal"
 
-#: backend/views/settings.php:241
+#: backend/views/settings.php:248
 msgid "Custom CSS"
 msgstr "CSS personnalisé"
 
-#: backend/views/settings.php:242
+#: backend/views/settings.php:249
 msgid "Apply custom css to admin area"
 msgstr "Appliquer des css personnalisés à la zone admin"
 
-#: backend/views/settings.php:267
+#: backend/views/settings.php:274
+msgid "Brand Custom Menu"
+msgstr "Menu personnalisé de marque"
+
+#: backend/views/settings.php:275
 msgid "Enable Branding"
 msgstr "Activer l’image de marque"
 
-#: backend/views/settings.php:268
+#: backend/views/settings.php:276
 msgid ""
 "By selecting this option, you can add your brand to the WordPress menu and "
 "customize how it displays."
@@ -291,51 +325,51 @@ msgstr ""
 "En sélectionnant cette option, vous pouvez ajouter votre marque au menu "
 "WordPress et personnaliser la façon dont elle s’affiche."
 
-#: backend/views/settings.php:276
+#: backend/views/settings.php:284
 msgid "Menu Title"
 msgstr "Titre du menu"
 
-#: backend/views/settings.php:284
+#: backend/views/settings.php:297
 msgid "Menu Slug"
 msgstr "Menu Slug"
 
-#: backend/views/settings.php:292
+#: backend/views/settings.php:310
 msgid "Menu Logo"
 msgstr "Logo du Menu"
 
-#: backend/views/settings.php:314
+#: backend/views/settings.php:337
 msgid "Page Content"
 msgstr "Contenu de la page"
 
-#: backend/views/settings.php:315
+#: backend/views/settings.php:338
 msgid "You can use HTML to design branding page"
 msgstr "Vous pouvez utiliser HTML pour concevoir une page d’image de marque"
 
-#: backend/views/settings.php:327
+#: backend/views/settings.php:350
 msgid "Admin Footer"
 msgstr "Pied de page administrateur"
 
-#: backend/views/settings.php:328
+#: backend/views/settings.php:351
 msgid "Footer Text"
 msgstr "Texte de pied de page"
 
-#: backend/views/settings.php:329
+#: backend/views/settings.php:352
 msgid "Change footer text"
 msgstr "Texte de pied de page"
 
-#: backend/views/settings.php:341
+#: backend/views/settings.php:364
 msgid "Visibility"
 msgstr "Visibilité"
 
-#: backend/views/settings.php:342
+#: backend/views/settings.php:365
 msgid "Hide the entire admin footer"
 msgstr "Masquer la barre d'administration"
 
-#: backend/views/settings.php:353
+#: backend/views/settings.php:376
 msgid "Export Settings"
 msgstr "Exporter les paramètres"
 
-#: backend/views/settings.php:355
+#: backend/views/settings.php:378
 msgid ""
 "Export the plugin's settings for this site as a .json file. This will allows "
 "you to easily import the configuration to another installation."
@@ -344,15 +378,15 @@ msgstr ""
 "json. Cela vous permettra d’importer facilement la configuration vers une "
 "autre installation."
 
-#: backend/views/settings.php:360
+#: backend/views/settings.php:383
 msgid "Export"
 msgstr "Exporter"
 
-#: backend/views/settings.php:367
+#: backend/views/settings.php:390
 msgid "Import Settings"
 msgstr "Importer les paramètres"
 
-#: backend/views/settings.php:369
+#: backend/views/settings.php:392
 msgid ""
 "Import the plugin's settings from a .json file. This file can be retrieved "
 "by exporting the settings from another installation."
@@ -360,13 +394,21 @@ msgstr ""
 "Importez les paramètres du plugin à partir d’un fichier .json. Ce fichier "
 "peut être récupéré en exportant les paramètres d’une autre installation."
 
-#: backend/views/settings.php:377
+#: backend/views/settings.php:400
 msgid "Import"
 msgstr "Importer"
 
-#: frontend/Enqueue.php:57
-msgid "Hey! You have clicked the button!"
+#: engine/Initialize.php:123
+msgid ""
+"Plugin Name is on production environment with missing `composer dumpautoload "
+"-o` that will improve the performance on autoloading itself."
 msgstr ""
+
+#: frontend/Settings.php:89
+#, fuzzy
+#| msgid "Disable Public Access to WP REST API"
+msgid "Public access to the REST API has been limited."
+msgstr "Désactiver l’accès du public à l’API WP REST"
 
 #: integrations/WPS_Hide_Login.php:122
 msgid "Please upgrade to the latest version of WordPress to activate"
@@ -383,6 +425,344 @@ msgid "This has been disabled"
 msgstr ""
 "A la Fredon LR, on ne plaisante pas avec la sécurité. Curieux passes donc "
 "ton chemin :)"
+
+#: vendor/cmb2/example-functions.php:115
+msgid "Test Metabox"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:148 vendor/cmb2/example-functions.php:492
+msgid "Test Text"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:149 vendor/cmb2/example-functions.php:162
+#: vendor/cmb2/example-functions.php:175 vendor/cmb2/example-functions.php:182
+#: vendor/cmb2/example-functions.php:195 vendor/cmb2/example-functions.php:203
+#: vendor/cmb2/example-functions.php:212 vendor/cmb2/example-functions.php:220
+#: vendor/cmb2/example-functions.php:235 vendor/cmb2/example-functions.php:243
+#: vendor/cmb2/example-functions.php:251 vendor/cmb2/example-functions.php:268
+#: vendor/cmb2/example-functions.php:277 vendor/cmb2/example-functions.php:293
+#: vendor/cmb2/example-functions.php:300 vendor/cmb2/example-functions.php:307
+#: vendor/cmb2/example-functions.php:332 vendor/cmb2/example-functions.php:345
+#: vendor/cmb2/example-functions.php:358 vendor/cmb2/example-functions.php:370
+#: vendor/cmb2/example-functions.php:384 vendor/cmb2/example-functions.php:392
+#: vendor/cmb2/example-functions.php:401 vendor/cmb2/example-functions.php:408
+#: vendor/cmb2/example-functions.php:422 vendor/cmb2/example-functions.php:493
+#: vendor/cmb2/example-functions.php:583 vendor/cmb2/example-functions.php:591
+#: vendor/cmb2/example-functions.php:598 vendor/cmb2/example-functions.php:605
+#: vendor/cmb2/example-functions.php:612 vendor/cmb2/example-functions.php:619
+#: vendor/cmb2/example-functions.php:626 vendor/cmb2/example-functions.php:652
+#: vendor/cmb2/example-functions.php:660 vendor/cmb2/example-functions.php:667
+#: vendor/cmb2/example-functions.php:717
+msgid "field description (optional)"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:161
+msgid "Test Text Small"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:174
+msgid "Test Text Medium"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:181
+msgid "Read-only Disabled Field"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:185
+msgid "Hey there, I'm a read-only field"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:194
+msgid "Custom Rendered Field"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:202
+msgid "Website URL"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:211
+msgid "Test Text Email"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:219
+msgid "Test Time"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:227 vendor/cmb2/example-functions.php:228
+msgid "Time zone"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:234
+msgid "Test Date Picker"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:242
+msgid "Test Date Picker (UNIX timestamp)"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:250
+msgid "Test Date/Time Picker Combo (UNIX timestamp)"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:267
+msgid "Test Money"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:276
+msgid "Test Color Picker"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:292
+msgid "Test Text Area"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:299
+msgid "Test Text Area Small"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:306
+msgid "Test Text Area for Code"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:324
+msgid "Test Title Weeeee"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:325
+msgid "This is a title description"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:331
+msgid "Test Select"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:337 vendor/cmb2/example-functions.php:350
+#: vendor/cmb2/example-functions.php:362
+msgid "Option One"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:338 vendor/cmb2/example-functions.php:351
+#: vendor/cmb2/example-functions.php:363
+msgid "Option Two"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:339 vendor/cmb2/example-functions.php:352
+#: vendor/cmb2/example-functions.php:364
+msgid "Option Three"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:344
+msgid "Test Radio inline"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:357
+msgid "Test Radio"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:369
+msgid "Test Taxonomy Radio"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:383
+msgid "Test Taxonomy Select"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:391
+msgid "Test Taxonomy Multi Checkbox"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:400
+msgid "Test Checkbox"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:407
+msgid "Test Multi Checkbox"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:413
+msgid "Check One"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:414
+msgid "Check Two"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:415
+msgid "Check Three"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:421
+msgid "Test wysiwyg"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:431
+msgid "Test Image"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:432
+msgid "Upload an image or enter a URL."
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:438
+msgid "Multiple Files"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:439
+msgid "Upload or add multiple images/attachments."
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:446
+msgid "oEmbed"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:449
+#, php-format
+msgid ""
+"Enter a youtube, twitter, or instagram URL. Supports services listed at %s."
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:481
+msgid "About Page Metabox"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:511
+msgid "Repeating Field Group"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:519
+msgid "Generates reusable form entries"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:521
+msgid "Entry {#}"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:522
+msgid "Add Another Entry"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:523
+msgid "Remove Entry"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:537
+msgid "Entry Title"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:544
+msgid "Description"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:545
+msgid "Write a short description for this entry"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:551
+msgid "Entry Image"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:557
+msgid "Image Caption"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:575
+msgid "User Profile Metabox"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:582 vendor/cmb2/example-functions.php:651
+msgid "Extra Info"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:590
+msgid "Avatar"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:597
+msgid "Facebook URL"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:604
+msgid "Twitter URL"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:611
+msgid "Google+ URL"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:618
+msgid "Linkedin URL"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:625
+msgid "User Field"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:644
+msgid "Category Metabox"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:659
+msgid "Term Image"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:666
+msgid "Arbitrary Term Field"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:685
+msgid "Theme Options"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:716
+msgid "Site Background Color"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:753
+#, php-format
+msgid "%s &mdash; Updated!"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:785
+msgid "REST Test Box"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:794
+msgid "REST Test Text"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:795
+msgid "Will show in the REST API for this box and for pages."
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:801
+msgid "REST Editable Test Text"
+msgstr ""
+
+#: vendor/cmb2/example-functions.php:802
+msgid "Will show in REST API \"editable\" contexts only (`POST` requests)."
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2.php:199
+msgid "Metabox configuration is required to have an ID parameter."
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2.php:618
+msgid "Click to toggle"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Ajax.php:75
+msgid "Please Try Again"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Ajax.php:181
+msgid "Remove Embed"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Ajax.php:189
+#: vendor/cmb2/includes/helper-functions.php:107
+#, php-format
+msgid "No oEmbed Results Found for %1$s. View more info at %2$s."
+msgstr ""
 
 #: vendor/cmb2/includes/CMB2_Base.php:423
 #, php-format
@@ -412,8 +792,52 @@ msgid ""
 "version %2$s with no alternative available."
 msgstr ""
 
+#: vendor/cmb2/includes/CMB2_Base.php:492
+#: vendor/cmb2/includes/CMB2_Hookup_Base.php:102
+#: vendor/cmb2/includes/CMB2_Options.php:247
+#: vendor/cmb2/includes/CMB2_Options_Hookup.php:369
+#: vendor/cmb2/includes/types/CMB2_Type_Base.php:173
+#, php-format
+msgid "Invalid %1$s property: %2$s"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Base.php:510
+#: vendor/cmb2/includes/types/CMB2_Type_Base.php:157
+#, php-format
+msgid "Invalid %1$s method: %2$s"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Field.php:1438
+msgid "Add Group"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Field.php:1439
+msgid "Remove Group"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Field.php:1471
+#: vendor/cmb2/includes/CMB2_Field.php:1475
+msgid "None"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Field.php:1589
+msgid "Sorry, this field does not have a cmb_id specified."
+msgstr ""
+
 #: vendor/cmb2/includes/CMB2_Field_Display.php:453
+#: vendor/cmb2/includes/CMB2_JS.php:242
+#: vendor/cmb2/includes/types/CMB2_Type_File_Base.php:90
 msgid "File:"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Hookup.php:188
+msgid ""
+"Term Metadata is a WordPress 4.4+ feature. Please upgrade your WordPress "
+"install."
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Hookup.php:192
+msgid "Term metaboxes configuration requires a \"taxonomies\" parameter."
 msgstr ""
 
 #: vendor/cmb2/includes/CMB2_Hookup.php:560
@@ -421,16 +845,146 @@ msgstr ""
 msgid "Toggle panel: %s"
 msgstr ""
 
-#: vendor/cmb2/includes/CMB2_Options_Hookup.php:140
+#: vendor/cmb2/includes/CMB2_Hookup_Base.php:44
+#, php-format
+msgid "%1$s should be implemented by the extended class."
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:177 vendor/cmb2/includes/CMB2_JS.php:222
+msgid "Clear"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:178
+msgid "Default"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:179
+msgid "Select Color"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:180
+msgid "Current Color"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:212
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:213
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:214
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:215
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:216
+msgid ""
+"January, February, March, April, May, June, July, August, September, "
+"October, November, December"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:217
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:218
+msgid "Next"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:219
+msgid "Prev"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:220
+msgid "Today"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:221 vendor/cmb2/includes/CMB2_JS.php:231
+msgid "Done"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:225
+msgid "Choose Time"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:226
+msgid "Time"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:227
+msgid "Hour"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:228
+msgid "Minute"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:229
+msgid "Second"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:230
+msgid "Now"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:232
+msgctxt ""
+"Valid formatting string, as per http://trentrichardson.com/examples/"
+"timepicker/"
+msgid "hh:mm TT"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:238
+msgid "Use this file"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:239
+msgid "Use these files"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:240
+#: vendor/cmb2/includes/types/CMB2_Type_File_Base.php:75
+msgid "Remove Image"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:241 vendor/cmb2/includes/CMB2_Types.php:408
+#: vendor/cmb2/includes/types/CMB2_Type_File_Base.php:95
+msgid "Remove"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:243
+#: vendor/cmb2/includes/types/CMB2_Type_File_Base.php:93
+msgid "Download"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_JS.php:244
+msgid "Select / Deselect All"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Options_Hookup.php:139
 msgid "Nothing to update."
 msgstr ""
 
-#: vendor/cmb2/includes/CMB2_Options_Hookup.php:144
+#: vendor/cmb2/includes/CMB2_Options_Hookup.php:143
 msgid "Settings updated."
 msgstr ""
 
 #: vendor/cmb2/includes/CMB2_Types.php:226
 msgid "Custom CMB2 field type classes must extend CMB2_Type_Base."
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Types.php:344
+msgid "Add Row"
+msgstr ""
+
+#: vendor/cmb2/includes/CMB2_Types.php:408
+msgid "Remove Row"
 msgstr ""
 
 #: vendor/cmb2/includes/rest-api/CMB2_REST_Controller.php:257
@@ -494,14 +1048,11 @@ msgid ""
 msgstr ""
 
 #: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:236
-#: vendor/cmb2/tests/test-cmb-rest-controllers.php:247
 msgid ""
 "CMB2 Field value cannot be updated without the value parameter specified."
 msgstr ""
 
 #: vendor/cmb2/includes/rest-api/CMB2_REST_Controller_Fields.php:297
-#: vendor/cmb2/tests/test-cmb-rest-controllers.php:258
-#: vendor/cmb2/tests/test-cmb-rest-controllers.php:269
 msgid ""
 "CMB2 Field value cannot be modified without the object_id and object_type "
 "parameters specified."
@@ -555,6 +1106,43 @@ msgid ""
 "Scope under which the request is made; determines fields present in response."
 msgstr ""
 
+#: vendor/cmb2/includes/types/CMB2_Type_Counter_Base.php:50
+msgid "Words left"
+msgstr ""
+
+#: vendor/cmb2/includes/types/CMB2_Type_Counter_Base.php:51
+msgid "Words"
+msgstr ""
+
+#: vendor/cmb2/includes/types/CMB2_Type_Counter_Base.php:56
+msgid "Characters left"
+msgstr ""
+
+#: vendor/cmb2/includes/types/CMB2_Type_Counter_Base.php:57
+msgid "Characters"
+msgstr ""
+
+#: vendor/cmb2/includes/types/CMB2_Type_Counter_Base.php:62
+msgid "Your text may be truncated."
+msgstr ""
+
+#: vendor/cmb2/includes/types/CMB2_Type_File.php:76
+msgid "Add or Upload File"
+msgstr ""
+
+#: vendor/cmb2/includes/types/CMB2_Type_File_List.php:41
+msgid "Add or Upload Files"
+msgstr ""
+
+#: vendor/cmb2/includes/types/CMB2_Type_Taxonomy_Base.php:115
+msgid "No terms"
+msgstr ""
+
+#: vendor/micropackage/requirements/src/Requirements.php:255
+#, php-format
+msgid "The plugin: <strong>%s</strong> cannot be activated."
+msgstr ""
+
 #: vendor/micropackage/requirements/src/Checker/DocHooks.php:43
 msgid "Support for DocHooks is required"
 msgstr ""
@@ -567,6 +1155,13 @@ msgstr ""
 #, php-format
 msgid "Minimum required version of PHP is %1$s. Your version is %2$s"
 msgstr ""
+
+#: vendor/micropackage/requirements/src/Checker/PHPExtensions.php:50
+#, php-format
+msgid "Missing PHP extension: %s"
+msgid_plural "Missing PHP extensions: %s"
+msgstr[0] ""
+msgstr[1] ""
 
 #: vendor/micropackage/requirements/src/Checker/Plugins.php:65
 #, php-format
@@ -588,18 +1183,8 @@ msgstr ""
 msgid "Minimum required version of WordPress is %1$s. Your version is %2$s"
 msgstr ""
 
-#: vendor/micropackage/requirements/src/Requirements.php:255
-#, php-format
-msgid "The plugin: <strong>%s</strong> cannot be activated."
-msgstr ""
-
-#: wordpress-ezpz-tweaks.php:33
-msgid "WordPress EzPz Tweaks"
-msgstr ""
-
-#: wordpress-ezpz-tweaks.php:60
-msgid "\"WordPress EzPz Tweaks\" requires PHP 7 or newer."
-msgstr ""
+#~ msgid "Donate"
+#~ msgstr "Faire un don"
 
 #~ msgid "Khorshid"
 #~ msgstr "Khorshid"

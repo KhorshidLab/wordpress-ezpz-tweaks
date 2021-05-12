@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-05 16:56+0430\n"
-"PO-Revision-Date: 2021-05-05 17:06+0430\n"
+"POT-Creation-Date: 2021-05-12 12:02+0430\n"
+"PO-Revision-Date: 2021-05-12 12:05+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -54,29 +54,25 @@ msgstr ""
 msgid "Failed to import the settings."
 msgstr "خطا در درون ریزی تنظیمات."
 
-#: backend/Settings_Page.php:78
+#: backend/Settings_Page.php:74
 msgid "EzPz Tweaks"
 msgstr ""
 
-#: backend/Settings_Page.php:109
+#: backend/Settings_Page.php:105
 msgid ""
 "Edit this page from: Settings > EzPz Tweaks > Branding tab > Page Content."
 msgstr ""
 "این صفحه را از: تنظیمات > EzPz Tweaks >برندینگ > محتوای صفحه ویرایش کنید."
 
-#: backend/Settings_Page.php:112
+#: backend/Settings_Page.php:108
 msgid "Edit Page"
 msgstr "ویرایش صفحه"
 
-#: backend/Settings_Page.php:141
+#: backend/Settings_Page.php:137
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: backend/Settings_Page.php:142
-msgid "Donate"
-msgstr "حمایت مالی"
-
-#: backend/Settings_Page.php:309
+#: backend/Settings_Page.php:304
 #, php-format
 msgid ""
 "Your login page is now here: <strong><a href=\"%1$s\">%2$s</a></strong>. "
@@ -125,11 +121,11 @@ msgstr ""
 msgid "Change WordPress Logo"
 msgstr "تغییر لوگو وردپرس"
 
-#: backend/views/settings.php:76 backend/views/settings.php:300
+#: backend/views/settings.php:76 backend/views/settings.php:311
 msgid "Upload an image or enter an URL."
 msgstr "تصویر را آپلود کنید یا URL تصویر را وارد کنید."
 
-#: backend/views/settings.php:83 backend/views/settings.php:307
+#: backend/views/settings.php:83 backend/views/settings.php:323
 msgid "Add File"
 msgstr "انتخاب فایل"
 
@@ -315,10 +311,14 @@ msgid "Apply custom css to admin area"
 msgstr "اعمال CSS سفارشی به پنل مدیریت"
 
 #: backend/views/settings.php:274
+msgid "Brand Custom Menu"
+msgstr "منوی اختصاصی برند"
+
+#: backend/views/settings.php:275
 msgid "Enable Branding"
 msgstr "فعالسازی برندینگ"
 
-#: backend/views/settings.php:275
+#: backend/views/settings.php:276
 msgid ""
 "By selecting this option, you can add your brand to the WordPress menu and "
 "customize how it displays."
@@ -326,51 +326,51 @@ msgstr ""
 "با انتخاب این گزینه شما می‌توانید برند خود را به منوی وردپرس اضافه و نمایش آن "
 "را سفارشی‌سازی کنید."
 
-#: backend/views/settings.php:283
+#: backend/views/settings.php:284
 msgid "Menu Title"
 msgstr "عنوان منو"
 
-#: backend/views/settings.php:291
+#: backend/views/settings.php:297
 msgid "Menu Slug"
 msgstr "نامک منو"
 
-#: backend/views/settings.php:299
+#: backend/views/settings.php:310
 msgid "Menu Logo"
 msgstr "لوگو منو"
 
-#: backend/views/settings.php:321
+#: backend/views/settings.php:337
 msgid "Page Content"
 msgstr "محتوای صفحه"
 
-#: backend/views/settings.php:322
+#: backend/views/settings.php:338
 msgid "You can use HTML to design branding page"
 msgstr "شما می توانید از HTML برای طراحی صفحه برندینگ استفاده کنید"
 
-#: backend/views/settings.php:334
+#: backend/views/settings.php:350
 msgid "Admin Footer"
 msgstr "فوتر ادمین"
 
-#: backend/views/settings.php:335
+#: backend/views/settings.php:351
 msgid "Footer Text"
 msgstr "متن فوتر"
 
-#: backend/views/settings.php:336
+#: backend/views/settings.php:352
 msgid "Change footer text"
 msgstr "متن فوتر مدیریت را تغییر دهید"
 
-#: backend/views/settings.php:348
+#: backend/views/settings.php:364
 msgid "Visibility"
 msgstr "قابلیت نمایش"
 
-#: backend/views/settings.php:349
+#: backend/views/settings.php:365
 msgid "Hide the entire admin footer"
 msgstr "مخفی کردن فوتر"
 
-#: backend/views/settings.php:360
+#: backend/views/settings.php:376
 msgid "Export Settings"
 msgstr "برون بری تنظیمات"
 
-#: backend/views/settings.php:362
+#: backend/views/settings.php:378
 msgid ""
 "Export the plugin's settings for this site as a .json file. This will allows "
 "you to easily import the configuration to another installation."
@@ -378,15 +378,15 @@ msgstr ""
 "از تنظیمات مربوط به این سایت خروجی فایل .json بگیرید. این کار به شما امکان "
 "میدهد تا تنظیمات خود را به آسانی در یک سایت دیگر درون ریزی کنید."
 
-#: backend/views/settings.php:367
+#: backend/views/settings.php:383
 msgid "Export"
 msgstr "برون بری"
 
-#: backend/views/settings.php:374
+#: backend/views/settings.php:390
 msgid "Import Settings"
 msgstr "درون ریزی تنظیمات"
 
-#: backend/views/settings.php:376
+#: backend/views/settings.php:392
 msgid ""
 "Import the plugin's settings from a .json file. This file can be retrieved by "
 "exporting the settings from another installation."
@@ -394,7 +394,7 @@ msgstr ""
 "تنظیمات سایت را از طریق یک فایل .json درون ریزی کنید. این فایل میتواند از "
 "طریق برون بری تنظیمات ایجاد شود."
 
-#: backend/views/settings.php:384
+#: backend/views/settings.php:400
 msgid "Import"
 msgstr "درون ریزی"
 
@@ -406,7 +406,7 @@ msgstr ""
 
 #: frontend/Settings.php:89
 msgid "Public access to the REST API has been limited."
-msgstr ""
+msgstr "دسترسی عمومی به REST API محدود شده است."
 
 #: integrations/WPS_Hide_Login.php:122
 msgid "Please upgrade to the latest version of WordPress to activate"
@@ -944,10 +944,8 @@ msgstr ""
 
 #: vendor/cmb2/includes/CMB2_JS.php:240
 #: vendor/cmb2/includes/types/CMB2_Type_File_Base.php:75
-#, fuzzy
-#| msgid "Remove Welcome Panel"
 msgid "Remove Image"
-msgstr "حذف پنل خوش آمد گویی داشبورد"
+msgstr ""
 
 #: vendor/cmb2/includes/CMB2_JS.php:241 vendor/cmb2/includes/CMB2_Types.php:408
 #: vendor/cmb2/includes/types/CMB2_Type_File_Base.php:95
@@ -1178,6 +1176,9 @@ msgstr "قالب مورد نیاز: %s"
 #, php-format
 msgid "Minimum required version of WordPress is %1$s. Your version is %2$s"
 msgstr "حداقل نسخه مورد نیاز وردپرس %1$s است. نسخه شما %2$s می باشد"
+
+#~ msgid "Donate"
+#~ msgstr "حمایت مالی"
 
 #~ msgid "Vazir"
 #~ msgstr "وزیر"
